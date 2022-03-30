@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TA on Joseph Starr</title>
+    <link>https://joe-starr.com/tags/ta/</link>
+    <description>Recent content in TA on Joseph Starr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2020 17:09:26 +0000</lastBuildDate><atom:link href="https://joe-starr.com/tags/ta/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MATH:1350 Quantitative Reasoning for Business</title>
+      <link>https://joe-starr.com/teaching/math1350/</link>
+      <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/teaching/math1350/</guid>
+      <description>Summary Algebraic techniques and modeling; quantitative methods for treating problems that arise in management and economic sciences; topics include algebra techniques, functions and functional models, exponential and logarithmic functions and models, and a thorough introduction to differential calculus; examples and applications from management, economic sciences, and related areas; for students planning to major in business.
+Taught from  Lial, Hungerford, Holcomb, &amp;amp; Mullins: Mathematics with Applications in the Management, Natural, and Social Sciences, 12th Edition.</description>
+    </item>
+    
+  </channel>
+</rss>

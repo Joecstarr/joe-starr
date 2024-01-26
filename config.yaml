@@ -2,7 +2,7 @@
 # Start Base Url
 # https://github.com/uiowa-mgb/personal-site-template/wiki/Base-Url
 ################################################################################
-baseURL: "https://personal.mathgradboard.com/"
+baseURL: "https://joe-starr.com/"
 ################################################################################
 # End Base Url
 ################################################################################
@@ -12,7 +12,7 @@ baseURL: "https://personal.mathgradboard.com/"
 # Start Title Section
 # https://github.com/uiowa-mgb/personal-site-template/wiki/Title-Section
 ################################################################################
-title: "Pythagoras of Samos"
+title: "Joe Starr"
 ################################################################################
 # End Title Section
 ################################################################################
@@ -26,7 +26,7 @@ params:
 # Start Favicon
 # https://github.com/uiowa-mgb/personal-site-template/wiki/Favicon
 ################################################################################
-  favicon: "/icons/favicon.ico"
+  favicon: "favicon/icon.png"
 ################################################################################
 # End Favicon
 ################################################################################
@@ -53,23 +53,23 @@ params:
       disableTeaching: false
       disableContact: true
       main:
-        - identifier: Publications
-          name: Publications
-          title: Publications
-          url: /publications
-        #Dropdown menu
-        - identifier: dropdown
-          title: Example dropdown menu
-          name: Extras
-          children:
-            - identifier: Blog
-              title: Blog
-              name: Blog
-              url: /blog
-            - identifier: "???"
-              title: "???"
-              name: "???"
-              url: /another_section
+        - identifier: Resources
+          name: Resources
+          title: Some useful resources
+          url: /resources
+        # #Dropdown menu
+        # - identifier: T
+        #   title: Example dropdown menu
+        #   name: Extras
+        #   children:
+        #     - identifier: Blog
+        #       title: Blog
+        #       name: Blog
+        #       url: /blog
+        #     - identifier: "???"
+        #       title: "???"
+        #       name: "???"
+        #       url: /another_section
 
 ################################################################################
 # End Navbar Section
@@ -80,12 +80,19 @@ params:
 # https://github.com/uiowa-mgb/personal-site-template/wiki/Theme-Section
 ################################################################################
   theme:
-    disableThemeToggle: false
-    defaultTheme: "light" # dark
+    disableThemeToggle: true
+    defaultTheme: "dark" # dark
 
 
   # color preference
-  # color:
+  color:
+    darkmode:
+        textColor: "#f8f8f2"
+        secondaryTextColor: "#6272a4"
+        backgroundColor: "#282a36"
+        secondaryBackgroundColor: "#44475a"
+        primaryColor: "#bd93f9"
+        secondaryColor: "#44475a"
   #   textColor:
   #   secondaryTextColor:
   #   backgroundColor:
@@ -93,13 +100,6 @@ params:
   #   primaryColor:
   #   secondaryColor:
 
-  #   darkmode:
-  #     textColor:
-  #     secondaryTextColor:
-  #     backgroundColor:
-  #     secondaryBackgroundColor:
-  #     primaryColor:
-  #     secondaryColor:
 
 ################################################################################
 # End Theme Section
@@ -114,13 +114,13 @@ params:
   hero:
     enable: true
     intro: "Hi, my name is"
-    title: "Pythagoras of Samos."
+    title: "Joe Starr"
     subtitle: ""
-    content: ""
-    image: images/Pythagoras.jpeg
+    content: "I'm a PhD student working with Dr. Isabel Darcy at The University of Iowa."
+    image: images/avatar.jpg
     roundImage: true
     button:
-      enable: true
+      enable: false
       name: "CV"
       url: "/pdf/CV.pdf"
       download: true
@@ -128,12 +128,9 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-github
-          url: https://example.com
+          url: https://github.com/Joecstarr/
         - icon: fab fa-linkedin
-          url: https://example.com
-      customIcons:
-        - icon: images/DNA.png
-          url: "https://example.com"
+          url: https://www.linkedin.com/in/joseph-C-starr/
 
 
 ################################################################################
@@ -147,20 +144,16 @@ params:
   about:
     enable: true
     title: "About Me"
-    # image: "/images/Pythagoras.jpeg"
+    image: "presentations/mathday23/star.svg"
     content: |-
-        In dolor dolor, eleifend at leo a, viverra convallis risus. Aliquam eu leo
-        diam. Vivamus at urna dignissim, venenatis dolor ut, laoreet elit.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Skilled embedded software engineer with a passion for problem solving.
     skills:
       enable: true
       title: "Here are some of my research interests:"
       items:
-        - "Triangles"
-        - "Circles"
-        - "Squares"
-        - "Points"
-        - "Angles"
+        - Low Dimensional Topology
+        - Knot Theory
+        - Computational Methods
 
 
 ################################################################################
@@ -357,7 +350,7 @@ params:
     enable: true
     # title: "Custom Name"
     # content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-    email: Pythagoras@mathgradboard.com
+    email: joe@joe-starr.com
     btnName: Mail me
 
 

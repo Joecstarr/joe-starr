@@ -67,6 +67,9 @@ if (pluginOptions.menu_enabled) {
 pluginOptions['plugins'] = enabledPlugins;
 pluginOptions['backgroundTransition'] = "none";
 
+pluginOptions['hash'] = true;
+pluginOptions['width'] = '90%';
+pluginOptions['height'] ='100%';
 Reveal.initialize(pluginOptions).then(() => {
 });
 // Reveal.initialize({
@@ -111,10 +114,18 @@ if (params.slides.diagram) {
         let pageno = `${indices.h}-${indices.v}`
         mermaidDivs.forEach(function (mermaidDiv, i) {
             let graphDefinition = mermaidDiv.textContent;
-            // mermaid.mermaidAPI.render(`mermaid${pageno}-${i}`, graphDefinition, insertSvg);
             mermaid.render(`mermaid-${pageno}-${i}`, graphDefinition).then((obj) => {
-                mermaidDiv.innerHTML = obj.svg;
+
+                container = document.createElement('div');
+                container.innerHTML = obj.svg;
+                // mermaidDiv.classList.forEach( (c) => { container.classList.add(c) })
+                let svg =  container.getElementsByTagName('svg')[0];
+                svg.setAttribute('width', '');
+                svg.setAttribute('height', '');
+                mermaidDiv.innerHTML = "";
+                mermaidDiv.appendChild(container);
                 mermaidDiv.classList.add('mermaid-done');
+                Reveal.layout();
             });
         });
         Reveal.layout();

@@ -71,11 +71,12 @@
     function remove_qr() {
         const match = document.querySelector(".slides .present .hide_qr");
         var qr = document.querySelector("#header-right");
-        if(match != null)
-        {
-            qr.style.display = "none";
-        }else{
-            qr.style.display = "block";
+        if (qr != null) {
+            if (match != null) {
+                qr.style.display = "none";
+            } else {
+                qr.style.display = "block";
+            }
         }
     }
     reveal_slidechange_callbacks.push(remove_qr)

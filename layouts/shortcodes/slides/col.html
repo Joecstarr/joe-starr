@@ -1,5 +1,10 @@
+{{ $markdown := .Get "markdownify" | default "false" }}
+
 <div class="slidecolumn {{ if .IsNamedParams }} {{ with .Get "class"}} {{ . | safeHTML }}{{ end }} {{ end }} " style="{{ if .IsNamedParams }} {{ with .Get "style"}} {{ . | safeCSS }}{{ end }} {{ end }}">
 
-{{ .Inner }}
-
+{{ if eq $markdown "true" }}
+{{ .Inner | markdownify | emojify }}
+{{ else }}
+{{ .Inner  }}
+{{ end }}
 </div>

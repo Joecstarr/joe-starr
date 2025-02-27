@@ -1,0 +1,686 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta name="date" content="2025-02-11">
+    <title>27th SIGMAA on RUME Conference | Joe Starr</title>
+
+    <style type="text/css">
+        :root {
+            --r-Background: #ffffff;
+            --r-Selection: #7f7d9c;
+            --r-Foreground: #000000;
+            --r-Highlight: #FFCD00;
+            --r-HeroText: #000000;
+            --r-Blue: #3984c6;
+            --r-Green: #4E7334;
+            --r-Orange: #E79461;
+            --r-Pink: #F0AFD2;
+            --r-Purple: #917CF0;
+            --r-Red: #CC553D;
+            --r-Yellow: #c1be3e;
+        }
+
+
+        .stroke-blue{stroke: var(--r-Blue) !important ;}
+        .stroke-green{stroke: var(--r-Green) !important ;}
+        .stroke-orange{stroke: var(--r-Orange) !important ;}
+        .stroke-pink{stroke: var(--r-Pink) !important ;}
+        .stroke-purple{stroke: var(--r-Purple) !important ;}
+        .stroke-red{stroke: var(--r-Red) !important ;}
+        .stroke-yellow{stroke: var(--r-Yellow) !important ;}
+        .stroke-background{stroke: var(--r-Background) !important ;}
+        .stroke-foreground{stroke: var(--r-Foreground) !important ;}
+        .stroke-highlight{stroke: var(--r-Highlight) !important ;}
+        .stroke-selection{stroke: var(--r-Selection) !important ;}
+        .fill-blue{fill: var(--r-Blue) !important ;}
+        .fill-green{fill: var(--r-Green) !important ;}
+        .fill-orange{fill: var(--r-Orange) !important ;}
+        .fill-pink{fill: var(--r-Pink) !important ;}
+        .fill-purple{fill: var(--r-Purple) !important ;}
+        .fill-red{fill: var(--r-Red) !important ;}
+        .fill-yellow{fill: var(--r-Yellow) !important ;}
+        .fill-background{fill: var(--r-Background) !important ;}
+        .fill-foreground{fill: var(--r-Foreground) !important ;}
+        .fill-highlight{fill: var(--r-Highlight) !important ;}
+        .fill-selection{fill: var(--r-Selection) !important ;}
+
+        @page {
+            width: 48in;
+            height: 36in;
+            margin: 0;
+        }
+
+        html,
+        body {
+            background:  var(--r-Background);
+        }
+
+        html {
+            font-family: "Roboto";
+            font-size:  26pt;;
+            color: var(--r-Foreground);
+            width: 48in;
+            height: 36in;
+        }
+
+        body {
+            margin: 0;
+            width: 99%;
+            height: 99%;
+            display: grid;
+            grid-gap: 0.25in;
+            grid-template-columns: 60px 60px;
+            padding: 0.25in !important;
+        }
+
+        body {
+            grid-template-areas:
+                
+                    "T H R"
+                
+                    "L H R"
+                
+                    "L H F"
+                ;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 1fr 5fr 1fr;
+        }
+
+        #hero {
+            grid-area: H;
+        }
+
+        #left-bar {
+            grid-area: L;
+        }
+
+        #right-bar {
+            grid-area: R;
+        }
+
+        #title-container {
+            grid-area: T;
+        }
+
+        #references {
+            grid-area: F;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-block-end: 0;
+            font-family: "Roboto Slab", Arial, sans-serif;
+        }
+
+        p {
+            margin-block-start: 0.25rem;
+        }
+
+        pre,
+        pre.sourceCode {
+            font-size: 0.8rem;
+            margin: 1rem 0;
+            padding: 0.5rem 0.5rem;
+        }
+
+        code {
+            font-family: "Source Code Pro", Monaco, monospace;
+        }
+
+        blockquote {
+            font-style: italic;
+            padding-left: 1rem;
+            border-left: .5rem solid  var(--r-Selection);
+            margin-left: 0;
+        }
+
+        sup {
+            font-size: 0.75rem;
+            font-style: normal;
+        }
+
+        #hero {
+            position: relative;
+            background: var(--r-Highlight);
+            color:  var(--r-HeroText);
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            padding: 5%;
+            font-size: 2.5rem;
+        }
+
+        #hero h1 {
+            font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+            padding-top: 5%;
+            font-weight:normal;
+        }
+
+        #hero h1 strong {
+            font-weight: 700;
+        }
+
+        #hero p {
+            padding: 1rem 0;
+        }
+
+        #hero>p:first-of-type {
+            padding-top: 6rem;
+        }
+
+        #qrholder{
+            
+            border: 4px solid var(--r-Foreground);
+            border-radius: .75rem;
+            padding:.75rem;
+            
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            width: 20rem;
+        }
+
+        #qrcode_toplbl, #qrcode_btmlbl{
+            font-size:1.8rem;
+            margin:0 !important;
+        }
+        #qrcode_btmlbl{
+            padding:1rem 0 0 0  !important;
+        }
+        #qrcode_toplbl{
+            padding: 0 0 1rem 0  !important;
+        }
+
+        #title-container {
+            padding: 5% 5% 0 5%;
+            background: none;
+        }
+
+        #title-container .author,
+        #title-container .affiliation {
+            font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+        }
+        #title-container .extra_author{
+            color: var(--r-Selection);
+        }
+
+        #title-container .author {
+            font-style: italic;
+            font-size: 1.25rem;
+        }
+
+        #title-container .affiliation {
+            font-weight: normal;
+        }
+
+        #left-bar {
+            background: none;
+            padding: 0 5%;
+        }
+
+        #right-bar {
+            background: none;
+            padding: 5%;
+        }
+
+        #references {
+            padding: 0 5%;
+        }
+
+        #references p,
+        #references ul,
+        #references ol {
+            font-size: 0.6rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            text-align: left;
+            width: 100%;
+            border: .05rem solid  var(--r-Selection);
+        }
+
+        table thead {
+            background:  var(--r-Selection);
+        }
+
+        table td,
+        table th {
+            padding: .1rem .2rem;
+            font-size: .5rem;
+        }
+
+        table th {
+            border-bottom-width: .1rem;
+        }
+
+
+    #hero{
+            padding-top: 25%;
+            background-image: url(/misc/iowa_logo.svg);
+            background-repeat: no-repeat;
+            background-position: 90% 95%;
+            background-size: 30%;
+        }
+
+        #right-bar {
+            background-image: url();
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 30%;
+        }
+
+        #left-bar {
+            background-image: url(/misc/isa_logo.png);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 40%;
+            margin-bottom: 2%;
+        }
+
+    </style>
+
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    if (typeof MathJax === 'undefined') {
+        MathJax = {
+            loader: {
+                load: ['[img]/img.min.js', '[tex]/color', '[tex]/amscd'],
+                paths: { img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3' }
+            },
+            tex: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+                processEscapes: true,
+                processEnvironments: true,
+                extensions: ["autoload-all.js", "AMSmath.js", "AMSsymbols.js", "AMScd.js"],
+                packages: { '[+]': ['img', 'color', 'amscd'] }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+        MathJax.startup = {
+            ready() {
+                MathJax.startup.defaultReady();
+                MathJax.startup.promise.then(() => {
+                    console.log("Start startup promise");
+
+                    document.querySelectorAll("mjx-container").forEach(function (x) {
+                        x.parentElement.classList += ' has-jax '
+                    })
+
+                    document.querySelectorAll("mjx-container img").forEach((element) => {
+                        var src = element.getAttribute("src");
+                        if (src.endsWith('.svg') == true) {
+                            fetch(src)
+                            .then(res => res.text())
+                            .then(res => {
+                                const holder = document.createElement('div')
+                                holder.style.width = "1em";
+                                holder.style.height = "1em";
+                                holder.innerHTML = res
+                                element.replaceWith(holder)
+                            })
+                        }
+                    });
+
+                    console.log("End startup promise");
+                });
+            }
+        };
+    }
+
+</script>
+
+    
+    <script src="/js/qrcode.min.js"></script>
+</head>
+
+<body cz-shortcut-listen="true">
+
+
+    <div id="title-container">
+        <h1 id="title">
+            <p>How One Graduate Teaching Assistant <strong>Restructured a Course on Teaching Undergraduate Research</strong></p>
+        </h1>
+
+        <h3 >
+            <span id="author" class="author"><strong>Joseph Starr</strong><sup> 1</sup></span>
+
+            
+            <span class="extra_author">Lori Adams<sup>1</sup></span>
+            
+        </h3>
+
+        <p id="affiliation" class="affiliation">
+            
+            <sup>1</sup>The University of Iowa<br />
+            
+        </p>
+    </div>
+
+        
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="hero">
+    <div class="section level1">
+                <!-- Begin Hero -->
+
+
+<h1 class="relative group">Preparing <strong>undergraduate researchers</strong> for graduate school by <strong>developing their instruction</strong>.
+    <div id="preparing-undergraduate-researchers-for-graduate-school-by-developing-their-instruction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#preparing-undergraduate-researchers-for-graduate-school-by-developing-their-instruction" aria-label="Anchor"></a>
+    </span>
+    
+</h1>
+
+    </div>
+    <div id="qrholder">
+        <div id="qrcode_toplbl"></div>
+        <div id="qrcode"></div>
+        <div id="qrcode_btmlbl"></div>
+    </div>
+</div>
+
+<div id="left-bar">
+    
+<!-- Begin Left -->
+
+
+<h2 class="relative group">The course
+    <div id="the-course" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-course" aria-label="Anchor"></a>
+    </span>
+    
+</h2>
+<p>The course, ISA:4040 <em>Teaching Your Undergraduate Research</em> is based on the
+prior work of Hoffmann and Lenoch (Hoffmann &amp; Lenoch, 2013) but reimagined for
+undergraduates engaged in undergraduate research. The course&rsquo;s established goal
+is to provide experience in instructional design and implementation to
+undergraduates whose intention is to continue to graduate school. The course has
+been offered for approximately five years by The Iowa Sciences Academy a
+division of The University of Iowa, whose mission is to support the success of
+undergraduate students interested in research and scientific communication. In
+that time the design of the course has primarily been that of a traditional
+course, relying on lecture and written/oral assignments taking the form of a
+term project. The term project asked students to produce a teaching unit for a
+general audience lesson on the student&rsquo;s own research work. This teaching unit
+design and execution were graded against a common rubric.</p>
+
+
+<h2 class="relative group">The Redesign
+    <div id="the-redesign" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-redesign" aria-label="Anchor"></a>
+    </span>
+    
+</h2>
+<p>The redesigned course adopts modern instructional techniques such as
+a gradual release of responsibility model (Fisher &amp; Frey, 2013) and ungraded
+assessments (Stommel, 2023).</p>
+
+
+<h3 class="relative group">The Design Goals
+    <div id="the-design-goals" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-design-goals" aria-label="Anchor"></a>
+    </span>
+    
+</h3>
+<p>The following goals were established to drive the redesign of the course:</p>
+<ol>
+<li>Students can engage in teaching as a structured activity.</li>
+<li>Students are confident to <strong>&ldquo;go rogue&rdquo;</strong> in their own learning.</li>
+<li>Students acknowledge that failure breeds success.</li>
+</ol>
+
+
+<h3 class="relative group">The Plan: Gradual Release
+    <div id="the-plan-gradual-release" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-plan-gradual-release" aria-label="Anchor"></a>
+    </span>
+    
+</h3>
+<p>The course began with a model lesson presented by the instructor, based on the
+instructor&rsquo;s own research. This was followed by a group discussion where the
+design of the model lesson was unpacked giving a practical example for backward
+design in the wild. This was supplemented with specific readings from
+Understanding by Design (Wiggins &amp; McTighe, 2008). Students were given more
+agency as the course moved to discussion of assessment. In this
+section of the course, students were given specific sources and
+empowered to select their own specific readings. The readings were
+discussed in a structured jigsaw activity where students were guided
+in sharing their learning from their selected readings. Students were then asked
+to prepare and present a five-minute lighting version of their lesson. The final
+section of instructional content was a peer review of drafts of their lesson.
+Students were asked to structure their own review requests where they prompted
+peers for specific feedback relevant to their particular needs. Following the
+main instructional portion of the course each student took fifty minutes each to
+give their lesson including prompting feedback from their peers. After all
+students have completed their lesson, each student conducted a qualitative
+analysis of their peer given feedback. This modeled a complete life
+cycle for course creation for each student.</p>
+
+</div>
+
+<div id="right-bar">
+    
+<!-- Begin Right -->
+
+
+<h3 class="relative group">The Plan: Ungrading
+    <div id="the-plan-ungrading" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-plan-ungrading" aria-label="Anchor"></a>
+    </span>
+    
+</h3>
+<p>The redesigned course has four deliverables for students combined into a
+portfolio. First, students were still expected to create the teaching unit.
+Second is a collection of the students&rsquo; design documentation detailing the
+evolution of the goals and design of their lesson throughout the
+semester. Students are presented with a backward design and
+encouraged to utilize it in their design process. As they moved
+through the course activities they were invited to change their
+minds, <strong>&ldquo;go rogue&rdquo;</strong>, and retain the artifacts of their evolving work.
+Third, is a collection of reflections on supplemental work. These supplemental
+assignments were designed and selected by the student. These included but was not
+limited to; literature reviews of teaching research, substantive extensions of
+their teaching unit, or self-determined mini-projects impacting their
+development in teaching. The final item in the portfolio is a collection of
+peer observation prompts and responses written and analyzed by the student.
+The redesigned course moves away from a unified rubric and adopts a concept of
+ungrading built from the ideas of Jesse Stommel (Stommel, 2023) as well as
+discussions with practitioners who have implemented similar methods. The ISA:4040
+upgrading strategy fits closely the professional one-to-one and
+performance review paradigm. Students were required to attend office hour
+one-to-ones with a minimum once a month plus once on the week before they teach,
+but were encouraged to attend office hours as frequently as desired.
+During these meetings the students&rsquo; personal course objectives were
+discussed, agreed on, and progress evaluated. The semester culminated
+with a performance review where the portfolio is reviewed, and a
+course retrospective establishes a grade against the agreed on course
+objectives.</p>
+
+
+<h2 class="relative group">The Research
+    <div id="the-research" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-research" aria-label="Anchor"></a>
+    </span>
+    
+</h2>
+<p>As a portion of a more extensive scholarly review of the
+<em>Teaching Your Undergraduate Research</em> course paradigm data was collected on
+experience of students in this course. Data was collected from students (n=7)
+during interviews which were conducted during final retrospective meetings.</p>
+
+
+<h3 class="relative group">The Interview
+    <div id="the-interview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-interview" aria-label="Anchor"></a>
+    </span>
+    
+</h3>
+<p>The interview was structured with a standardized question set which addressed
+the following areas of interest:</p>
+<ol>
+<li>General Experience</li>
+<li>Teaching Unit Development</li>
+<li>Learning Outcomes</li>
+<li>Feedback and Revision</li>
+<li>Impact of Grading Methods</li>
+<li>Broader Benefits</li>
+</ol>
+
+
+<h3 class="relative group">Preliminary Report
+    <div id="preliminary-report" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#preliminary-report" aria-label="Anchor"></a>
+    </span>
+    
+</h3>
+<p>Data is still being processed as such only preliminary results are presented
+here. Student feedback during touchpoints indicates an increase apperception
+for the intricacies of instruction as well as increased confidence in students'
+self-identification as an instructor. Ungrading, seems to have allowed for
+students to decouple the failure of an aspect of their preparation from the
+students&rsquo; failure in the course.</p>
+<p>Overall, the gradual release and ungrading models were successful for this
+small group of undergraduates. Extending these ideas to other course sections
+would provide additional broader data that would help us disaggregate data
+across several subgroups of students. We will continue using these instructional
+strategies and look for others that will help support our three goals.</p>
+
+</div>
+<div id="references" class="section level1 unnumbered">
+    <h1>References</h1>
+    
+<!-- Begin References -->
+<p>Fisher, D., &amp; Frey, N. (2013). Better Learning Through Structured Teaching: A Framework for the Gradual Release of Responsibility. ASCD.</p>
+<p>Hoffmann, D., &amp; Lenoch, S. (2013). Teaching Your Research: A Workshop to Teach Curriculum Design to Graduate Students and Post-doctoral Fellows. Medical Science Educator, 23(3), 336-345.</p>
+<p>Stommel, J. (2023). Undoing the Grade: Why We Grade, and How to Stop. Hybrid Pedagogy Inc..</p>
+<p>Wiggins, G., &amp; McTighe, J. (2008). Understanding by Design. Association for Supervision and Curriculum Development.</p>
+
+</div>
+
+
+
+
+    <script type="text/javascript">
+        (function () {
+            
+                els = document.getElementsByTagName('a');
+                for (i = 0; i < els.length; i++) {
+                    el = els[i];
+                    if (el.getAttribute('href') === el.innerText) el.style.wordBreak = 'break-all';
+                }
+            })();
+    </script>
+
+
+    <script type="text/javascript">
+        var width = document.getElementById('qrholder').offsetWidth;
+        var style = window.getComputedStyle(document.body)
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            width : width*.9,
+            height : width*.9,
+            useSVG: true,
+            colorDark : style.getPropertyValue("--r-HeroText"),
+            colorLight : style.getPropertyValue("--r-Highlight"),
+            correctLevel : QRCode.CorrectLevel.H
+        });
+
+        function makeCode () {
+            var elText = document.getElementById("text");
+
+            qrcode.makeCode("https://joe-starr.com/resources/course_plans/");
+            var tl = "";
+            var bl = "Follow the QR code for lesson plans and resource.";
+
+            if ( tl != "") {
+                var element = document.querySelector("#qrcode_toplbl");
+                const holder_tl = document.createElement('p')
+                holder_tl.innerHTML = tl;
+                holder_tl.setAttribute("id", "qrcode_toplbl");
+                element.replaceWith(holder_tl)
+            }
+            if ( bl != "") {
+                var element = document.querySelector("#qrcode_btmlbl");
+                const holder_bl = document.createElement('p')
+                holder_bl.innerHTML = bl;
+                holder_bl.setAttribute("id", "qrcode_btmlbl");
+                element.replaceWith(holder_bl)
+            }
+
+        }
+
+        makeCode();
+    </script>
+
+
+
+
+</body>
+
+</html>

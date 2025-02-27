@@ -13,16 +13,20 @@ share: false
 
 {{< mathjax_preamble >}}
 
-**Please visit GitHub for the course design documents. You can find the README below.**
+## Here's a button to take you to the materials as pdf and zip files
 
 {{< button href="https://github.com/Joecstarr/MfaCoTUR/releases/" target="_self" >}}
-Click me to go to the latest release!
+Click me to go to the page where you can download the materials!
 {{< /button >}}
 
 ---
 
+## Here's a link to the main page of the GitHub repository
+
 {{< github repo="Joecstarr/MfaCoTUR" >}}
 
 ---
+
+##  Here's a link the README of the GitHub repository
 
 {{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoTUR/main/README.md" >}}

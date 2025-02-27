@@ -14,8 +14,12 @@ share: false
 {{< mathjax_preamble >}}
 
 
+**Please visit GitHub for the course design documents. You can find the README below.**
+
+---
+
 {{< github repo="Joecstarr/MfaCoBPM" >}}
 
-$$\ $$
+---
 
-{{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoBPM/refs/heads/main/README.md" >}}
+{{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoBPM/main/README.md" >}}

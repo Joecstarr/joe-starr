@@ -13,9 +13,12 @@ share: false
 
 {{< mathjax_preamble >}}
 
+**Please visit GitHub for the course design documents. You can find the README below.**
+
+---
 
 {{< github repo="Joecstarr/MfaCoTUR" >}}
 
-$$\ $$
+----
 
-{{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoTUR/refs/heads/main/README.md" >}}
+{{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoTUR/main/README.md" >}}

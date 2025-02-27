@@ -15,10 +15,14 @@ share: false
 
 **Please visit GitHub for the course design documents. You can find the README below.**
 
+{{< button href="https://github.com/Joecstarr/MfaCoTUR/releases/" target="_self" >}}
+Click me to go to the latest release!
+{{< /button >}}
+
 ---
 
 {{< github repo="Joecstarr/MfaCoTUR" >}}
 
-----
+---
 
 {{< mdimporter url="https://raw.githubusercontent.com/Joecstarr/MfaCoTUR/main/README.md" >}}

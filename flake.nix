@@ -38,6 +38,7 @@
           curl
           zip
           decktape
+          tailwindcss
         ];
         shellHook = ''
           wget -q --spider https://google.com

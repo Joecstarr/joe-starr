@@ -29,3 +29,6 @@ run:  clean
 pdf type="research" presentation="comp_talk" resolution="1920x1080":
     decktape -s {{resolution}} --load-pause 10000 http://localhost:1313/speaking/{{type}}/{{presentation}} {{presentation}}_presentation_{{resolution}}.pdf
 
+# Compile tailwind css
+update-tailwind:
+	tailwindcss -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit

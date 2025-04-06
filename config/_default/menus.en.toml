@@ -63,6 +63,17 @@ parent = "Speaking"
 pageRef = "speaking/posters"
 weight = 80
 
+[[main]]
+name = "Misc"
+pageRef = "Misc"
+weight = 80
+
+[[main]]
+name = "Ducks"
+parent = "Misc"
+pageRef = "misc/ducks"
+weight = 80
+
 #[[main]]
 #  name = "Blog"
 #  pageRef = "posts"

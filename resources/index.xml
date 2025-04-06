@@ -8,6 +8,7 @@
     <language>en</language>
     <copyright>© 2025 Joe Starr</copyright>
     <lastBuildDate>Mon, 10 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/resources/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Continued Fraction and Twist Vector Converter</title>
       <link>https://joe-starr.com/resources/cont_frac_convert/</link>
@@ -24,7 +25,7 @@
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://joe-starr.com/resources/toolchain/</guid>
-      <description>PC Typesetting Core tool is vscode here are my settings</description>
+      <description></description>
       
     </item>
     
@@ -34,7 +35,7 @@
       <pubDate>Tue, 30 May 2023 17:09:26 +0000</pubDate>
       
       <guid>https://joe-starr.com/resources/grid_to_front_projection/</guid>
-      <description>`$\newcommand{\N}{\mathbb{N}} \newcommand{\Z}{\mathbb{Z}} \newcommand{\Q}{\mathbb{Q}} \newcommand{\R}{\mathbb{R}} \newcommand{\LP}{\left(} \newcommand{\RP}{\right)} \newcommand{\LS}{\left\lbrace} \newcommand{\RS}{\right\rbrace} \newcommand{\LA}{\left\langle} \newcommand{\RA}{\right\rangle} \newcommand{\LB}{\left[} \newcommand{\RB}{\right]} \newcommand{\MM}{\ \middle|\ } \newcommand{\exp}{\text{exp}} \newcommand{\abs}[1]{\left\vert#1\right\vert} \newcommand{\msr}[1]{m\left(#1\right)} \newcommand{\inv}[1]{#1^{-1}} \newcommand{\bkt}[1]{\LA \img{#1}\RA} \require{color}$`s Instructions Create a $n\times n$ table by setting the size and pressing the button.</description>
+      <description></description>
       
     </item>
     
@@ -44,7 +45,7 @@
       <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
       
       <guid>https://joe-starr.com/resources/analysis_prepsheet/</guid>
-      <description>A prepsheet/card deck for preparing for my analysis qual</description>
+      <description></description>
       
     </item>
     

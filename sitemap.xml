@@ -57,6 +57,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://joe-starr.com/misc/ducks/</loc>
+    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://joe-starr.com/speaking/posters/rume_25/</loc>
     <lastmod>2025-02-27T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -203,6 +209,12 @@
   <url>
     <loc>https://joe-starr.com/speaking/misc/discrete_morse_theory/</loc>
     <lastmod>2022-10-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/</loc>
+    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

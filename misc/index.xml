@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Joe Starr</title>
+    <link>https://joe-starr.com/misc/</link>
+    <description>Recent content on Joe Starr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Joe Starr</copyright>
+    <lastBuildDate>Tue, 07 Jan 2020 17:09:26 +0000</lastBuildDate><atom:link href="https://joe-starr.com/misc/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Rubber Ducks</title>
+      <link>https://joe-starr.com/misc/ducks/</link>
+      <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/ducks/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

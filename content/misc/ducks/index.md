@@ -21,7 +21,7 @@ stuck on a tricky bug, grab a rubber duck and start talking!
 
 This is my collection of rubber ducks, currently standing at 121 ducks.
 
-Photo credit Valeria Reyna
+Photo credit Valeria Reyna.
 
 {{< gallery >}}
 <img src="/ducks/IMG_1584.JPEG" class="grid-w50 md:grid-w33 xl:grid-w25" />

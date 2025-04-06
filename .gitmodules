@@ -1,3 +1,9 @@
 [submodule "themes/blowfish"]
 	path = themes/blowfish
-	url = https://github.com/Joecstarr/blowfish.git
+	url = https://github.com/nunocoracao/blowfish.git
+[submodule "themes/hugo-simplecite"]
+	path = themes/hugo-simplecite
+	url = https://github.com/joksas/hugo-simplecite
+[submodule "static/ducks"]
+	path = static/ducks
+	url = https://github.com/Joecstarr/ducks.git

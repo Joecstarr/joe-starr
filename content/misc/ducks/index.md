@@ -24,7 +24,9 @@ This is my collection of rubber ducks, currently standing at 121 ducks.
 Photo credit Valeria Reyna.
 
 {{< gallery >}}
-<img src="/ducks/IMG_1584.JPEG" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="/ducks/IMG_1758.jpeg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="/ducks/IMG_1757.jpeg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="/ducks/IMG_1756.jpeg" class="grid-w50 md:grid-w33 xl:grid-w25" />
 <img src="/ducks/IMG_1585.JPEG" class="grid-w50 md:grid-w33 xl:grid-w25" />
 <img src="/ducks/IMG_1586.JPEG" class="grid-w50 md:grid-w33 xl:grid-w25" />
 <img src="/ducks/IMG_1587.JPEG" class="grid-w50 md:grid-w33 xl:grid-w25" />

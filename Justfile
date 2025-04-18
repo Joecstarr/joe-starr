@@ -32,3 +32,9 @@ pdf type="research" presentation="comp_talk" resolution="1920x1080":
 # Compile tailwind css
 update-tailwind:
 	tailwindcss -c ./themes/blowfish/tailwind.config.js -i ./themes/blowfish/assets/css/main.css -o ./assets/css/compiled/main.css --jit
+
+check-prettier:
+    prettier "content/**/*.md" --check
+
+do-prettier:
+    prettier -w "content/**/*.md"

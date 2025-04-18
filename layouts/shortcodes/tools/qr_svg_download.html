@@ -1,0 +1,226 @@
+{{ $qrjs := resources.Get "js/qrcode.min.js" }}
+<script src="{{ $qrjs.RelPermalink }}"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+<style>
+    .generator {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .controls {
+        display: block;
+    }
+
+    th,
+    td {
+        border: 1px solid #6272a4;
+        border-collapse: collapse;
+    }
+
+    table-container table {
+        margin: 20px auto;
+        padding: 0;
+        background-color: #44475a;
+        border-radius: 5px;
+    }
+
+
+    table-container td {
+        padding: 15px;
+        text-align: center;
+        color: #ffb86c;
+        font-family: monospace;
+    }
+
+    .example {
+        flex-shrink: 0;
+        margin-bottom: 30px;
+    }
+
+    .clr-field {
+        display: inline-block;
+        position: relative;
+        color: transparent;
+    }
+
+    .field {
+        display: inline-block;
+        position: relative;
+    }
+
+    .full .clr-field button {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .clr-field input {
+        margin: 0;
+        direction: ltr;
+    }
+
+    .field input {
+        margin: 0;
+        direction: ltr;
+    }
+
+    input {
+        width: 150px;
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        box-sizing: border-box;
+        background: #44475a !important;
+    }
+
+    .button,
+    .convert,
+    .download {
+        margin-top: 15px;
+        padding: 9px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #bd93f9;
+        color: #44475a;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        transition: transform .1s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+    }
+
+    .convert,
+    .download {
+        width: 100%;
+    }
+
+    .table-placeholder {
+        max-width: 500px;
+        width: 100%;
+        margin: 20px auto;
+
+        &.hidden {
+            display: none;
+        }
+
+        &__row {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    &__item {
+        max-width: 150px;
+        width: 100%;
+        height: 36px;
+        margin: 2px;
+        background: #44475a;
+        border-radius: 5px;
+    }
+
+
+    table-container c {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 30vw;
+        max-height: 30vh;
+    }
+
+    #svg-container svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    #qrholder {
+        border: 4px solid var(--r-Foreground);
+        border-radius: .75rem;
+        padding: .75rem;
+        width: 20rem;
+    }
+</style>
+
+
+
+<div id="table-container">
+
+    <section class="controls">
+    </section>
+
+    <div class=" flex flex-wrap flex-col">
+        <div class="example shrink grow">
+            <p>URL:</p>
+            <input id="tblsize" class="size" type="string">
+            <button id="createtbl" class="button">Create qr code</button>
+        </div>
+
+        <div class="example shrink grow">
+            <div>
+                <p>Foreground color:</p>
+                <div class="clr-field" style="color: #000000; " data-darkreader-inline-color=""><button
+                        type="button" aria-labelledby="clr-open-label"></button><input type="text"
+                        value="#000000" id="fcolordata" data-coloris=""></div>
+            </div>
+            <div>
+                <p>Background color:</p>
+                <div class="clr-field " style="color: #ffffff; " data-darkreader-inline-color=""><button type="button"
+                        aria-labelledby="clr-open-label"></button><input type="text" id="bcolordata" value="#ffffff"
+                        data-coloris=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="qrholder">
+</div>
+
+<button class="download">Download</button>
+
+
+<script type="text/javascript">
+    document.querySelector('.download').addEventListener('click', () => {
+        var elText = document.getElementById("tblsize").value;
+        const svg = document.querySelector('#qrholder').innerHTML;
+        const blob = new Blob([svg.toString()]);
+        const element = document.createElement("a");
+        element.download = elText + ".svg";
+        element.href = window.URL.createObjectURL(blob);
+        element.click();
+        element.remove();
+    });
+</script>
+<script type="text/javascript">
+
+    function makeCode() {
+        var elText = document.getElementById("tblsize").value;
+        var svg = document.getElementById('qrholder')
+
+        var fcolor = document.getElementById('fcolordata').value
+        var bcolor = document.getElementById('bcolordata').value
+        svg.appendChild(new QRCode({
+            msg: elText
+            , dim: 300,
+            pad: 1
+            , mtx: -1
+            , ecl: "H"
+            , ecb: 1
+            , pal: [fcolor, bcolor]
+            , vrb: 0
+        }));
+    }
+
+    document.getElementById("createtbl").addEventListener('click', () => {
+        makeCode();
+    });
+</script>

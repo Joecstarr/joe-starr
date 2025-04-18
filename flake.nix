@@ -3,16 +3,19 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-hugo.url = "nixpkgs/63158b9cbb6ec93d26255871c447b0f01da81619";
   };
 
   outputs =
-    { self
-    , nixpkgs
-    ,
+    {
+      self,
+      nixpkgs,
+      nixpkgs-hugo,
     }:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      pkgs-hugo = nixpkgs-hugo.legacyPackages.${system};
     in
     {
 
@@ -21,24 +24,25 @@
           autoPatchelfHook
         ];
 
-        buildInputs = with pkgs; [
-          jq
-          nodejs
-          hugo
-           uv
-          just
-          ruff
-          git
-          libxml2
-          libxslt
-          act
-          inkscape
-          chromium
-          svg2pdf
-          curl
-          zip
-          decktape
-          tailwindcss
+        buildInputs = [
+          pkgs.jq
+          pkgs-hugo.hugo
+          pkgs.uv
+          pkgs.just
+          pkgs.ruff
+          pkgs.git
+          pkgs.libxml2
+          pkgs.libxslt
+          pkgs.act
+          pkgs.inkscape
+          pkgs.chromium
+          pkgs.svg2pdf
+          pkgs.curl
+          pkgs.zip
+          pkgs.decktape
+          pkgs.tailwindcss
+          pkgs.nodejs
+          pkgs.nodePackages.prettier
         ];
         shellHook = ''
           wget -q --spider https://google.com

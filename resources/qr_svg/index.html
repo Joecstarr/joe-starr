@@ -13985,6 +13985,7 @@ the qr code works and download it with the download button.</p>
 
         var fcolor = document.getElementById('fcolordata').value
         var bcolor = document.getElementById('bcolordata').value
+        svg.innerHTML = "";
         svg.appendChild(new QRCode({
             msg: elText
             , dim: 300,
@@ -14001,6 +14002,7 @@ the qr code works and download it with the download button.</p>
         makeCode();
     });
 </script>
+
 <hr>
 
           

@@ -188,6 +188,10 @@
             left: 5%;
             width: 20rem;
         }
+        #svgholder > svg{
+            height:100% !important;
+            width:100% !important;
+        }
 
         #qrcode_toplbl, #qrcode_btmlbl{
             font-size:1.8rem;
@@ -409,7 +413,7 @@
     </div>
     <div id="qrholder">
         <div id="qrcode_toplbl"></div>
-        <div id="qrcode"></div>
+        <div id="svgholder"></div>
         <div id="qrcode_btmlbl"></div>
     </div>
 </div>
@@ -640,38 +644,47 @@ strategies and look for others that will help support our three goals.</p>
 
 
     <script type="text/javascript">
-        var width = document.getElementById('qrholder').offsetWidth;
-        var style = window.getComputedStyle(document.body)
-        var qrcode = new QRCode(document.getElementById("qrcode"), {
-            width : width*.9,
-            height : width*.9,
-            useSVG: true,
-            colorDark : style.getPropertyValue("--r-HeroText"),
-            colorLight : style.getPropertyValue("--r-Highlight"),
-            correctLevel : QRCode.CorrectLevel.H
-        });
 
         function makeCode () {
-            var elText = document.getElementById("text");
 
-            qrcode.makeCode("https://joe-starr.com/resources/course_plans/");
-            var tl = "";
-            var bl = "Follow the QR code for lesson plans and resource.";
 
-            if ( tl != "") {
-                var element = document.querySelector("#qrcode_toplbl");
-                const holder_tl = document.createElement('p')
-                holder_tl.innerHTML = tl;
-                holder_tl.setAttribute("id", "qrcode_toplbl");
-                element.replaceWith(holder_tl)
-            }
-            if ( bl != "") {
-                var element = document.querySelector("#qrcode_btmlbl");
-                const holder_bl = document.createElement('p')
-                holder_bl.innerHTML = bl;
-                holder_bl.setAttribute("id", "qrcode_btmlbl");
-                element.replaceWith(holder_bl)
-            }
+        var width = document.getElementById('qrholder').offsetWidth;
+        var style = window.getComputedStyle(document.body)
+        var elText = "https://joe-starr.com/resources/course_plans/";
+        var svg = document.getElementById('svgholder')
+
+        var tl = "";
+        var bl = "Follow the QR code for lesson plans and resource.";
+
+        if ( tl != "") {
+            var element = document.querySelector("#qrcode_toplbl");
+            const holder_tl = document.createElement('p')
+            holder_tl.innerHTML = tl;
+            holder_tl.setAttribute("id", "qrcode_toplbl");
+            element.replaceWith(holder_tl)
+        }
+
+        if ( bl != "") {
+            var element = document.querySelector("#qrcode_btmlbl");
+            const holder_bl = document.createElement('p')
+            holder_bl.innerHTML = bl;
+            holder_bl.setAttribute("id", "qrcode_btmlbl");
+            element.replaceWith(holder_bl)
+        }
+
+        svg.appendChild(new QRCode({
+            msg: elText,
+            dim: 1000,
+            pad: 1,
+            mtx: -1,
+            ecl: "H",
+            ecb: 1,
+            pal: [
+                style.getPropertyValue("--r-HeroText"),
+                style.getPropertyValue("--r-Highlight")
+                ],
+            vrb: 0
+        }));
 
         }
 

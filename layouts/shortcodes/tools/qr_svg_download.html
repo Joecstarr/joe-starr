@@ -208,6 +208,7 @@
 
         var fcolor = document.getElementById('fcolordata').value
         var bcolor = document.getElementById('bcolordata').value
+        svg.innerHTML = "";
         svg.appendChild(new QRCode({
             msg: elText
             , dim: 300,

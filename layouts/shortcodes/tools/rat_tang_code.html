@@ -1,0 +1,269 @@
+<style>
+    body {
+        font-family: 'Verdana';
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 9px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #bd93f9;
+        color: #44475a;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        width: 100%;
+        transition: transform .1s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+    }
+
+    svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    input[type=text] {
+        appearance: none;
+        border: none;
+        outline: none;
+        border-bottom: .2em solid #6272a4;
+        background: rgba(#6272a4, .2);
+        border-radius: .2em .2em 0 0;
+        color: #6272a4;
+        width: 100%;
+    }
+
+    #svg-container {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 30vw;
+        max-height: 30vh;
+    }
+</style>
+
+
+
+<div>
+    <section class="controls">
+        <label>
+            Twist Vector :
+            <input id="twist_vector_input" type="text">
+        </label>
+    </section>
+</div>
+<button id="draw">Draw Twist Vector</button>
+<div id="svg-container"></div>
+<button id="download">Download</button>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+<script type="text/javascript">
+    class Segment {
+        constructor() {
+            this.source = [null, null]
+            this.sink = [null, null]
+        }
+        isNull = () => {
+            for (var i = 0; i < this.source.length; i++) {
+                if (this.source[i] == null) {
+                    return true
+                }
+            }
+            for (var i = 0; i < this.sink.length; i++) {
+                if (this.sink[i] == null) {
+                    return true
+                }
+            }
+            return false
+        }
+
+    }
+    class Drawer {
+        constructor(imgSelector, tableSelector,) {
+            this.tableObj = document.querySelector(tableSelector)
+            SVG().clear(imgSelector)
+            this.eccentricity = 0.4
+            this.crossing_color = "#ffffff"
+            this.string_color = "#000000"
+            this.tv = []
+            this.stroke_width = 0.5
+            this.gridsize = 1
+            this.crossing_grid = 15
+            this.__parse_tv()
+            this.draw = SVG().addTo(imgSelector)
+            this.draw.viewbox({
+                x: 0, y: 0,
+                width: this.gridsize,
+                height: this.gridsize
+            })
+            this.draw.size(10 * this.gridsize, 10 * this.gridsize)
+
+            this.segments = []
+        }
+        __parse_tv = () => {
+            this.tv = this.tableObj.value.split(" ").map(Number)
+            var crossing_num = this.tv.reduce((a, b) => a + b, 0)
+            this.gridsize = (this.crossing_grid + 1) * crossing_num
+        }
+
+        __segment_str = (step) => {
+            var delta_x = step.sink[0] - step.source[0]
+            var x_ctr1 = step.source[0] + (this.eccentricity * delta_x)
+            var x_ctr2 = step.sink[0] - (this.eccentricity * delta_x)
+
+            var path = "M"
+            path += step.source[0] + "," + step.source[1]
+            path += " C"
+            path += x_ctr1 + "," + step.source[1] + "," + x_ctr2 + "," + step.sink[1] + "," + step.sink[0] + "," + step.sink[1]
+
+            return path
+        }
+
+        __draw_strand = (parent_group, step) => {
+            var path_str = this.__segment_str(step)
+            var path = parent_group.path(path_str)
+            path.stroke({ color: this.crossing_color, width: this.stroke_width * 2 })
+            path.plot()
+            var path = parent_group.path(path_str)
+            path.plot()
+        }
+
+        __draw_crossing = (parent_group, trans_x, is_hor = false) => {
+
+            var crossing_group = parent_group.group()
+            crossing_group.transform({
+                translateX: trans_x
+            })
+
+            var step1 = new Segment()
+            step1.source = [0, 0]
+            step1.sink = [this.crossing_grid, this.crossing_grid]
+
+            var step2 = new Segment()
+            step2.source = [0, this.crossing_grid]
+            step2.sink = [this.crossing_grid, 0]
+
+            if (is_hor) {
+                this.__draw_strand(crossing_group, step2)
+                this.__draw_strand(crossing_group, step1)
+            }
+            else {
+                this.__draw_strand(crossing_group, step1)
+                this.__draw_strand(crossing_group, step2)
+            }
+
+
+        }
+
+        __draw_integral = (parent_group, crossing_num, is_hor = false) => {
+            for (var i = 0; i < crossing_num; i++) {
+                var integral_group = parent_group.group()
+                if (is_hor) {
+                    integral_group.transform({
+                        rotate: 90,
+                        translateX: this.crossing_grid,
+                    })
+                    this.__draw_crossing(integral_group, i * this.crossing_grid, true)
+                }
+                else {
+                    this.__draw_crossing(integral_group, i * this.crossing_grid)
+                }
+            }
+        }
+
+        generate = () => {
+
+            var offset_x = this.crossing_grid
+            var offset_y = this.crossing_grid
+
+            for (var i = 0; i < this.tv.length; i++) {
+
+                var outer_integral_group = this.draw.group()
+                outer_integral_group.attr('fill', "none")
+                outer_integral_group.attr('stroke-width', this.stroke_width)
+                outer_integral_group.attr('stroke', this.string_color)
+
+                if (i % 2 == 0) {
+
+                    outer_integral_group.transform({
+                        translateX: offset_x,
+                        translateY: offset_y,
+                    })
+
+                    this.__draw_integral(outer_integral_group, this.tv[i], false)
+
+                    if (i > 0) {
+                        var step = new Segment()
+                        step.source = [-this.crossing_grid, -this.crossing_grid*2]
+                        step.sink = [0, 0]
+
+                        this.__draw_strand(outer_integral_group, step)
+
+                        var step = new Segment()
+                        step.source = [-this.crossing_grid, -this.crossing_grid]
+                        step.sink = [0, this.crossing_grid]
+
+                        this.__draw_strand(outer_integral_group, step)
+                    }
+
+                    offset_x = (offset_x + this.tv[i] * this.crossing_grid) / 2
+                    offset_y = offset_y + (i + 2) * this.crossing_grid
+
+                }
+                else {
+                    outer_integral_group.transform({
+                        translateX: offset_x,
+                        translateY: offset_y,
+                    })
+
+                    this.__draw_integral(outer_integral_group, this.tv[i], true)
+
+
+                    var step = new Segment()
+                    step.source = [-(this.tv[i] / 2), -offset_x]
+                    step.sink = [0, 0]
+
+                    this.__draw_strand(outer_integral_group, step)
+
+                    var step = new Segment()
+                    step.source = [-(this.tv[i] / 2), -offset_x]
+                    step.sink = [this.crossing_grid, 0]
+
+                    this.__draw_strand(outer_integral_group, step)
+
+                    offset_x = offset_x + (i + 1.5) * this.crossing_grid
+                }
+            }
+        }
+
+    }
+
+
+    document.querySelector('#draw').addEventListener('click', () => {
+        drawer = new Drawer('#svg-container', '#twist_vector_input')
+        drawer.generate()
+    });
+</script>
+<script type="text/javascript">
+
+    document.querySelector('#download').addEventListener('click', () => {
+        function uuidv4() {
+            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+                (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+            );
+        }
+        const svg = document.querySelector('#svg-container').innerHTML;
+        const blob = new Blob([svg.toString()]);
+        const element = document.createElement("a");
+        element.download = uuidv4() + ".svg";
+        element.href = window.URL.createObjectURL(blob);
+        element.click();
+        element.remove();
+    });
+</script>

@@ -1,0 +1,25 @@
+{{ $filepath := "/static/ducks" }}
+{{ $files    := readDir $filepath }}
+{{ $ext := default "-" (.Get "type" )}}
+{{ if (fileExists $filepath)}}
+
+{{ range readDir $filepath }}
+{{- if hasSuffix .Name ".jpg" -}}
+{{ $imgURL := print "ducks/" .Name | absURL }}
+<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
+{{- end -}}
+{{- if hasSuffix .Name ".jpeg" -}}
+{{ $imgURL := print "ducks/" .Name | absURL }}
+<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
+{{- end -}}
+{{- if hasSuffix .Name ".JPEG" -}}
+{{ $imgURL := print "ducks/" .Name | absURL }}
+<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
+{{- end -}}
+{{- if hasSuffix .Name ".png" -}}
+{{ $imgURL := print "ducks/" .Name | absURL }}
+<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
+{{- end -}}
+{{ end }}
+
+{{end}}

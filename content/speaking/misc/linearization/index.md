@@ -1,8 +1,8 @@
 ---
 
-title: "Knots in Washington 50"
+title: "Linearization"
 date: "2024-12-07"
-summary: "Talk given at the Knots in Washington 50 conference"
+summary: ""
 tags: [
     "Talks",'research talks'
 ]

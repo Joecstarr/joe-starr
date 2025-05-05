@@ -24,4 +24,4 @@ ducks.
 
 Photo credit Valeria Reyna.
 
-{{< gallery >}} {{< ducks >}} {{< /gallery >}}
+{{< ducks >}}

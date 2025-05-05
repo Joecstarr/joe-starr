@@ -3,23 +3,80 @@
 {{ $ext := default "-" (.Get "type" )}}
 {{ if (fileExists $filepath)}}
 
-{{ range readDir $filepath }}
-{{- if hasSuffix .Name ".jpg" -}}
-{{ $imgURL := print "ducks/" .Name | absURL }}
-<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
-{{- end -}}
-{{- if hasSuffix .Name ".jpeg" -}}
-{{ $imgURL := print "ducks/" .Name | absURL }}
-<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
-{{- end -}}
-{{- if hasSuffix .Name ".JPEG" -}}
-{{ $imgURL := print "ducks/" .Name | absURL }}
-<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
-{{- end -}}
-{{- if hasSuffix .Name ".png" -}}
-{{ $imgURL := print "ducks/" .Name | absURL }}
-<img src="{{ $imgURL }}" class="grid-w50 md:grid-w33 xl:grid-w25" />
-{{- end -}}
-{{ end }}
+<h1 style="margin:auto;text-align:center;padding-bottom:4vh;">Duck of the day!</h1>
+<div id="duck_of_the_day" ></div>
+
+<h1 style="margin:auto;text-align:center;padding-top:10vh;">Ducks on the pond!</h1>
+<div id="duck_pond"class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
+<!-- start randomimage -->
+<script>
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array
+        }
+
+
+        function hasImageExtension(path) {
+            if (!path || typeof path !== 'string') {
+            return false;
+            }
+
+            const lowerCasePath = path.toLowerCase();
+            return /\.(jpg|jpeg|png|gif|bmp|webp)$/.test(lowerCasePath);
+        }
+
+        async function sha256(message) {
+            // encode as UTF-8
+            const msgBuffer = new TextEncoder().encode(message);
+
+            // hash the message
+            const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+
+            // convert ArrayBuffer to Array
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+            // convert bytes to hex string
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            return parseInt(hashHex, 16);
+        }
+
+        var files = [
+        {{ range readDir $filepath }}{{ print "ducks/" .Name | absURL }},
+        {{end}}
+        ];
+
+        var images = files.filter(file => hasImageExtension(file) === true);
+        var shuffled = files.filter(file => hasImageExtension(file) === true);
+
+
+        shuffleArray(shuffled).forEach(image => {
+            const ducks = document.getElementById('duck_pond')
+            const img2 = document.createElement('img');
+            const div = document.createElement('img');
+            img2.src = image;
+            img2.classList.add('h-auto');
+            img2.classList.add('max-w-full');
+            img2.classList.add('rounded-lg');
+            ducks.appendChild(img2)
+        })
+        const today = new Date().toISOString().slice(0, 10);;
+
+        sha256(today).then(function(result) {
+            const ducks = document.getElementById('duck_of_the_day')
+            const img2 = document.createElement('img');
+            img2.classList.add('h-auto');
+            img2.classList.add('max-w-50');
+            img2.classList.add('w-1/2');
+            img2.classList.add('m-auto');
+            img2.classList.add('rounded-lg');
+            img2.src = images[result % images.length];
+
+            ducks.appendChild(img2)
+        })
+</script>
+<!-- end randomimage -->
 
 {{end}}

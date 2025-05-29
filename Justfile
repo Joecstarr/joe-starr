@@ -23,7 +23,7 @@ clean:
     hugo mod clean
     rm -fr build_dir
 
-run:  clean
+live:  clean
     hugo server --navigateToChanged -DF -d build_dir --logLevel debug
 
 pdf type="research" presentation="comp_talk" resolution="1920x1080":

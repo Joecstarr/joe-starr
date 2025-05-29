@@ -7,12 +7,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Joe Starr</copyright>
-    <lastBuildDate>Tue, 07 Jan 2020 17:09:26 +0000</lastBuildDate><atom:link href="https://joe-starr.com/teaching/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Jan 2025 17:09:26 +0000</lastBuildDate><atom:link href="https://joe-starr.com/teaching/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ISA:1040 Entering Research</title>
+      <link>https://joe-starr.com/teaching/isa1040/</link>
+      <pubDate>Tue, 07 Jan 2025 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/teaching/isa1040/</guid>
+      <description>This seminar series is designed to support success and professional development of students in science majors who are affiliated with the Iowa Sciences Academy.</description>
+      
+    </item>
+    
+    <item>
+      <title>ISA:4040 Teaching Your Undergraduate Research</title>
+      <link>https://joe-starr.com/teaching/isa4040/</link>
+      <pubDate>Tue, 07 Jan 2025 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/teaching/isa4040/</guid>
+      <description>Scientific teaching principles (e.g., backwards design, active learning, formative assessment)</description>
+      
+    </item>
+    
+    <item>
+      <title>ISA:4041 Senior Capstone Project</title>
+      <link>https://joe-starr.com/teaching/isa4041/</link>
+      <pubDate>Tue, 07 Jan 2025 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/teaching/isa4041/</guid>
+      <description>Structure for development, planning, and implementation of a culminating project for the Iowa Sciences Academy</description>
+      
+    </item>
+    
+    <item>
+      <title>MATH:5760 Mathematical Biology II (Module 6: Machine Learning)</title>
+      <link>https://joe-starr.com/teaching/math5760/</link>
+      <pubDate>Sun, 07 Jan 2024 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/teaching/math5760/</guid>
+      <description>Topics in mathematical biology; canonical mathematical modeling and analysis of problems in the biological sciences; second of a two-semester sequence.</description>
+      
+    </item>
     
     <item>
       <title>MATH:1005 College Algebra</title>
       <link>https://joe-starr.com/teaching/math1005/</link>
-      <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
+      <pubDate>Sat, 07 Jan 2023 17:09:26 +0000</pubDate>
       
       <guid>https://joe-starr.com/teaching/math1005/</guid>
       <description>College Algebra</description>
@@ -22,7 +62,7 @@
     <item>
       <title>MATH:1350 Quantitative Reasoning for Business</title>
       <link>https://joe-starr.com/teaching/math1350/</link>
-      <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
+      <pubDate>Sat, 07 Jan 2023 17:09:26 +0000</pubDate>
       
       <guid>https://joe-starr.com/teaching/math1350/</guid>
       <description>Mathematics and Reasoning for business students</description>

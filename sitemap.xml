@@ -27,8 +27,32 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://joe-starr.com/teaching/isa1040/</loc>
+    <lastmod>2025-01-07T17:09:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/teaching/isa4040/</loc>
+    <lastmod>2025-01-07T17:09:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/teaching/isa4041/</loc>
+    <lastmod>2025-01-07T17:09:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://joe-starr.com/what_is/tangle_tabulation/</loc>
     <lastmod>2024-03-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/teaching/math5760/</loc>
+    <lastmod>2024-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -51,19 +75,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/analysis_prepsheet/</loc>
-    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://joe-starr.com/teaching/math1005/</loc>
-    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
+    <lastmod>2023-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://joe-starr.com/teaching/math1350/</loc>
+    <lastmod>2023-01-07T17:09:26+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/resources/analysis_prepsheet/</loc>
     <lastmod>2020-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -107,6 +131,12 @@
   <url>
     <loc>https://joe-starr.com/resources/course_plans/</loc>
     <lastmod>2025-02-10T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/teaching/</loc>
+    <lastmod>2025-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -232,12 +262,6 @@
   </url>
   <url>
     <loc>https://joe-starr.com/misc/</loc>
-    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://joe-starr.com/teaching/</loc>
     <lastmod>2020-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

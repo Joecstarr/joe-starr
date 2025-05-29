@@ -1,6 +1,6 @@
 ---
 title: MATH:1350 Quantitative Reasoning for Business
-date: 2020-01-07T17:09:26.037Z
+date: 2023-01-07T17:09:26.037Z
 featured: false
 summary: Mathematics and Reasoning for business students
 tags:
@@ -22,5 +22,6 @@ Algebraic techniques and modeling; quantitative methods for treating problems th
 
 ## Taught During
 
-- Fall 2021
-- Spring 2022
+- Fall 2021 as graduate assistant
+- Spring 2022 as graduate assistant
+- Spring 2024 as graduate assistant

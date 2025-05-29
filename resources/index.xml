@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Joe Starr</copyright>
-    <lastBuildDate>Tue, 15 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/resources/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Brief Guide To Ann Arbor And Metro Detroit</title>
+      <link>https://joe-starr.com/resources/mi_guide/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/mi_guide/</guid>
+      <description>Brief Guide To Ann Arbor And Metro Detroit</description>
+      
+    </item>
     
     <item>
       <title>QR code svg generator</title>

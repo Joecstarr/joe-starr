@@ -55,6 +55,7 @@
           fi
 
           just bootstrap
+          source .venv/bin/activate
         '';
       };
     };

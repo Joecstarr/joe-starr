@@ -18,7 +18,7 @@ def swap(file_content: str,color_swaps):
     for i, style in enumerate(styles):
         for swap_color in color_swaps:
             for color in swap_color["start"]:
-                if re.match(rf".*{color}.*", style):
+                if re.match(rf".*{color}.*", style,flags=re.IGNORECASE):
                     if style.startswith("stroke"):
                         styles[i] = f'stroke:{swap_color["end"]}'
                         class_list.append(f'stroke-{swap_color["name"]}')

@@ -9,6 +9,7 @@
  */
 
 @import "admonitions.css";
+@import "custom.css";
 
 :root {
     --r-background-color: var(--r-Background);

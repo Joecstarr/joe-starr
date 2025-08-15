@@ -1,4 +1,3 @@
-
 .bigmath > mjx-container[jax="CHTML"][display="true"] mjx-math {
     font-size: 170% !important;
 }
@@ -10,7 +9,8 @@ li {
     text-align: left !important;
 }
 
-.mjx-n > img,svg {
+.mjx-n > img,
+svg {
     vertical-align: middle !important;
 }
 
@@ -141,7 +141,7 @@ li {
     flex-grow: 1;
 }
 
-.centerImg *{
+.centerImg * {
     max-height: calc(var(--slide-height));
     max-width: calc(var(--slide-width));
     width: auto;
@@ -153,67 +153,135 @@ li {
     width: auto;
 }
 
-.mermaid-done{
+.mermaid-done {
     max-height: calc(var(--slide-height)) !important;
     max-width: calc(var(--slide-width)) !important;
     width: auto;
 }
 
-.mermaid-done svg{
+.mermaid-done svg {
     max-height: calc(var(--slide-height)) !important;
     max-width: calc(var(--slide-width)) !important;
     width: auto;
 }
 
-.mermaid *{
-    line-height: .9;
+.mermaid * {
+    line-height: 0.9;
 }
 
+.stroke-blue {
+    stroke: var(--r-Blue) !important ;
+}
+.stroke-green {
+    stroke: var(--r-Green) !important ;
+}
+.stroke-orange {
+    stroke: var(--r-Orange) !important ;
+}
+.stroke-pink {
+    stroke: var(--r-Pink) !important ;
+}
+.stroke-purple {
+    stroke: var(--r-Purple) !important ;
+}
+.stroke-red {
+    stroke: var(--r-Red) !important ;
+}
+.stroke-yellow {
+    stroke: var(--r-Yellow) !important ;
+}
+.stroke-background {
+    stroke: var(--r-Background) !important ;
+}
+.stroke-foreground {
+    stroke: var(--r-Foreground) !important ;
+}
+.stroke-highlight {
+    stroke: var(--r-Highlight) !important ;
+}
+.stroke-selection {
+    stroke: var(--r-Selection) !important ;
+}
+.fill-blue {
+    fill: var(--r-Blue) !important ;
+}
+.fill-green {
+    fill: var(--r-Green) !important ;
+}
+.fill-orange {
+    fill: var(--r-Orange) !important ;
+}
+.fill-pink {
+    fill: var(--r-Pink) !important ;
+}
+.fill-purple {
+    fill: var(--r-Purple) !important ;
+}
+.fill-red {
+    fill: var(--r-Red) !important ;
+}
+.fill-yellow {
+    fill: var(--r-Yellow) !important ;
+}
+.fill-background {
+    fill: var(--r-Background) !important ;
+}
+.fill-foreground {
+    fill: var(--r-Foreground) !important ;
+}
+.fill-highlight {
+    fill: var(--r-Highlight) !important ;
+}
+.fill-selection {
+    fill: var(--r-Selection) !important ;
+}
 
+.svgContainer.halfHeight > svg {
+    max-height: 50vh !important;
+}
+.svgContainer.fullHeight > svg {
+    max-height: 100vh !important;
+}
+.svgContainer.eighthHeight > svg {
+    max-height: 12.5vh !important;
+}
+.svgContainer.sixteenthHeight > svg {
+    max-height: 6.25vh !important;
+}
+.svgContainer.quarterHeight > svg {
+    max-height: 25vh !important;
+}
+.svgContainer.thirdHeight > svg {
+    max-height: 33vh !important;
+}
+.svgContainer.twothirdHeight > svg {
+    max-height: 66vh !important;
+}
+.svgContainer.threequarterHeight > svg {
+    max-height: 75vh !important;
+}
 
-.stroke-blue{stroke: var(--r-Blue) !important ;}
-.stroke-green{stroke: var(--r-Green) !important ;}
-.stroke-orange{stroke: var(--r-Orange) !important ;}
-.stroke-pink{stroke: var(--r-Pink) !important ;}
-.stroke-purple{stroke: var(--r-Purple) !important ;}
-.stroke-red{stroke: var(--r-Red) !important ;}
-.stroke-yellow{stroke: var(--r-Yellow) !important ;}
-.stroke-background{stroke: var(--r-Background) !important ;}
-.stroke-foreground{stroke: var(--r-Foreground) !important ;}
-.stroke-highlight{stroke: var(--r-Highlight) !important ;}
-.stroke-selection{stroke: var(--r-Selection) !important ;}
-.fill-blue{fill: var(--r-Blue) !important ;}
-.fill-green{fill: var(--r-Green) !important ;}
-.fill-orange{fill: var(--r-Orange) !important ;}
-.fill-pink{fill: var(--r-Pink) !important ;}
-.fill-purple{fill: var(--r-Purple) !important ;}
-.fill-red{fill: var(--r-Red) !important ;}
-.fill-yellow{fill: var(--r-Yellow) !important ;}
-.fill-background{fill: var(--r-Background) !important ;}
-.fill-foreground{fill: var(--r-Foreground) !important ;}
-.fill-highlight{fill: var(--r-Highlight) !important ;}
-.fill-selection{fill: var(--r-Selection) !important ;}
-
-
-
-.svgContainer.halfHeight > svg{
-    max-height:50vh;
+.svgContainer.halfHeight > p > svg {
+    max-height: 50vh !important;
 }
-.svgContainer.fullHeight > svg{
-    max-height:100vh;
+.svgContainer.fullHeight > p > svg {
+    max-height: 100vh !important;
 }
-.svgContainer.eighthHeight > svg{
-    max-height:12.5vh;
+.svgContainer.eighthHeight > p > svg {
+    max-height: 12.5vh !important;
 }
-.svgContainer.quarterHeight > svg{
-    max-height:25vh;
+.svgContainer.sixteenthHeight > p > svg {
+    max-height: 6.25vh !important;
 }
-.svgContainer.thirdHeight > svg{
-    max-height:33vh;
+.svgContainer.quarterHeight > p > svg {
+    max-height: 25vh !important;
 }
-.svgContainer.twothirdHeight > svg{
-    max-height:66vh;
+.svgContainer.thirdHeight > p > svg {
+    max-height: 33vh !important;
 }
-.svgContainer.threequarterHeight > svg{
-    max-height:75vh;
+.svgContainer.twothirdHeight > p > svg {
+    max-height: 66vh !important;
+}
+.svgContainer.threequarterHeight > p > svg {
+    max-height: 75vh !important;
 }

@@ -147,7 +147,8 @@ class Drawer {
     };
 
     generate = () => {
-        var group = this.draw.group().addClass("my-group" + i);
+        var group_o = this.draw.group().addClass("outer-group");
+        var group = group_o.group().addClass("my-group" + i);
         group.attr("fill", "none");
         group.attr("stroke-width", this.stroke_width);
         group.attr("stroke", this.string_color);
@@ -181,11 +182,12 @@ class Drawer {
             origin: { x: this.diagram.length * this.scale * .5, y: this.diagram.length * this.scale * .5 },
             rotate: '45'
         })
+
         this.draw.viewbox({
-            x: -Math.sqrt(2) * this.diagram.length * this.scale * .5,
-            y: -Math.sqrt(2) * this.diagram.length * this.scale * .1,
-            width: Math.sqrt(2) * this.diagram.length * this.scale,
-            height: Math.sqrt(2) * this.diagram.length * this.scale,
+            x: group_o.bbox().x,
+            y: group_o.bbox().y,
+            width: group_o.bbox().width,
+            height: group_o.bbox().height,
         });
     };
 }

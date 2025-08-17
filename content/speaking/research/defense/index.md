@@ -1,7 +1,7 @@
 ---
-title: "Defense Talk "
+title: "Defense Slides"
 date: "2025-08-18"
-summary: "Talk for my final exam on tangle tabulation."
+summary: "Talk for my thesis defense on tangle tabulation."
 tags:
    - "Talks"
    - "research talks"
@@ -162,7 +162,7 @@ Atoms are knotted vortices in the æther.
 - 1960s Conway computes knots up to 11 crossings
    - "A few hours"
 - 1980s Caudron verifies knots up to 11 crossings
-   - finding 4 omissions of Conway
+   - Finding 4 omissions of Conway
 
 ---
 
@@ -1383,7 +1383,11 @@ Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
 **Routine**
 
 1. for each combination of $\Gamma_r\in T_r$ and $\Gamma_s \in T_s$
-    1. Compute $\Gamma_r\star \Gamma_s$
+    1. Compute $\Gamma = \Gamma_r\star \Gamma_s$
+    1. Report $\Gamma$
+    1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
+        1. Set $v_0$ to $-v_0$ for $\Gamma$
+        1. Report $\Gamma$
 {{<  /slides/admonition >}}
 
 ---
@@ -1449,7 +1453,7 @@ is called a **good scion** when either:
     1. for each vertex $v_i$ at distance 1 from the root of $\Gamma$
         1. Continue to the next iteration of the outer loop if $v_i$ fails to satisfy the stick condition
     1. Report $\Gamma$
-    1. Continue to the iteration of the loop if $v_0$ is valence other then two
+    1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
 {{<  /slides/admonition >}}
@@ -1499,7 +1503,7 @@ $\Gamma=\Gamma_r\star\Gamma_s$ is non-canonical.
         1. Continue to the next iteration of the outer loop if $v_i$ fails to satisfy the stick condition
         1. Continue to the next iteration of the outer loop if $v_i$ fails to satisfy the positivity condition
     1. Report $\Gamma$
-    1. Continue to the iteration of the loop if $v_0$ is valence other then two
+    1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
 {{<  /slides/admonition >}}
@@ -1526,7 +1530,7 @@ $\Gamma=\Gamma_r\star\Gamma_s$ is non-canonical.
         1. Continue to the next iteration of the outer loop if $v_i$ fails to satisfy the stick condition
         1. Continue to the next iteration of the outer loop if $v_i$ fails to satisfy the positivity condition
     1. Report $\Gamma$
-    1. Continue to the iteration of the loop if $v_0$ is valence other then two
+    1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
 {{<  /slides/admonition >}}

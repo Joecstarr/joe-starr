@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Joe Starr</copyright>
-    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Research Talks</title>
+      <link>https://joe-starr.com/tags/research-talks/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/tags/research-talks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Talks</title>
+      <link>https://joe-starr.com/tags/talks/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/tags/talks/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Index</title>
@@ -35,26 +55,6 @@
       <pubDate>Tue, 07 Jan 2025 17:09:26 +0000</pubDate>
       
       <guid>https://joe-starr.com/tags/ta/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Research Talks</title>
-      <link>https://joe-starr.com/tags/research-talks/</link>
-      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://joe-starr.com/tags/research-talks/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Talks</title>
-      <link>https://joe-starr.com/tags/talks/</link>
-      <pubDate>Sat, 04 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://joe-starr.com/tags/talks/</guid>
       <description></description>
       
     </item>

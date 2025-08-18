@@ -108,3 +108,19 @@
     color: var(--r-Foreground);
     text-align: left;
 }
+/*********************************** Algorithm *********************************/
+
+.admonition.algorithm {
+    border-color: var(--r-Red);
+    background-color: var(--r-background-color);
+    text-align: left;
+}
+
+.admonition.algorithm .title {
+    color: var(--r-Red);
+    text-align: left;
+}
+.admonition.algorithm .content {
+    color: var(--r-Foreground);
+    text-align: left;
+}

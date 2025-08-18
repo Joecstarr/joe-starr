@@ -68,7 +68,7 @@ a.lowercase {
 
 </style>
 
-## Defense (8/18/25)
+#### Defense Slides (8/18/25)
 
 # The Tanglenomicon:
 ## Tabulation of Arborescent Tangles
@@ -81,7 +81,9 @@ Joseph Starr
 <p style="font-size:.6em; text-align:center !important"> Mathematics Department at The University of Iowa<p>
 
 
-<p style="font-size:.8em;   vertical-align: bottom; text-align:center !important">"The Tanglenomicon" name due to Dr. Nicholas Connolly<p>
+<p style="font-size:.8em;   vertical-align: bottom; text-align:center !important">Partially supported by DMS-2038103<p>
+<p style="font-size:.6em;   vertical-align: bottom; text-align:center !important">"The Tanglenomicon" name due to Dr. Nicholas Connolly<p>
+
 
 ---
 

@@ -14,7 +14,7 @@ color_swaps:
           - "#5E81AC"
           - "#A1CAF1"
           - "#8be9fd"
-          - "#8be9fd"
+          - "#0074D9"
           - "#0000ff"
       end: "#8be9fd"
     - name: comment
@@ -22,6 +22,7 @@ color_swaps:
           - "#2E3440"
           - "#6272a4"
           - "#848482"
+          - "#AAAAAA"
       end: "#6272a4"
     - name: foreground
       start:
@@ -36,7 +37,7 @@ color_swaps:
       start:
           - "#50fa7b"
           - "#008856"
-          - "#A3BE8C"
+          - "#2ECC40"
           - "#A3BE8C"
           - "#A3BE8C"
           - "#A3BE8C"
@@ -46,7 +47,7 @@ color_swaps:
           - "#D08770"
           - "#F38400"
           - "#deb887"
-          - "#deb887"
+          - "#FF851B"
           - "#deb887"
           - "#ffb86c"
       end: "#ffb86c"
@@ -55,14 +56,14 @@ color_swaps:
           - "#BF6199"
           - "#E68FAC"
           - "#ff79c6"
-          - "#ff79c6"
+          - "#39CCCC"
           - "#ff79c6"
       end: "#ff79c6"
     - name: purple
       start:
           - "#B48EAD"
           - "#875692"
-          - "#bd93f9"
+          - "#B10DC9"
           - "#bd93f9"
           - "#bd93f9"
       end: "#bd93f9"
@@ -71,7 +72,7 @@ color_swaps:
           - "#BF616A"
           - "#ff0000"
           - "#BE0032"
-          - "#ff5555"
+          - "#FF4136"
           - "#ff5555"
       end: "#ff5555"
     - name: selection
@@ -79,14 +80,14 @@ color_swaps:
           - "#434C5E"
           - "#848482"
           - "#654522"
-          - "#44475a"
-          - "#44475a"
+          - "#DDDDDD"
+          - "#616161"
       end: "#6272a4"
     - name: yellow
       start:
           - "#EBCB8B"
           - "#F3C300"
           - "#f1fa8c"
-          - "#f1fa8c"
+          - "#FFDC00"
           - "#f1fa8c"
       end: "#f1fa8c"

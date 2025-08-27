@@ -1,5 +1,5 @@
 ---
-title: "Dearborn Colloquium Talk Fall23"
+title: "Dearborn Colloquium Talk Fall 2023"
 date: "2023-11-15"
 summary: "Talk given at the U of M - Dearborn Colloquium on 11/15/23."
 tags: [

@@ -19,7 +19,7 @@ testament to the power of simplicity in problem-solving, proving that sometimes,
 the best solutions come from the most unexpected sources. So, next time you're
 stuck on a tricky bug, grab a rubber duck and start talking!
 
-This is my collection of rubber ducks, currently standing at {{< ducks_count >}}
+This is my collection of rubber ducks, currently standing at <b id="duck_count"></b>
 ducks.
 
 Photo credit Valeria Reyna.

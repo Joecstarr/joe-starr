@@ -15,21 +15,18 @@
     {{ if (fileExists $filepath)}}
 
     {{ range readDir $filepath }}
+    {{ $imgURL := print "./static/ducks/" .Name }}
     {{- if hasSuffix .Name ".jpg" -}}
-    {{ $imgURL := print "ducks/" .Name | absURL }}
-    <img src="{{ $imgURL }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
     {{- end -}}
     {{- if hasSuffix .Name ".jpeg" -}}
-    {{ $imgURL := print "ducks/" .Name | absURL }}
-    <img src="{{ $imgURL }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
     {{- end -}}
     {{- if hasSuffix .Name ".JPEG" -}}
-    {{ $imgURL := print "ducks/" .Name | absURL }}
-    <img src="{{ $imgURL }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
     {{- end -}}
     {{- if hasSuffix .Name ".png" -}}
-    {{ $imgURL := print "ducks/" .Name | absURL }}
-    <img src="{{ $imgURL }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    <img src="data:image/png;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
     {{- end -}}
     {{ end }}
 
@@ -44,16 +41,6 @@
             [copiedArray[i], copiedArray[j]] = [copiedArray[j], copiedArray[i]];
         }
         return copiedArray
-    }
-
-
-    function hasImageExtension(path) {
-        if (!path || typeof path !== 'string') {
-            return false;
-        }
-
-        const lowerCasePath = path.toLowerCase();
-        return /\.(jpg|jpeg|png|gif|bmp|webp)$/.test(lowerCasePath);
     }
 
     async function sha256(message) {
@@ -74,23 +61,21 @@
     const today = new Date().toISOString().slice(0, 10);;
     const store = document.getElementById("duck_pound");
     const elementsArray = Array.prototype.slice.call(store.getElementsByClassName('shuffleMe'));
+    var id_container = document.getElementById("duck_count");
+    id_container.innerHTML = elementsArray.length;
 
     sha256(today).then(function (result) {
         const duck = document.getElementById('duck_of_the_day')
         var container = document.getElementById("duck_pound");
-
-        duck.appendChild(elementsArray[result % elementsArray.length])
+        var pond_container = document.getElementById("duck_pond");
+        var element = elementsArray[result % elementsArray.length];
+        shuffleArray(elementsArray).forEach(function (element) {
+            pond_container.appendChild(element);
+        })
+        duck.appendChild(element)
     })
 
-    function shuffle_ducks() {
-        var container = document.getElementById("duck_pond");
 
-        shuffleArray(elementsArray).forEach(function (element) {
-            container.appendChild(element);
-        })
-    }
-
-    shuffle_ducks()
 </script>
 <!-- end randomimage -->
 

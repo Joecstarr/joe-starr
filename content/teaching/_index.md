@@ -1,6 +1,6 @@
 ---
 summary: ""
-title: Teaching
+title: Instruction
 author: Joe Starr
 groupByYear: true
 tags:

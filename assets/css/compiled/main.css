@@ -65,7 +65,7 @@ body.zen-mode-enable {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style: 
+  --tw-contain-style:
 }
 
 ::backdrop {
@@ -119,7 +119,7 @@ body.zen-mode-enable {
   --tw-contain-size: ;
   --tw-contain-layout: ;
   --tw-contain-paint: ;
-  --tw-contain-style: 
+  --tw-contain-style:
 }
 
 /*! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */
@@ -2884,8 +2884,8 @@ body button {
 /* Scale SVG logos to appropriate size */
 
 .logo svg {
-  height:5rem;
-  width:5rem
+  height:2rem;
+  width:2rem
 }
 
 /* Search */

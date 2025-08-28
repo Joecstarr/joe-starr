@@ -9,7 +9,7 @@
 
     <title>{{ $cv_data.header.name | markdownify }} - CV</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asul:wght@700&family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
         :root {
@@ -25,34 +25,54 @@
             print-color-adjust:exact !important;
             }
 
-        @page{
-                size: A4 portrait;
-                margin-left: 1in;
-                margin-right: 1in;
-                margin-top: 1in;
-                margin-bottom: 1in;
-         }
-        @page  :first {
-                size: A4 portrait;
-                margin-left: 1in;
-                margin-right: 1in;
-                margin-top: .125in;
-                margin-bottom: 1in;
-         }
-            html{
-                font-size: 11pt;
-                color: var(--print-text-color);
-            }
             #header,
             #footer,
             #nav {
                 display: none !important;
             }
 
+        @media print {
+            @page {
+                size: letter;
+            }
+
+            .social{
+                color: var(--print-text-color) !important;
+                text-decoration: none;
+            }
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+
+            html {
+                font-size: 11pt;
+                color: var(--print-text-color) !important;
+                background-color: var(--background-color) !important;
+            }
+
+        }
+
+        @media screen {
+            html {
+                color: var(--text-color);
+                background-color: var(--background-color);
+            }
+            .social{
+                color: var(--print-text-color) !important;
+                text-decoration: none;
+            }
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+            .skill_title {
+                color: var(--primary-color);
+            }
+        }
         .section_title{
             background-color: var(--primary-color);
             color: var(--background-color);
-            font-size: 11pt;
         }
         .head .icon{
             color: var(--text-color);
@@ -61,8 +81,8 @@
             margin-right:10px;
         }
         .icon{
-            margin-left:10px;
-            margin-right:10px;
+            margin-left: 1rem;
+            margin-right: .4rem;
         }
 
         .head {
@@ -74,11 +94,9 @@
     h4, h5, h6  {
             font-family: 'roboto', sans-serif;
             padding: 0;
-            font-size: 11pt;
             margin:0;
         }
         h1{
-            font-size: 20pt;
             color: var(--primary-color);
         }
         p{
@@ -95,21 +113,22 @@
         .hr{
             background-color: var(--primary-color);
             border-color: var(--primary-color);
-            height: .005in;
+            height: .1vh;
             padding: 0;
             margin-top: 0;
         }
         .hrlite{
             background-color: var(--secondary-color);
             border-color: var(--secondary-color);
-            height: .005in;
+            opacity: 0.2;
+            height: .1vh;
             padding: 0;
             margin-top: 0;
         }
         .section_title{
             display: inline-block;
-            padding: .05in;
-            margin: .025in;
+            padding: .5vw;
+            margin: .125vh;
             margin-left: 0;
             margin-bottom: 0;
             text-transform: uppercase;
@@ -127,18 +146,21 @@
             margin: 0;
         }
         .summary {
-            margin-top: .05in;
-            margin-bottom: .05in;
+            margin-top: .5vh;
+            margin-bottom: .5vh;
+            width:100%;
+        }
+
+        .left_heading {
+            width:100%;
         }
 
         .left {
-            max-width:3in;
+            max-width:70vw;
         }
         .right {
-            max-width:2in;
+            min-width: 30vw;
             float: right;
-            font-size:11pt;
-            min-width: 1in;
             text-align:right;
         }
 
@@ -170,28 +192,32 @@
     </div>
 
     {{ range $cv_data.sections }}
-    <section  >
-
-        <h2 class="section_title" ><i class="{{.icon}} icon" aria-hidden="true"></i>{{.title | markdownify }}</h2>
+    {{ if .break }}
+    <div style="page-break-before: always !important;">
+    {{ else }}
+    <div>
+    {{ end }}
+    <div>
+        <h4 class="section_title" ><i class="{{.icon}} icon" aria-hidden="true"></i>{{.title | markdownify }}</h4>
         <div class="hr"></div>
         {{ range .subsections }}
         <div style="page-break-inside:avoid;">
             <div class="hrlite"></div>
             <div class="flex" >
                 <div class="left">
-                    <h4>{{.name | markdownify}}</h4>
-                    <h6>{{.subheader | markdownify}}</h6>
+                    <div class="left_heading">
+                        <h4>{{.name | markdownify}}</h4>
+                        <h4>{{.subheader | markdownify}}</h4>
+                    </div>
+                    <div class="summary">{{.summary | markdownify}}</div>
                 </div>
                 <div class="right">
                     {{.dates | markdownify}}
                 </div>
             </div>
-            <p class="summary">
-                {{.summary | markdownify}}
-            </p>
         </div>
         {{ end }}
-    </section>
+    </div>
     {{ end }}
 
 </body>

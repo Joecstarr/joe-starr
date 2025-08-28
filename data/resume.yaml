@@ -1,18 +1,22 @@
 color:
     textColor: "#000000"
+    printTextColor: "#000000"
     secondaryTextColor: "#000000"
-    backgroundColor: "#eaedf0"
+    backgroundColor: "#ffffff"
     secondaryBackgroundColor: "#8811ee1a"
     primaryColor: "#8811ee"
-    secondaryColor: "#8811ee1e"
+    secondaryColor: "#006bac"
 
 header:
-    name: Joseph Starr
-    title: PhD Candidate / Graduate Assistant
+    name: Joseph Starr, PhD
+    title: Mathematician and Software Engineer
     contact:
         - address: mailto:joe@joe-starr.com
-          text: joe@joe-starr.com
-          icon: fa-regular fa-envelope
+          text: "joe@joe-starr.com"
+          icon: fa-solid fa-envelope
+        - address: https://joe-starr.com/
+          text: joe-starr.com
+          icon: fa-solid fa-ethernet
         - address: https://github.com/Joecstarr/
           text: Joecstarr
           icon: fa-brands fa-github
@@ -20,61 +24,86 @@ header:
           text: joseph-c-starr
           icon: fa-brands fa-linkedin
 sections:
-
-    # # ##############################################################################
-    # # ##############################################################################
-    # # ##############################################################################
-    # - title: Awards
-    #   icon: fa-solid fa-medal
-    #   subsections:
-    #       - name: "RTG: Geometry and Topology at Iowa Graduate Fellowship"
-    #         summary: |-
-    #             Funded by [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)
-    #         dates: Summer 24, Spring 23, Summer 23
-    # ##############################################################################
-    # ##############################################################################
-    # ##############################################################################
     - title: Experience
       icon: fa-solid fa-briefcase
       subsections:
-          - name: Teaching Assistant
+          - name: Teaching Assistant / Research Fellow
             subheader: "[University of Iowa](https://uiowa.edu)"
-            dates: "Fall 2021 - Present"
+            dates: "Aug 2021 - May 2025"
             summary: |-
-                * Lead undergraduate students as instructor of record.
-                * Lead undergraduate and graduate students as discussion leader.
+                * Conducted original research.
+                * Developed original and modified existing courses for use in an
+                  undergraduate research training program.
+                * Led undergraduate students as instructor of record.
+                * Led undergraduate and graduate students as discussion leader.
                 * Tutor undergraduate and graduate students in math tutorial lab.
           - name: Software Engineer
             subheader: "[Western Diversified Plastics](https://westerndp.com/)"
             dates: "Dec 2020 - Aug 2021"
             summary: |-
-                * ASPICE process tooling including tooling for customer
-                requirements parsing and tracing.
-                * Standing up of product prototypes.
-                * General AUTOSAR development.
+                * Design and implementation of ASPICE process tooling for:
+                    - Parsing of customer requirements.
+                    - Tracing of customer requirements.
+                    - Internal requirements modeling process design.
+                    - Generation of project health metrics and their analysis.
+                    - Reporting project health to project management tooling.
+                * MICROSAR sourcing (technical contact)
+                    - MICROSAR
+                    - Flash Bootloader
+                    - vVIRTUALtarget
+                    - vTESTstudio
+                * Standing up product prototype (basic IO for
+                  hardware verification).
+                * General development of AUTOSAR application components.
+                * Design and implementation of continuous integration (CI) process and system.
           - name: Project Engineer
             subheader: "[Vector North America](https://Vector.com)"
             dates: "Jan 2017 - Dec 2020"
             summary: |-
-                ##### Software Architect
+                ##### Project Architect
                 * Responsible for the complete architectural design and direction of a customer project.
                 * Analysis of customer requirements and negotiation of acceptance for those requirements.
                 * Planning of team development activities.
+                * Design and implementation of safety use case (ASIL A)
+
+                ##### AUTOSAR Projects
+                * Design and implementation of AUTOSAR application components
+                * Design and implementation of AUTOSAR MCAL components
+                    - GPT
+                    - SPI
+                    - FLS (partial)
+                    - ADC (partial)
+                * Flash Bootloader design and implementation.
+                * Design and implementation of continuous integration (CI) process and system.
 
                 ##### Flash Bootloader Integration
                 * Integration and testing of Off The Shelf software solutions with a focus on *Flash Bootloader* integrations.
                 * Worked with new technologies such as Ethernet, CAN-FD, and Security.
                 * Support customers in use of the *Flash Bootloader* product.
-                # ##############################################################################
-    # ##############################################################################
-    # ##############################################################################
+# ##############################################################################
+# ##############################################################################
+# ##############################################################################
     - title: Education
       icon: fa-solid fa-school
       subsections:
-          - name: PhD in Mathematics
+          - name: Doctor of Philosophy in Mathematics
             subheader: University of Iowa
-            dates: Fall 2021 - Present (Expected Summer 2025)
-          - name: MS in Mathematics
+            dates: Fall 2021 - Summer 2025 (Defended 8/18/25)
+            summary: |-
+               In my thesis titled __The Tanglenomicon: Tabulation of Arborescent
+               Tangles__, I enumerated a class of knot-theoretic objects called
+               arborescent tangles. I identified a unique (up to isotopy)
+               representative for each arborescent tangle, the Right Leaning
+               Identity Tangle Tree (RLITT). I then created and proved correct
+               the abstract algorithms needed for enumeration of RLITT.
+               Furthermore, I designed a process architecture that connects
+               mathematical research with software design, including formal
+               design and validation activities. Within that process I developed
+               a modular software architecture in C for general computational
+               knot theoretic use cases. Using this architecture, I implemented
+               my theoretical algorithms and tabulated arborescent tangles up to
+               18 crossings.
+          - name: Master of Science in Mathematics
             subheader: University of Iowa
             dates: Fall 2021 - Spring 2023
           - name: Bachelor of Science in Computer Science
@@ -83,24 +112,37 @@ sections:
           - name: Bachelor of Science in CIS Mathematics
             subheader: University of Michigan - Dearborn
             dates: Fall 2013 - Fall 2016
-    # ##############################################################################
-    # ##############################################################################
-    - title: Tools/Frameworks
-      icon: fa-solid fa-school
+# ##############################################################################
+# ##############################################################################
+bullets:
+    - title: Tools and Frameworks
+      icon: fa-solid fa-screwdriver-wrench
       bullets:
           - name: C
             level: 5
           - name: Python
             level: 5
-          - name: cmake
+          - name: JavaScript
+            level: 2
+          - name: CMake
             level: 4
-          - name: CI/CD (Jenkins)
+          - name: Jenkins (CI/CD)
+            level: 3
+          - name: GitHub (CI/CD)
             level: 4
-          - name: git
+          - name: GitHub (Project Management)
+            level: 3
+          - name: Git
             level: 4
-          - name: svn
+          - name: SVN
             level: 4
           - name: JIRA
+            level: 4
+          - name: Enterprise Architect
+            level: 4
+          - name: Vector MICROSAR Classic
+            level: 4
+          - name: Vector Flash Bootloader
             level: 5
           - name: Vector CANoe
             level: 3
@@ -112,31 +154,33 @@ sections:
             level: 3
           - name: Vector VectorCAST
             level: 2
-          - name: Vector MICROSAR Classic
-            level: 4
-          - name: Vector Flash Bootloader
-            level: 5
-    # ##############################################################################
-    # ##############################################################################
-    - title: Technologies/Standards
-      icon: fa-solid fa-school
-      bullets:
-          - name: ISO 26262
+          - name: Vector vVIRTUALtarget
             level: 2
+# ##############################################################################
+# ##############################################################################
+    - title: Technologies and Standards
+      icon: fa-solid fa-pen-ruler
+      bullets:
           - name: ASPICE
             level: 4
           - name: AUTOSAR (classic)
-            level: 3
+            level: 4
           - name: SPI
             level: 4
           - name: CAN
             level: 4
-          - name: TJA1145A
-            level: 3
-    - title: Platforms
-      icon: fa-solid fa-school
+          - name: CAN FD
+            level: 4
+          - name: Ethernet
+            level: 4
+          - name: ISO 26262
+            level: 2
+    - title: Silicon Platforms and Peripherals
+      icon: fa-solid fa-microchip
       bullets:
           - name: Renesas RL78
           - name: Infineon Traveo II
           - name: Infineon TriCore TC2xx
           - name: Infineon TriCore TC3xx
+          - name: Infineon TLE9471
+          - name: NXP TJA1145A

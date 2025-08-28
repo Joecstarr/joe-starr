@@ -15,12 +15,13 @@ params:
     name: Joe Starr
     image: ./avatar.jpg
     headline: |-
-      ## PhD Candidate and Graduate Assistant at University of Iowa
-      Knot theorist with a background in automotive software engineering.
-    bio: Knot theorist with a background in automotive software engineering.
+      ## Mathematician and Software Engineer
+      Computational knot theorist with a background in embedded software engineering.
+    bio: Knot theorist with a background in embedded software engineering.
     links:
       - email: mailto:joe@joe-starr.com
       - cv: ./cv/joe-starr/
+      - resume: ./resume/joe-starr/
       - linkedin: https://www.linkedin.com/in/joseph-C-starr/
       - github: https://github.com/joecstarr
       # - amazon: https://www.amazon.com/hz/wishlist/ls/wishlist-id

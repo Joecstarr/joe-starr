@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-{{  $cv_data := .Site.Data.resume }}
+{{ $resume_data := .Site.Data.resume }}
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- fontawesome -->
     <script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
 
-    <title>{{ $cv_data.header.name | markdownify }} - CV</title>
+    <title>{{ $resume_data.header.name | markdownify }} - Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asul:wght@700&family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
         :root {
-            --text-color: {{ $cv_data.color.textColor | default "#343a40" }};
-            --text-secondary-color: {{ $cv_data.color.secondaryTextColor | default "#6c757d" }};
-            --background-color: {{ $cv_data.color.backgroundColor | default "#eaedf0" }};
-            --secondary-background-color: {{ $cv_data.color.secondaryBackgroundColor | default "#64ffda1a" }};
-            --primary-color: {{ $cv_data.color.primaryColor | default "#007bff" }};
-            --secondary-color: {{ $cv_data.color.secondaryColor | default "#f8f9fa" }};
+            --text-color: {{ $resume_data.color.textColor | default "#343a40" }};
+            --print-text-color: {{ $resume_data.color.printTextColor | default "#343a40" }};
+            --text-secondary-color: {{ $resume_data.color.secondaryTextColor | default "#6c757d" }};
+            --background-color: {{ $resume_data.color.backgroundColor | default "#eaedf0" }};
+            --secondary-background-color: {{ $resume_data.color.secondaryBackgroundColor | default "#64ffda1a" }};
+            --primary-color: {{ $resume_data.color.primaryColor | default "#007bff" }};
+            --secondary-color: {{ $resume_data.color.secondaryColor | default "#f8f9fa" }};
+            -webkit-print-color-adjust:exact !important;
+            print-color-adjust:exact !important;
             }
 
 
         @media print {
-            @page{
+            @page {
                 size: letter;
             }
-            .section_title{
+
+            .section_title {
                 background-color: var(--primary-color);
                 color: #ffffff;
-                font-size: 12pt;
             }
-            html{
-                font-size: 11pt;
-                color: #000000;
-                background-color: #ffffff;
+
+            .skill_title {
+                color: var(--primary-color);
+            }
+
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+
+            html {
+                font-size: 8.4pt;
+                color: var(--print-text-color) !important;
+                background-color: var(--background-color) !important;
             }
 
         }
+
         @media screen {
-        html{
+            html {
+                color: var(--text-color);
+                background-color: var(--background-color);
+            }
+
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+
+            .section_title {
+                background-color: var(--primary-color);
+                color: var(--background-color);
+            }
+
+            .skill_title {
+                color: var(--primary-color);
+            }
+        }
+
+        .head .icon {
             color: var(--text-color);
             background-color: var(--background-color);
         }
 
-        .section_title{
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            font-size: 1.5vh;
+        .icon {
+            margin-left: 1rem;
+            margin-right: .4rem;
         }
-    }
-        .head .icon{
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin-left:10px;
-            margin-right:10px;
-        }
-        .icon{
-            margin-left:10px;
-            margin-right:10px;
+        .icon_skill {
+            margin-right: .4rem;
         }
 
         .head {
@@ -66,21 +92,28 @@
         }
 
 
-        h1, h2, h3,
-    h4, h5, h6  {
-            font-family: 'Asul', sans-serif;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'roboto', sans-serif;
             padding: 0;
             margin: .125vh;
         }
-       h6  {
-            font-family: 'Asul', sans-serif;
+
+        h6 {
+            font-family: 'roboto', sans-serif;
             padding: 0;
             margin: 0;
         }
-        h1{
+
+        h1 {
             color: var(--primary-color);
         }
-        p{
+
+        p {
             display: block;
             margin-block-start: 0.1rem;
             margin-block-end: 0.1rem;
@@ -88,24 +121,29 @@
             margin-inline-end: 0px;
             unicode-bidi: isolate;
         }
-        ul{
+
+        ul {
             margin: 0;
         }
-        .hr{
+
+        .hr {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
-            height: .5vh;
-            padding: 0;
-            margin-top: 0;
-        }
-        .hrlite{
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
             height: .1vh;
             padding: 0;
             margin-top: 0;
         }
-        .section_title{
+
+        .hrlite {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            opacity: 0.2;
+            height: .1vh;
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .section_title {
             display: inline-block;
             padding: .5vw;
             margin: .125vh;
@@ -115,8 +153,19 @@
             margin-bottom: 0;
         }
 
+        .skill_title {
+            display: inline-block;
+            padding: .5vw;
+            padding-left: 0;
+            margin-left: 0;
+            margin: .125vh;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'roboto', sans-serif;
         }
 
         .flex {
@@ -124,6 +173,7 @@
             justify-content: space-between;
             margin: 0;
         }
+
         .summary {
             margin-top: .5vh;
             margin-bottom: .5vh;
@@ -144,25 +194,21 @@
         .left p:first-of-type {
             margin-bottom: 0;
         }
+
         .dot {
-            height: .75em;
-            width: .75em;
+            height: .75rem;
+            width: .75rem;
             border-radius: 50%;
             border-color: var(--foreground-color);
-            border-width: .01em;
+            border-width: .01rem;
             border-style: solid;
             display: inline-block;
-          }
+        }
+
         .dot_fill {
             background-color: var(--primary-color);
-          }
-        .skills{
-            flex-flow: wrap;
-            justify-content: space-evenly;
         }
-        .skill{
-            margin:.25em;
-        }
+
     </style>
 </head>
 
@@ -172,78 +218,86 @@
     </header>
 
     <div class="head">
-        <h1>{{ $cv_data.header.name | markdownify }}</h1>
-        <h2>{{ $cv_data.header.title | markdownify }}</h2>
+        <h1>{{ $resume_data.header.name | markdownify }}</h1>
+        <h2>{{ $resume_data.header.title | markdownify }}</h2>
         <p>
-            {{ range $cv_data.header.contact }}
-
-            <a href="{{.address}}"><i class="{{.icon}} icon" aria-hidden="true"></i>{{.text | markdownify }}</a>
-             {{ end}}
+            {{ range $resume_data.header.contact }}
+                <a class="social" href="{{.address}}"><i class="{{.icon}} icon" aria-hidden="true"></i>{{.text | markdownify }}</a>
+            {{ end}}
         </p>
         <p>
-            {{ $cv_data.header.summary | markdownify }}
+            {{ $resume_data.header.summary | markdownify }}
         </p>
     </div>
 
-    {{ range $cv_data.sections }}
-    <section>
-
-        <h2 class="section_title"><i class="{{.icon}} icon" aria-hidden="true"></i>{{.title | markdownify }}</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
-            {{ range .bullets }}
-                <div class="flex">
-                    <h5 class="skill"> ‣ {{.name | markdownify}}</h5>
-                    {{with .level}}
-                    <div class="skill">
-                    {{if  gt .  1}}
-                        <div class="dot dot_fill"></div>
-                    {{else}}
-                        <div class="dot"></div>
-                    {{end}}
-                    {{if gt .  2}}
-                        <div class="dot dot_fill"></div>
-                    {{else}}
-                        <div class="dot"></div>
-                    {{end}}
-                    {{if gt .  3}}
-                        <div class="dot dot_fill"></div>
-                    {{else}}
-                        <div class="dot"></div>
-                    {{end}}
-                    {{if gt .  4}}
-                        <div class="dot dot_fill"></div>
-                    {{else}}
-                        <div class="dot"></div>
-                    {{end}}
-                    {{if ge .  5}}
-                        <div class="dot dot_fill"></div>
-                    {{else}}
-                        <div class="dot"></div>
-                    {{end}}
-                    </div>
-                    {{end}}
+    <div style="  display: flex;">
+        <div style="width:20%;">
+            {{ range $resume_data.bullets }}
+            <div>
+                <h4 class="skill_title"><i class="{{.icon}} icon_skill" aria-hidden="true"></i>{{.title | markdownify }}
+                </h4>
+                <div class="skills">
+                    {{ range .bullets }}
+                        <h5 class=""> ‣ {{.name | markdownify}}</h5>
+                        {{with .level}}
+                        <div class="skill">
+                            {{if ge . 1}}
+                            <div class="dot dot_fill"></div>
+                            {{else}}
+                            <div class="dot"></div>
+                            {{end}}
+                            {{if ge . 2}}
+                            <div class="dot dot_fill"></div>
+                            {{else}}
+                            <div class="dot"></div>
+                            {{end}}
+                            {{if ge . 3}}
+                            <div class="dot dot_fill"></div>
+                            {{else}}
+                            <div class="dot"></div>
+                            {{end}}
+                            {{if ge . 4}}
+                            <div class="dot dot_fill"></div>
+                            {{else}}
+                            <div class="dot"></div>
+                            {{end}}
+                            {{if ge . 5}}
+                            <div class="dot dot_fill"></div>
+                            {{else}}
+                            <div class="dot"></div>
+                            {{end}}
+                        </div>
+                        {{end}}
+                    {{ end }}
+                </div>
             </div>
             {{ end }}
         </div>
-        {{ range .subsections }}
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>{{.name | markdownify}}</h4>
-                    <h5>{{.subheader | markdownify}}</h5>
+        <div style="width:80%;">
+            {{ range $resume_data.sections }}
+            <div>
+                <h4 class="section_title"><i class="{{.icon}} icon" aria-hidden="true"></i>{{.title | markdownify }}
+                </h4>
+                <div class="hr"></div>
+                {{ range .subsections }}
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>{{.name | markdownify}}</h3>
+                        <h4>{{.subheader | markdownify}}</h4>
+                    </div>
+                    <div class="right">
+                        {{.dates | markdownify}}
+                    </div>
                 </div>
-                <div class="right">
-                    {{.dates | markdownify}}
-                </div>
+                <p class="summary">
+                    {{.summary | markdownify}}
+                </p>
+                {{ end }}
             </div>
-            <p class="summary">
-                {{.summary | markdownify}}
-            </p>
-        {{ end }}
-    </section>
-    {{ end }}
-
+            {{ end }}
+        </div>
+    </div>
 </body>
 
 </html>

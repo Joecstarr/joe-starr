@@ -1,0 +1,7 @@
+{{ $style := .Get "style" | default "background-color:#ff5555;color:#282a36;" }}
+{{ $text := .Get "text" | default "Report an Issue!" }}
+
+<button onclick="window.location.href='https://github.com/Joecstarr/joe-starr/issues/new/choose';" class="!rounded-md px-4 py-2 !no-underline" style="{{ $style  | safeCSS }}">
+{{ $text }}
+</button>
+

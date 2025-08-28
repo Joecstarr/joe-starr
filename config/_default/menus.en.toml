@@ -84,6 +84,11 @@ name = "Ducks"
 parent = "Misc"
 pageRef = "misc/ducks"
 weight = 80
+[[main]]
+name = "Knots in the Wild"
+parent = "Misc"
+pageRef = "misc/knots_in_the_wild"
+weight = 80
 
 #[[main]]
 #  name = "Blog"

@@ -20,8 +20,8 @@ params:
     bio: Knot theorist with a background in embedded software engineering.
     links:
       - email: mailto:joe@joe-starr.com
-      - cv: ./cv/joe-starr/
-      - resume: ./resume/joe-starr/
+      - cv: https://joe-starr.com/cv/joe-starr/
+      - resume: https://joe-starr.com/resume/joe-starr/
       - linkedin: https://www.linkedin.com/in/joseph-C-starr/
       - github: https://github.com/joecstarr
       # - amazon: https://www.amazon.com/hz/wishlist/ls/wishlist-id

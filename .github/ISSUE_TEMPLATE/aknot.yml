@@ -1,0 +1,31 @@
+name: "📷 Submit a knot you found in the wild"
+description: Template for submitting a new knot in the wild
+title: "[📷]"
+body:
+    - type: checkboxes
+      id: check-pull
+      attributes:
+          label: Will you be opening a pull request?
+          description: >-
+              Will you be opening a pull request for this enhancement?
+          options:
+              - label: "yes"
+              - label: "no"
+      validations:
+          required: true
+
+    - type: textarea
+      id: whats-your-attribution
+      attributes:
+          label: Please add the picture of your knot and any info you have on it.
+          description: Your question
+      validations:
+          required: true
+
+    - type: textarea
+      id: whats-your-suggestion
+      attributes:
+          label: Please add information for attrbution.
+          description: Your question
+      validations:
+          required: true

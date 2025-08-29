@@ -1,9 +1,10 @@
 ---
 summary: ""
-title: Instruction
+title: Tools
 author: Joe Starr
 groupByYear: true
 tags:
   - index
-type: teaching
+type: resources
 ---
+

@@ -1,0 +1,15 @@
+{{ $markdown := .Get "markdownify" | default "false" }}
+
+<div class="admonition {{ with .Get "type" | default "note"   }}{{ . | lower }}{{ end }}" style="{{ if .IsNamedParams }} {{ with .Get "style"}} {{ . | safeCSS }}{{ end }} {{ end }}">
+    <div class="title ">
+           <span class="relative inline-block mr-1">{{  with .Get "icon" }}{{ partial "icon.html" . }}{{end}}</span>
+           {{ .Get "title" | default "Note" }}
+    </div>
+    <div class="content ">
+        {{ if eq $markdown "true" }}
+        {{ .Inner | markdownify | emojify }}
+        {{ else }}
+        {{ .Inner  }}
+        {{ end }}
+    </div>
+</div>

@@ -634,13 +634,13 @@ $
 ---
 {{< slides/zombie/hide_background  >}}
 
-{{< slides/admonition type="Exercise" title="Exercise: Type III" >}}
+{{< admonition type="Exercise" title="Exercise: Type III" >}}
 
 {{< slides/center_block style="font-size:9rem;margin-top:1rem" >}}
 $\LA\img{/presentations/kauf_bkt/type3/1.svg}\RA=\LA\img{/presentations/kauf_bkt/type3/6.svg}\RA$
 {{< /slides/center_block >}}
 
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 
 
@@ -689,12 +689,12 @@ $${\LA\img{/presentations/kauf_bkt/type1/1b.svg}\RA=-A^{-3}\LA\img{/presentation
 ---
 {{< slides/zombie/hide_background  >}}
 
-{{< slides/admonition type="Exercise" title="Exercise: Compute bracket for the other Type I" >}}
+{{< admonition type="Exercise" title="Exercise: Compute bracket for the other Type I" >}}
 
 {{< slides/center_block style="font-size:6rem;margin-top:1rem" >}}
 ${\LA\img{/presentations/kauf_bkt/type1/1.svg}\RA=?\LA\img{/presentations/kauf_bkt/type1/2a.svg}\RA}$
 {{< /slides/center_block >}}
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -817,12 +817,12 @@ $${w\LP P\RP=\text{#}\LP\img{/presentations/kauf_bkt/crossing/crossing_+.svg}\RP
 {{< slides/zombie/hide_background  >}}
 
 
-{{< slides/admonition type="Exercise" title="Exercise: Compute the writhe" >}}
+{{< admonition type="Exercise" title="Exercise: Compute the writhe" >}}
 
 {{< slides/center_block style="font-size:10rem;margin-top:1rem" >}}
 $w\LP\img{/presentations/kauf_bkt/trefoil/trefoil.svg}\RP$
 {{< /slides/center_block >}}
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 
 ---
@@ -855,12 +855,12 @@ $
 {{< slides/zombie/hide_background  >}}
 
 
-{{< slides/admonition type="Exercise" title="Exercise: Verify the other type I move" >}}
+{{< admonition type="Exercise" title="Exercise: Verify the other type I move" >}}
 {{< slides/center_block style="font-size:7rem;margin-top:1rem" >}}
 
 $-A^{-3w\LP \img{/presentations/kauf_bkt/type1/1.svg}\RP}=\LA\img{/presentations/kauf_bkt/type1/2a.svg}\RA$
 {{< /slides/center_block  >}}
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -982,12 +982,12 @@ $
 {{< slides/zombie/hide_background  >}}
 
 
-{{< slides/admonition type="Exercise" title="Exercise: Compute the bracket on the anti-knot" >}}
+{{< admonition type="Exercise" title="Exercise: Compute the bracket on the anti-knot" >}}
 {{< slides/center_block style="font-size:7rem;margin-top:1rem" >}}
 
 $-A^{-3w\LP \img{/presentations/dna/dna_right.svg}\RP}\LA\img{/presentations/dna/dna_right.svg}\RA$
 {{< /slides/center_block  >}}
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 
 ---

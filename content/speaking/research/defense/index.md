@@ -372,7 +372,7 @@ All possible tangles made from $+$ and $\vee$ on basic tangles.
 
 ---
 
-{{<  slides/admonition type="Example" title="Algebraic" >}}
+{{<  admonition type="Example" title="Algebraic" >}}
 
 {{< slides/row  style="align-items:baseline;">}}
 {{< slides/col  >}}
@@ -393,7 +393,7 @@ $$\vee \color{var(--r-Purple)}++\vee3\frac{1}{2}3+\vee3\frac{1}{2}3 ++\vee3\frac
 
 {{< /slides/col >}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations  %}}
 Conway, J.H. "An Enumeration of Knots and Links, and Some of Their Algebraic Properties." In Computational Problems in Abstract Algebra, 329-58. Elsevier, 1970. [https://doi.org/10.1016/B978-0-08-012975-4.50034-5](https://doi.org/10.1016/B978-0-08-012975-4.50034-5)
@@ -504,17 +504,17 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 ### Relative positions of connections?
 #### Solution: Rooted plane tree
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 A **rooted plane tree** is an abstract tree imbued with a strict total order on
 the vertices (indexed by the non-negative integers). We call the least vertex
 the **root** of the tree.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
-{{<  slides/admonition type="Note" title="Convention:" markdownify="true" >}}
+{{<  admonition type="Note" title="Convention:" markdownify="true" >}}
 We will select the total order given by a depth first in order traversal of the
 tree.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 
 ---
@@ -707,12 +707,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 A vertex with valence $\geq 3$ is called an
 *Essential Vertex*.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
@@ -741,12 +741,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The subtrees remaining after excising all essential vertices and their bonds (half edges)
 are called the *Sticks* of a tree.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
@@ -776,13 +776,13 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition: Part 1" markdownify="true"  >}}
+{{<  admonition type="Definition" title="Definition: Part 1" markdownify="true"  >}}
 The **$F_3^\prime$ move** on a weighted arborescent tree moves a weight $w$ as in
 the image below and, if $w$ is odd, reverse the cyclic order of
 weights and bonds at all vertices of the purple subtree lying at odd distance
 (count of edges between two vertices) from the vertex shown.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< slides/centersvg src="/presentations/bands/moves/f3/f3p_def.svg"  direct="true" class="sixteenthHeight" >}}
 
 {{% slides/citations %}}
@@ -807,7 +807,7 @@ weights and bonds at all vertices of the purple subtree lying at odd distance
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition: Part 2" markdownify="true"  >}}
+{{<  admonition type="Definition" title="Definition: Part 2" markdownify="true"  >}}
 
 Also, when $w$ is odd, apply $\xi$ ( $X$-axis rotation) to all free bonds
 in the purple subtree that are attached to a vertex at even distance from the
@@ -815,7 +815,7 @@ vertex shown, and $\eta$ ($Y$-axis rotation) to those
 at odd distance.  The rotations are relative to the local orientations of the
 plumbing squares on the bands corresponding to vertices at even/odd distances
 from the vertex with weight $w$.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< slides/centersvg src="/presentations/bands/moves/f3/f3p_def.svg"  direct="true" class="sixteenthHeight" >}}
 
 {{% slides/citations %}}
@@ -831,13 +831,13 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The **$F_2$ move** on a weighted arborescent tangle tree reverses the cyclic order
 of bonds and weights at one vertex on the tree and at every vertex at even distance from it; also
 apply $\eta$ ($Y$-axis rotation) to every free bond of a vertex at even (or zero) distance, and
 apply $\xi$ ($X$-axis rotation) to every free bond at odd distance.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -848,12 +848,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The **$F_1$ move** on a weighted arborescent tangle tree reverses the cyclic order
 of bonds and weights at every vertex of the graph and applies $\zeta$ ($Z$-axis
 rotation) to every free bond.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -862,9 +862,9 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 The **$R^-$** replaces the left image below with the right, leaving the rest of the tree unchanged.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< slides/centersvg src="/presentations/bands/moves/R/n/def.svg"  direct="true" class="quarterHeight" >}}
 
 {{% slides/citations %}}
@@ -874,9 +874,9 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 The **$R^+$** replaces the left image below with the right, leaving the rest of the tree unchanged.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< slides/centersvg src="/presentations/bands/moves/R/p/def.svg"  direct="true" class="quarterHeight" >}}
 
 {{% slides/citations %}}
@@ -973,12 +973,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem: Bonahon and Seibenmann" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem: Bonahon and Seibenmann" markdownify="true" >}}
 There exists an effective algorithm which, for any weighted planar tree $\Gamma$
 with free bonds labeled by elements of $V_4$, alters $\Gamma$ by a sequence of
 moves of the calculus of arborescent tangles to produce a collection of
 positively (or negatively) canonical weighted planar trees.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -986,14 +986,14 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem: Bonahon and Seibenmann" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem: Bonahon and Seibenmann" markdownify="true" >}}
 Consider two positive (or negative) CWPTT
 $\Gamma$ and $\Gamma^\prime$, with free bonds labeled by
 elements of $V_4$. Plumbing, according to $\Gamma$ and $\Gamma^\prime$
 gives isomorphic arborescent tangles if and only if $\Gamma$ and
 $\Gamma^\prime$ can be deduced from each other by a sequence of moves
 ($F_1$), ($F_2$), ($F_3^\prime$), and the modified ring moves $\LP\pm R\RP$.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -1001,10 +1001,10 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 For weighted planar tangle tree $\Gamma$, with weights $\LS w_i\RS$. We call
 $$\text{TCN}=\sum |w_i|$$ the **Tree Crossing Number (TCN)**.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1184,10 +1184,10 @@ II.   If the valence of $v_i$ is $2$ then all of:
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 $\Gamma$ is a $\LP+\RP$-CWPTT if and only if all the vertices of $\Gamma$ are
 $\LP+\RP$-canonical.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 
 ---
@@ -1231,15 +1231,15 @@ $\LP+\RP$-canonical.
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition [S]" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition [S]" markdownify="true" >}}
 A CWPTT is called **right leaning** if all weights are in the highest indexed
 region of each vertex. Additionally, any ring subtrees
 that are children of a vertex are the highest indexed children of that vertex.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
-{{<  slides/admonition type="Note" title="Note" markdownify="true" >}}
+{{<  admonition type="Note" title="Note" markdownify="true" >}}
 Not using "abbreviated trees" makes generation a bit less complex.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1248,37 +1248,37 @@ Not using "abbreviated trees" makes generation a bit less complex.
 ---
 
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 Every arborescent tangle has a right leaning CWPTT representative.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition [S]" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition [S]" markdownify="true" >}}
 A CWPTT is called an **identity tree** if its free bond is marked by
 $\iota\in V_4$.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 Every arborescent tangle has an identity CWPTT representative.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition [S]" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition [S]" markdownify="true" >}}
 A CWPTT is called a **right leaning identity tangle tree (RLITT)** if it's a
 right leaning and identity tree.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 Every $\LP+\RP$-CWPTT has a unique right leaning identity representative.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1312,7 +1312,7 @@ Cayley, A. (1857). ON THE THEORY OF THE ANALYTICAL FORMS CALLED TREES (The colle
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition [S]" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition [S]" markdownify="true" >}}
 For WPTT $\Gamma_r$ and $\Gamma_s$, define the **grafting operation**
 $$
 \begin{aligned}
@@ -1328,7 +1328,7 @@ grafting.
 When grafting at the root $v_0$ we omit the index label in the grafting
 operation, that is, $\star_0$ is written simply as $\star$. We call $\Gamma_r$
 the **rootstock** and $\Gamma_s$ the **scion**.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 {{% slides/uncenter %}}
@@ -1347,7 +1347,7 @@ $$\Gamma_r\star_2\color{#ffb86c}\Gamma_s$$
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 
 Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
 
@@ -1359,7 +1359,7 @@ Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
        $\text{Sign}\LP v_0\RP=\text{Sign}\LP v_1\RP$. Each vertex in
        $\LS v_i\RS_{i=2}^n$ of $\Gamma_r$ is $\LP +\RP$-canonical.
     1. $\Gamma_r$ is $\LP+\RP$-RLITT
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1372,7 +1372,7 @@ Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
 
 ---
 
-{{<  slides/admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1.5rem" >}}
+{{<  admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1.5rem" >}}
 **Input**
 
 -   A collection of of RLITT scions $T_s$
@@ -1390,7 +1390,7 @@ Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
     1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1418,26 +1418,26 @@ Every $\Gamma$ $\LP+\RP$-RLITT of TCN $n$ is one of two forms:
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 For $\Gamma_r$ a $\LP+\RP-$RLITT and $\Gamma_s$ a $\LP+\RP-$RLITT scion,
 the result of $\Gamma=\Gamma_r\star\Gamma_s$ is canonical, if all
 $v_i$ at distance $1$ or less from the root are canonical.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
-{{<  slides/admonition type="Definition" title="Definition [S]" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition [S]" markdownify="true" >}}
 A $\LP+\RP-$RLITT (respectively $\LP-\RP-$RLITT) $\Gamma$ with root weight $w_0$
 is called a **good scion** when either:
 
 1. $w_0\neq0$
 2. $w_0=0$ and the valence of $v_0$ is greater than $2$ (essential)
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
 
-{{<  slides/admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1.1rem" >}}
+{{<  admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1.1rem" >}}
 
 **Input**
 
@@ -1458,7 +1458,7 @@ is called a **good scion** when either:
     1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 
 ---
@@ -1477,16 +1477,16 @@ is called a **good scion** when either:
 
 ---
 
-{{<  slides/admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem [S]" markdownify="true" >}}
 For $\Gamma_r$ a non-negative $\LP+\RP-$RLITT, and $\Gamma_s$ a good
 non-positive $\LP-\RP-$RLITT scion, the result of
 $\Gamma=\Gamma_r\star\Gamma_s$ is non-canonical.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
 
-{{<  slides/admonition type="Algorithm" title="Algorithm: Generate $\LP+\RP$-RLITT [S]" markdownify="true" style="font-size:1rem" >}}
+{{<  admonition type="Algorithm" title="Algorithm: Generate $\LP+\RP$-RLITT [S]" markdownify="true" style="font-size:1rem" >}}
 
 **Input**
 
@@ -1508,12 +1508,12 @@ $\Gamma=\Gamma_r\star\Gamma_s$ is non-canonical.
     1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
 
-{{<  slides/admonition type="Algorithm" title="Algorithm: Generate $\LP-\RP$-RLITT [S]" markdownify="true" style="font-size:1rem" >}}
+{{<  admonition type="Algorithm" title="Algorithm: Generate $\LP-\RP$-RLITT [S]" markdownify="true" style="font-size:1rem" >}}
 
 **Input**
 
@@ -1535,7 +1535,7 @@ $\Gamma=\Gamma_r\star\Gamma_s$ is non-canonical.
     1. Continue to the iteration of the loop if $v_0$ in $\Gamma_r$ is valence other than two
         1. Set $v_0$ to $-v_0$ for $\Gamma$
         1. Report $\Gamma$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -1563,7 +1563,7 @@ $$
 ---
 
 
-{{<  slides/admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1rem" >}}
+{{<  admonition type="Algorithm" title="Algorithm [S]" markdownify="true" style="font-size:1rem" >}}
 
 **Input**
 
@@ -1591,7 +1591,7 @@ $$
     1. Execute "Generate $\LP+\RP$-RLITT" input $T_{r+}$ and $T_{s+}$
     1. Execute "Generate $\LP-\RP$-RLITT" input $T_{r-}$ and $T_{s-}$
     1. Add the results to $T$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 

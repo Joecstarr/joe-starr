@@ -20,20 +20,31 @@
 # weight = 40
 
 [[main]]
-name = "Teaching"
+name = "Instruction"
 pageRef = "teaching"
 weight = 50
 
 [[main]]
 name = "Resources"
-pageRef = "resources"
+weight = 60
+
+[[main]]
+name = "General"
+parent = "Resources"
+pageRef = "resources/general"
+weight = 70
+
+[[main]]
+name = "Tools"
+parent = "Resources"
+pageRef = "resources/Tools"
 weight = 60
 
 [[main]]
 name = "Course Plans"
 parent = "Resources"
 pageRef = "resources/course_plans"
-weight = 70
+weight = 40
 
 
 [[main]]
@@ -72,6 +83,11 @@ weight = 80
 name = "Ducks"
 parent = "Misc"
 pageRef = "misc/ducks"
+weight = 80
+[[main]]
+name = "Knots in the Wild"
+parent = "Misc"
+pageRef = "misc/knots_in_the_wild"
 weight = 80
 
 #[[main]]

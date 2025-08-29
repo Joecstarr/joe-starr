@@ -530,7 +530,7 @@ $= \color{var(--r-Purple)}([1\ 2\  0] + [1\ 2\ 0] + [1\ 1\  0]) \color{var(--r-F
 
 All possible tangles made from $+$ and $\vee$
 
-{{<  slides/admonition type="Example" title="Algebraic" >}}
+{{<  admonition type="Example" title="Algebraic" >}}
 
 {{< slides/row  >}}
 {{< slides/col  >}}
@@ -545,7 +545,7 @@ A vertical sum of two Montesinos tangles.
 {{< slides/centersvg src="/presentations/lightning/annotated/Alg.svg"  >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 

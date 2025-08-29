@@ -1,0 +1,22 @@
+name: "💭 Request/Suggest a 'what is?' topic"
+description: Template for requesting/suggesting a 'what is?' topic
+title: "[💭]"
+body:
+    - type: checkboxes
+      id: check-pull
+      attributes:
+          label: Will you be opening a pull request?
+          description: >-
+              Will you be opening a pull request for this enhancement?
+          options:
+              - label: "yes"
+              - label: "no"
+      validations:
+          required: true
+    - type: textarea
+      id: whats-your-suggestion
+      attributes:
+          label: Please add information on what you would like me to talk about
+          description: Your question
+      validations:
+          required: true

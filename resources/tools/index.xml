@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Joe Starr</title>
+    <link>https://joe-starr.com/resources/tools/</link>
+    <description>Recent content in Tools on Joe Starr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Joe Starr</copyright>
+    <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/resources/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Draw Weighted Planar Tangle Trees</title>
+      <link>https://joe-starr.com/resources/tools/draw_wptt/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/draw_wptt/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>QR code svg generator</title>
+      <link>https://joe-starr.com/resources/tools/qr_svg/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/qr_svg/</guid>
+      <description>A tool</description>
+      
+    </item>
+    
+    <item>
+      <title>Continued Fraction and Twist Vector Converter</title>
+      <link>https://joe-starr.com/resources/tools/cont_frac_convert/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/cont_frac_convert/</guid>
+      <description>A tool that computes continued fractions from twist vectors.</description>
+      
+    </item>
+    
+    <item>
+      <title>Grid Diagram to Front Projection</title>
+      <link>https://joe-starr.com/resources/tools/grid_to_front_projection/</link>
+      <pubDate>Tue, 30 May 2023 17:09:26 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/grid_to_front_projection/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>A Knotplot QR Code Generator</title>
+      <link>https://joe-starr.com/resources/tools/text_knots/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/text_knots/</guid>
+      <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw &amp;lsquo;LR&amp;rsquo; codes (qr codes but made of links).</description>
+      
+    </item>
+    
+    <item>
+      <title>A Knotplot Text Generator</title>
+      <link>https://joe-starr.com/resources/tools/qr_code_knots/</link>
+      <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/resources/tools/qr_code_knots/</guid>
+      <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw text.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

@@ -11,30 +11,30 @@
     
     <item>
       <title>A Knotplot QR Code Generator</title>
-      <link>https://joe-starr.com/resources/text_knots/</link>
+      <link>https://joe-starr.com/resources/tools/text_knots/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/text_knots/</guid>
+      <guid>https://joe-starr.com/resources/tools/text_knots/</guid>
       <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw &amp;lsquo;LR&amp;rsquo; codes (qr codes but made of links).</description>
       
     </item>
     
     <item>
       <title>A Knotplot Text Generator</title>
-      <link>https://joe-starr.com/resources/qr_code_knots/</link>
+      <link>https://joe-starr.com/resources/tools/qr_code_knots/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/qr_code_knots/</guid>
+      <guid>https://joe-starr.com/resources/tools/qr_code_knots/</guid>
       <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw text.</description>
       
     </item>
     
     <item>
       <title>Legendrian Unknot Visualization</title>
-      <link>https://joe-starr.com/resources/legendrian_knots/</link>
+      <link>https://joe-starr.com/resources/general/legendrian_knots/</link>
       <pubDate>Tue, 29 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/legendrian_knots/</guid>
+      <guid>https://joe-starr.com/resources/general/legendrian_knots/</guid>
       <description>A tool to visualize the Legendrian unknot in the standard contact structure on Rn</description>
       
     </item>

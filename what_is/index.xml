@@ -10,6 +10,26 @@
     <lastBuildDate>Wed, 13 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://joe-starr.com/what_is/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>A Knot</title>
+      <link>https://joe-starr.com/what_is/knot/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/what_is/knot/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>A Tangle</title>
+      <link>https://joe-starr.com/what_is/tangle/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/what_is/tangle/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Tangle Tabulation</title>
       <link>https://joe-starr.com/what_is/tangle_tabulation/</link>
       <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>

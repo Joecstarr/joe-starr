@@ -1,10 +1,10 @@
+@import "slides_themes/dracula.css";
 
 .admonition {
     padding: 15px;
     margin-bottom: 21px;
     border-left: 10px solid transparent;
     text-align: left;
-    height: 100%;
 }
 
 .admonition .title {
@@ -18,7 +18,6 @@
 /*********************************** Note **********************************/
 .admonition.note {
     border-color: var(--r-Blue);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -30,7 +29,6 @@
 /*********************************** Theorem **********************************/
 .admonition.theorem {
     border-color: var(--r-Green);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -42,7 +40,6 @@
 /*********************************** Definition **********************************/
 .admonition.definition {
     border-color: var(--r-Orange);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -54,7 +51,6 @@
 /*********************************** Question **********************************/
 .admonition.question {
     border-color: var(--r-Pink);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -66,7 +62,6 @@
 /*********************************** Proof **********************************/
 .admonition.proof {
     border-color: var(--r-Purple);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -81,7 +76,6 @@
 /*********************************** Example **********************************/
 .admonition.example {
     border-color: var(--r-Yellow);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -96,7 +90,6 @@
 /*********************************** Exercise *********************************/
 .admonition.exercise {
     border-color: var(--r-Red);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 
@@ -112,7 +105,6 @@
 
 .admonition.algorithm {
     border-color: var(--r-Red);
-    background-color: var(--r-background-color);
     text-align: left;
 }
 

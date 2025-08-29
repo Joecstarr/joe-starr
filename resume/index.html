@@ -1,64 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <script defer src="/fontawesome-6/all-6.4.2.js"></script>
 
-    <title>Joseph Starr - CV</title>
+    <title>Joseph Starr, PhD - Resume</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asul:wght@700&family=Open+Sans&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
         :root {
             --text-color: #000000;
+            --print-text-color: #000000;
             --text-secondary-color: #000000;
-            --background-color: #eaedf0;
+            --background-color: #ffffff;
             --secondary-background-color: #8811ee1a;
             --primary-color: #8811ee;
-            --secondary-color: #8811ee1e;
+            --secondary-color: #006bac;
+            -webkit-print-color-adjust:exact !important;
+            print-color-adjust:exact !important;
             }
 
 
         @media print {
-            @page{
+            @page {
                 size: letter;
             }
-            .section_title{
+
+            .section_title {
                 background-color: var(--primary-color);
                 color: #ffffff;
-                font-size: 12pt;
             }
-            html{
-                font-size: 11pt;
-                color: #000000;
-                background-color: #ffffff;
+
+            .skill_title {
+                color: var(--primary-color);
+            }
+
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+
+            html {
+                font-size: 8.4pt;
+                color: var(--print-text-color) !important;
+                background-color: var(--background-color) !important;
             }
 
         }
+
         @media screen {
-        html{
+            html {
+                color: var(--text-color);
+                background-color: var(--background-color);
+            }
+
+            a{
+                color: var(--secondary-color) !important;
+                text-decoration: none;
+            }
+
+            .section_title {
+                background-color: var(--primary-color);
+                color: var(--background-color);
+            }
+
+            .skill_title {
+                color: var(--primary-color);
+            }
+        }
+
+        .head .icon {
             color: var(--text-color);
             background-color: var(--background-color);
         }
 
-        .section_title{
-            background-color: var(--primary-color);
-            color: var(--background-color);
-            font-size: 1.5vh;
+        .icon {
+            margin-left: 1rem;
+            margin-right: .4rem;
         }
-    }
-        .head .icon{
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin-left:10px;
-            margin-right:10px;
-        }
-        .icon{
-            margin-left:10px;
-            margin-right:10px;
+        .icon_skill {
+            margin-right: .4rem;
         }
 
         .head {
@@ -66,21 +92,28 @@
         }
 
 
-        h1, h2, h3,
-    h4, h5, h6  {
-            font-family: 'Asul', sans-serif;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'roboto', sans-serif;
             padding: 0;
             margin: .125vh;
         }
-       h6  {
-            font-family: 'Asul', sans-serif;
+
+        h6 {
+            font-family: 'roboto', sans-serif;
             padding: 0;
             margin: 0;
         }
-        h1{
+
+        h1 {
             color: var(--primary-color);
         }
-        p{
+
+        p {
             display: block;
             margin-block-start: 0.1rem;
             margin-block-end: 0.1rem;
@@ -88,24 +121,29 @@
             margin-inline-end: 0px;
             unicode-bidi: isolate;
         }
-        ul{
+
+        ul {
             margin: 0;
         }
-        .hr{
+
+        .hr {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
-            height: .5vh;
-            padding: 0;
-            margin-top: 0;
-        }
-        .hrlite{
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
             height: .1vh;
             padding: 0;
             margin-top: 0;
         }
-        .section_title{
+
+        .hrlite {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            opacity: 0.2;
+            height: .1vh;
+            padding: 0;
+            margin-top: 0;
+        }
+
+        .section_title {
             display: inline-block;
             padding: .5vw;
             margin: .125vh;
@@ -115,8 +153,19 @@
             margin-bottom: 0;
         }
 
+        .skill_title {
+            display: inline-block;
+            padding: .5vw;
+            padding-left: 0;
+            margin-left: 0;
+            margin: .125vh;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
         body {
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'roboto', sans-serif;
         }
 
         .flex {
@@ -124,6 +173,7 @@
             justify-content: space-between;
             margin: 0;
         }
+
         .summary {
             margin-top: .5vh;
             margin-bottom: .5vh;
@@ -144,25 +194,21 @@
         .left p:first-of-type {
             margin-bottom: 0;
         }
+
         .dot {
-            height: .75em;
-            width: .75em;
+            height: .75rem;
+            width: .75rem;
             border-radius: 50%;
             border-color: var(--foreground-color);
-            border-width: .01em;
+            border-width: .01rem;
             border-style: solid;
             display: inline-block;
-          }
+        }
+
         .dot_fill {
             background-color: var(--primary-color);
-          }
-        .skills{
-            flex-flow: wrap;
-            justify-content: space-evenly;
         }
-        .skill{
-            margin:.25em;
-        }
+
     </style>
 </head>
 
@@ -172,103 +218,712 @@
     </header>
 
     <div class="head">
-        <h1>Joseph Starr</h1>
-        <h2>PhD Candidate / Graduate Assistant</h2>
+        <h1>Joseph Starr, PhD</h1>
+        <h2>Mathematician and Software Engineer</h2>
         <p>
             
-
-            <a href="mailto:joe@joe-starr.com"><i class="fa-regular fa-envelope icon" aria-hidden="true"></i><a
+                <a class="social" href="mailto:joe@joe-starr.com"><i class="fa-solid fa-envelope icon" aria-hidden="true"></i><a
   href="mailto:joe@joe-starr.com">joe@joe-starr.com</a></a>
-             
-
-            <a href="https://github.com/Joecstarr/"><i class="fa-brands fa-github icon" aria-hidden="true"></i>Joecstarr</a>
-             
-
-            <a href="https://www.linkedin.com/in/joseph-c-starr/"><i class="fa-brands fa-linkedin icon" aria-hidden="true"></i>joseph-c-starr</a>
-             
+            
+                <a class="social" href="https://joe-starr.com/"><i class="fa-solid fa-ethernet icon" aria-hidden="true"></i>joe-starr.com</a>
+            
+                <a class="social" href="https://github.com/Joecstarr/"><i class="fa-brands fa-github icon" aria-hidden="true"></i>Joecstarr</a>
+            
+                <a class="social" href="https://www.linkedin.com/in/joseph-c-starr/"><i class="fa-brands fa-linkedin icon" aria-hidden="true"></i>joseph-c-starr</a>
+            
         </p>
         <p>
             
         </p>
     </div>
 
-    
-    <section>
-
-        <h2 class="section_title"><i class="fa-solid fa-briefcase icon" aria-hidden="true"></i>Experience</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
+    <div style="  display: flex;">
+        <div style="width:20%;">
             
-        </div>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>Teaching Assistant</h4>
-                    <h5><a
-  href="https://uiowa.edu"
-    target="_blank"
-  >University of Iowa</a></h5>
-                </div>
-                <div class="right">
-                    Fall 2021 - Present
+            <div>
+                <h4 class="skill_title"><i class="fa-solid fa-screwdriver-wrench icon_skill" aria-hidden="true"></i>Tools and Frameworks
+                </h4>
+                <div class="skills">
+                    
+                        <h5 class=""> ‣ C</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Python</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ JavaScript</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ CMake</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Jenkins (CI/CD)</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ GitHub (CI/CD)</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ GitHub (Project Management)</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Git</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ SVN</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ JIRA</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Enterprise Architect</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector MICROSAR Classic</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector Flash Bootloader</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector CANoe</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector DaVinci Configurator</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector DaVinci Developer</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector vTESTstudio</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector VectorCAST</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Vector vVIRTUALtarget</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
                 </div>
             </div>
-            <p class="summary">
-                <ul>
-<li>Lead undergraduate students as instructor of record.</li>
-<li>Lead undergraduate and graduate students as discussion leader.</li>
+            
+            <div>
+                <h4 class="skill_title"><i class="fa-solid fa-pen-ruler icon_skill" aria-hidden="true"></i>Technologies and Standards
+                </h4>
+                <div class="skills">
+                    
+                        <h5 class=""> ‣ ASPICE</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ AUTOSAR (classic)</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ SPI</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ CAN</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ CAN FD</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ Ethernet</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                        <h5 class=""> ‣ ISO 26262</h5>
+                        
+                        <div class="skill">
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot dot_fill"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                            
+                            <div class="dot"></div>
+                            
+                        </div>
+                        
+                    
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="skill_title"><i class="fa-solid fa-microchip icon_skill" aria-hidden="true"></i>Silicon Platforms and Peripherals
+                </h4>
+                <div class="skills">
+                    
+                        <h5 class=""> ‣ Renesas RL78</h5>
+                        
+                    
+                        <h5 class=""> ‣ Infineon Traveo II</h5>
+                        
+                    
+                        <h5 class=""> ‣ Infineon TriCore TC2xx</h5>
+                        
+                    
+                        <h5 class=""> ‣ Infineon TriCore TC3xx</h5>
+                        
+                    
+                        <h5 class=""> ‣ Infineon TLE9471</h5>
+                        
+                    
+                        <h5 class=""> ‣ NXP TJA1145A</h5>
+                        
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div style="width:80%;">
+            
+            <div>
+                <h4 class="section_title"><i class="fa-solid fa-briefcase icon" aria-hidden="true"></i>Experience
+                </h4>
+                <div class="hr"></div>
+                
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>Teaching Assistant / Research Fellow</h3>
+                        <h4><a
+  href="https://uiowa.edu"
+    target="_blank"
+  >University of Iowa</a></h4>
+                    </div>
+                    <div class="right">
+                        Aug 2021 - May 2025
+                    </div>
+                </div>
+                <p class="summary">
+                    <ul>
+<li>Conducted original research.</li>
+<li>Developed original and modified existing courses for use in an
+undergraduate research training program.</li>
+<li>Led undergraduate students as instructor of record.</li>
+<li>Led undergraduate and graduate students as discussion leader.</li>
 <li>Tutor undergraduate and graduate students in math tutorial lab.</li>
 </ul>
 
-            </p>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>Software Engineer</h4>
-                    <h5><a
+                </p>
+                
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>Software Engineer</h3>
+                        <h4><a
   href="https://westerndp.com/"
     target="_blank"
-  >Western Diversified Plastics</a></h5>
+  >Western Diversified Plastics</a></h4>
+                    </div>
+                    <div class="right">
+                        Dec 2020 - Aug 2021
+                    </div>
                 </div>
-                <div class="right">
-                    Dec 2020 - Aug 2021
-                </div>
-            </div>
-            <p class="summary">
-                <ul>
-<li>ASPICE process tooling including tooling for customer
-requirements parsing and tracing.</li>
-<li>Standing up of product prototypes.</li>
-<li>General AUTOSAR development.</li>
+                <p class="summary">
+                    <ul>
+<li>Design and implementation of ASPICE process tooling for:
+<ul>
+<li>Parsing of customer requirements.</li>
+<li>Tracing of customer requirements.</li>
+<li>Internal requirements modeling process design.</li>
+<li>Generation of project health metrics and their analysis.</li>
+<li>Reporting project health to project management tooling.</li>
+</ul>
+</li>
+<li>MICROSAR sourcing (technical contact)
+<ul>
+<li>MICROSAR</li>
+<li>Flash Bootloader</li>
+<li>vVIRTUALtarget</li>
+<li>vTESTstudio</li>
+</ul>
+</li>
+<li>Standing up product prototype (basic IO for
+hardware verification).</li>
+<li>General development of AUTOSAR application components.</li>
+<li>Design and implementation of continuous integration (CI) process and system.</li>
 </ul>
 
-            </p>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>Project Engineer</h4>
-                    <h5><a
+                </p>
+                
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>Project Engineer</h3>
+                        <h4><a
   href="https://Vector.com"
     target="_blank"
-  >Vector North America</a></h5>
+  >Vector North America</a></h4>
+                    </div>
+                    <div class="right">
+                        Jan 2017 - Dec 2020
+                    </div>
                 </div>
-                <div class="right">
-                    Jan 2017 - Dec 2020
-                </div>
-            </div>
-            <p class="summary">
-                
+                <p class="summary">
+                    
 
-<h5 class="relative group">Software Architect
-    <div id="software-architect" class="anchor"></div>
+<h5 class="relative group">Project Architect
+    <div id="project-architect" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#software-architect" aria-label="Anchor"></a>
+            style="text-decoration-line: none !important;" href="#project-architect" aria-label="Anchor"></a>
     </span>
     
 </h5>
@@ -276,6 +931,32 @@ requirements parsing and tracing.</li>
 <li>Responsible for the complete architectural design and direction of a customer project.</li>
 <li>Analysis of customer requirements and negotiation of acceptance for those requirements.</li>
 <li>Planning of team development activities.</li>
+<li>Design and implementation of safety use case (ASIL A)</li>
+</ul>
+
+
+<h5 class="relative group">AUTOSAR Projects
+    <div id="autosar-projects" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#autosar-projects" aria-label="Anchor"></a>
+    </span>
+    
+</h5>
+<ul>
+<li>Design and implementation of AUTOSAR application components</li>
+<li>Design and implementation of AUTOSAR MCAL components
+<ul>
+<li>GPT</li>
+<li>SPI</li>
+<li>FLS (partial)</li>
+<li>ADC (partial)</li>
+</ul>
+</li>
+<li>Flash Bootloader design and implementation.</li>
+<li>Design and implementation of continuous integration (CI) process and system.</li>
 </ul>
 
 
@@ -295,599 +976,87 @@ requirements parsing and tracing.</li>
 <li>Support customers in use of the <em>Flash Bootloader</em> product.</li>
 </ul>
 
-
-<h1 class="relative group">
-    <div id="" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#" aria-label="Anchor"></a>
-    </span>
-    
-</h1>
-
-            </p>
-        
-    </section>
-    
-    <section>
-
-        <h2 class="section_title"><i class="fa-solid fa-school icon" aria-hidden="true"></i>Education</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
-            
-        </div>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>PhD in Mathematics</h4>
-                    <h5>University of Iowa</h5>
-                </div>
-                <div class="right">
-                    Fall 2021 - Present (Expected Summer 2025)
-                </div>
-            </div>
-            <p class="summary">
+                </p>
                 
-            </p>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>MS in Mathematics</h4>
-                    <h5>University of Iowa</h5>
-                </div>
-                <div class="right">
-                    Fall 2021 - Spring 2023
-                </div>
             </div>
-            <p class="summary">
+            
+            <div>
+                <h4 class="section_title"><i class="fa-solid fa-school icon" aria-hidden="true"></i>Education
+                </h4>
+                <div class="hr"></div>
                 
-            </p>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>Bachelor of Science in Computer Science</h4>
-                    <h5>University of Michigan - Dearborn</h5>
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>Doctor of Philosophy in Mathematics</h3>
+                        <h4>University of Iowa</h4>
+                    </div>
+                    <div class="right">
+                        Fall 2021 - Summer 2025 (Defended 8/18/25)
+                    </div>
                 </div>
-                <div class="right">
-                    Fall 2013 - Fall 2016
-                </div>
-            </div>
-            <p class="summary">
+                <p class="summary">
+                    In my thesis titled <strong>The Tanglenomicon: Tabulation of Arborescent
+Tangles</strong>, I enumerated a class of knot-theoretic objects called
+arborescent tangles. I identified a unique (up to isotopy)
+representative for each arborescent tangle, the Right Leaning
+Identity Tangle Tree (RLITT). I then created and proved correct
+the abstract algorithms needed for enumeration of RLITT.
+Furthermore, I designed a process architecture that connects
+mathematical research with software design, including formal
+design and validation activities. Within that process I developed
+a modular software architecture in C for general computational
+knot theoretic use cases. Using this architecture, I implemented
+my theoretical algorithms and tabulated arborescent tangles up to
+18 crossings.
+                </p>
                 
-            </p>
-        
-        <div class="hrlite"></div>
-        <div class="flex">
-            <div class="left">
-                    <h4>Bachelor of Science in CIS Mathematics</h4>
-                    <h5>University of Michigan - Dearborn</h5>
+                <div class="hrlite"></div>
+                <div class="flex">
+                    <div class="left">
+                        <h3>Master of Science in Mathematics</h3>
+                        <h4>University of Iowa</h4>
+                    </div>
+                    <div class="right">
+                        Fall 2021 - Spring 2023
+                    </div>
                 </div>
-                <div class="right">
-                    Fall 2013 - Fall 2016
-                </div>
-            </div>
-            <p class="summary">
+                <p class="summary">
+                    
+                </p>
                 
-            </p>
-        
-    </section>
-    
-    <section>
-
-        <h2 class="section_title"><i class="fa-solid fa-school icon" aria-hidden="true"></i>Tools/Frameworks</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
-            
+                <div class="hrlite"></div>
                 <div class="flex">
-                    <h5 class="skill"> ‣ C</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
+                    <div class="left">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>University of Michigan - Dearborn</h4>
                     </div>
+                    <div class="right">
+                        Fall 2013 - Fall 2016
+                    </div>
+                </div>
+                <p class="summary">
                     
-            </div>
-            
+                </p>
+                
+                <div class="hrlite"></div>
                 <div class="flex">
-                    <h5 class="skill"> ‣ Python</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
+                    <div class="left">
+                        <h3>Bachelor of Science in CIS Mathematics</h3>
+                        <h4>University of Michigan - Dearborn</h4>
                     </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ cmake</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
+                    <div class="right">
+                        Fall 2013 - Fall 2016
                     </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ CI/CD (Jenkins)</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ git</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ svn</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ JIRA</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector CANoe</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector DaVinci Configurator</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector DaVinci Developer</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector vTESTstudio</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector VectorCAST</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector MICROSAR Classic</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Vector Flash Bootloader</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    </div>
-                    
+                </div>
+                <p class="summary">
+                    
+                </p>
+                
             </div>
             
         </div>
-        
-    </section>
-    
-    <section>
-
-        <h2 class="section_title"><i class="fa-solid fa-school icon" aria-hidden="true"></i>Technologies/Standards</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ ISO 26262</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ ASPICE</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ AUTOSAR (classic)</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ SPI</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ CAN</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ TJA1145A</h5>
-                    
-                    <div class="skill">
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot dot_fill"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    
-                        <div class="dot"></div>
-                    
-                    </div>
-                    
-            </div>
-            
-        </div>
-        
-    </section>
-    
-    <section>
-
-        <h2 class="section_title"><i class="fa-solid fa-school icon" aria-hidden="true"></i>Platforms</h2>
-        <div class="hr"></div>
-        <div class="flex skills">
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Renesas RL78</h5>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Infineon Traveo II</h5>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Infineon TriCore TC2xx</h5>
-                    
-            </div>
-            
-                <div class="flex">
-                    <h5 class="skill"> ‣ Infineon TriCore TC3xx</h5>
-                    
-            </div>
-            
-        </div>
-        
-    </section>
-    
-
+    </div>
 </body>
 
 </html>

@@ -11,30 +11,90 @@
     
     <item>
       <title>Draw Weighted Planar Tangle Trees</title>
-      <link>https://joe-starr.com/resources/draw_wptt/</link>
+      <link>https://joe-starr.com/resources/tools/draw_wptt/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/draw_wptt/</guid>
+      <guid>https://joe-starr.com/resources/tools/draw_wptt/</guid>
       <description></description>
       
     </item>
     
     <item>
+      <title>An LED lamp I found at Marshalls.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0006/</link>
+      <pubDate>Wed, 06 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0006/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0006/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>A wooden table decoration I found at Aldi.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0005/</link>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0005/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0005/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>A string of beads I found at Joann Fabrics.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0004/</link>
+      <pubDate>Mon, 04 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0004/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0004/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>A string of beads I found at Joann Fabrics.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0003/</link>
+      <pubDate>Sun, 03 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0003/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0003/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>A monkey&#39;s paw pillow I found at Marshalls.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0002/</link>
+      <pubDate>Sat, 02 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0002/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0002/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>A string of beads I found at Joann Fabrics.</title>
+      <link>https://joe-starr.com/misc/knots_in_the_wild/0001/</link>
+      <pubDate>Fri, 01 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/misc/knots_in_the_wild/0001/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://joe-starr.com/misc/knots_in_the_wild/0001/featured.jpg" />
+    </item>
+    
+    <item>
       <title>Brief Guide To Ann Arbor And Metro Detroit</title>
-      <link>https://joe-starr.com/resources/mi_guide/</link>
+      <link>https://joe-starr.com/resources/general/mi_guide/</link>
       <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/mi_guide/</guid>
+      <guid>https://joe-starr.com/resources/general/mi_guide/</guid>
       <description>Brief Guide To Ann Arbor And Metro Detroit</description>
       
     </item>
     
     <item>
       <title>QR code svg generator</title>
-      <link>https://joe-starr.com/resources/qr_svg/</link>
+      <link>https://joe-starr.com/resources/tools/qr_svg/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/qr_svg/</guid>
+      <guid>https://joe-starr.com/resources/tools/qr_svg/</guid>
       <description>A tool</description>
       
     </item>
@@ -90,6 +150,26 @@
     </item>
     
     <item>
+      <title>A Knot</title>
+      <link>https://joe-starr.com/what_is/knot/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/what_is/knot/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>A Tangle</title>
+      <link>https://joe-starr.com/what_is/tangle/</link>
+      <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://joe-starr.com/what_is/tangle/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Tangle Tabulation</title>
       <link>https://joe-starr.com/what_is/tangle_tabulation/</link>
       <pubDate>Wed, 13 Mar 2024 00:00:00 +0000</pubDate>
@@ -111,30 +191,30 @@
     
     <item>
       <title>Continued Fraction and Twist Vector Converter</title>
-      <link>https://joe-starr.com/resources/cont_frac_convert/</link>
+      <link>https://joe-starr.com/resources/tools/cont_frac_convert/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/cont_frac_convert/</guid>
+      <guid>https://joe-starr.com/resources/tools/cont_frac_convert/</guid>
       <description>A tool that computes continued fractions from twist vectors.</description>
       
     </item>
     
     <item>
       <title>Tool Chain</title>
-      <link>https://joe-starr.com/resources/toolchain/</link>
+      <link>https://joe-starr.com/resources/general/toolchain/</link>
       <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/toolchain/</guid>
+      <guid>https://joe-starr.com/resources/general/toolchain/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Grid Diagram to Front Projection</title>
-      <link>https://joe-starr.com/resources/grid_to_front_projection/</link>
+      <link>https://joe-starr.com/resources/tools/grid_to_front_projection/</link>
       <pubDate>Tue, 30 May 2023 17:09:26 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/grid_to_front_projection/</guid>
+      <guid>https://joe-starr.com/resources/tools/grid_to_front_projection/</guid>
       <description></description>
       
     </item>
@@ -161,10 +241,10 @@
     
     <item>
       <title>Analysis Prepsheet</title>
-      <link>https://joe-starr.com/resources/analysis_prepsheet/</link>
+      <link>https://joe-starr.com/resources/general/analysis_prepsheet/</link>
       <pubDate>Tue, 07 Jan 2020 17:09:26 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/analysis_prepsheet/</guid>
+      <guid>https://joe-starr.com/resources/general/analysis_prepsheet/</guid>
       <description></description>
       
     </item>
@@ -270,7 +350,7 @@
     </item>
     
     <item>
-      <title>Dearborn Colloquium Talk Fall23</title>
+      <title>Dearborn Colloquium Talk Fall 2023</title>
       <link>https://joe-starr.com/speaking/research/dearborn_f23/</link>
       <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
       
@@ -291,20 +371,20 @@
     
     <item>
       <title>A Knotplot QR Code Generator</title>
-      <link>https://joe-starr.com/resources/text_knots/</link>
+      <link>https://joe-starr.com/resources/tools/text_knots/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/text_knots/</guid>
+      <guid>https://joe-starr.com/resources/tools/text_knots/</guid>
       <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw &amp;lsquo;LR&amp;rsquo; codes (qr codes but made of links).</description>
       
     </item>
     
     <item>
       <title>A Knotplot Text Generator</title>
-      <link>https://joe-starr.com/resources/qr_code_knots/</link>
+      <link>https://joe-starr.com/resources/tools/qr_code_knots/</link>
       <pubDate>Mon, 16 Oct 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/qr_code_knots/</guid>
+      <guid>https://joe-starr.com/resources/tools/qr_code_knots/</guid>
       <description>This script uses the knotplot&amp;rsquo;s celtic knot drawing tools to draw text.</description>
       
     </item>
@@ -341,10 +421,10 @@
     
     <item>
       <title>Legendrian Unknot Visualization</title>
-      <link>https://joe-starr.com/resources/legendrian_knots/</link>
+      <link>https://joe-starr.com/resources/general/legendrian_knots/</link>
       <pubDate>Tue, 29 Nov 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://joe-starr.com/resources/legendrian_knots/</guid>
+      <guid>https://joe-starr.com/resources/general/legendrian_knots/</guid>
       <description>A tool to visualize the Legendrian unknot in the standard contact structure on Rn</description>
       
     </item>

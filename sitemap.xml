@@ -3,19 +3,55 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://joe-starr.com/resources/draw_wptt/</loc>
+    <loc>https://joe-starr.com/resources/tools/draw_wptt/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/mi_guide/</loc>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0006/</loc>
+    <lastmod>2025-08-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0005/</loc>
+    <lastmod>2025-08-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0004/</loc>
+    <lastmod>2025-08-04T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0003/</loc>
+    <lastmod>2025-08-03T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0002/</loc>
+    <lastmod>2025-08-02T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/0001/</loc>
+    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/resources/general/mi_guide/</loc>
     <lastmod>2025-05-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/qr_svg/</loc>
+    <loc>https://joe-starr.com/resources/tools/qr_svg/</loc>
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -51,6 +87,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://joe-starr.com/what_is/knot/</loc>
+    <lastmod>2024-03-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/what_is/tangle/</loc>
+    <lastmod>2024-03-13T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://joe-starr.com/what_is/tangle_tabulation/</loc>
     <lastmod>2024-03-13T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
@@ -63,19 +111,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/cont_frac_convert/</loc>
+    <loc>https://joe-starr.com/resources/tools/cont_frac_convert/</loc>
     <lastmod>2023-07-15T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/toolchain/</loc>
+    <loc>https://joe-starr.com/resources/general/toolchain/</loc>
     <lastmod>2023-06-20T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/grid_to_front_projection/</loc>
+    <loc>https://joe-starr.com/resources/tools/grid_to_front_projection/</loc>
     <lastmod>2023-05-30T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -93,7 +141,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/analysis_prepsheet/</loc>
+    <loc>https://joe-starr.com/resources/general/analysis_prepsheet/</loc>
     <lastmod>2020-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -131,6 +179,30 @@
   <url>
     <loc>https://joe-starr.com/resources/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/resources/tools/</loc>
+    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/</loc>
+    <lastmod>2025-08-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/misc/knots_in_the_wild/</loc>
+    <lastmod>2025-08-06T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://joe-starr.com/resources/general/</loc>
+    <lastmod>2025-05-28T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -231,13 +303,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/text_knots/</loc>
+    <loc>https://joe-starr.com/resources/tools/text_knots/</loc>
     <lastmod>2023-10-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/qr_code_knots/</loc>
+    <loc>https://joe-starr.com/resources/tools/qr_code_knots/</loc>
     <lastmod>2023-10-16T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -261,7 +333,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://joe-starr.com/resources/legendrian_knots/</loc>
+    <loc>https://joe-starr.com/resources/general/legendrian_knots/</loc>
     <lastmod>2022-11-29T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -269,12 +341,6 @@
   <url>
     <loc>https://joe-starr.com/speaking/misc/discrete_morse_theory/</loc>
     <lastmod>2022-10-04T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://joe-starr.com/misc/</loc>
-    <lastmod>2020-01-07T17:09:26+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

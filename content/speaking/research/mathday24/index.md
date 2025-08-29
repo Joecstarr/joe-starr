@@ -650,7 +650,7 @@ Moon, Hyeyoung, and Isabel K. Darcy. "Tangle Equations Involving Montesinos Link
 
 All possible tangles made from $+$ and $\vee$ on basic tangles
 
-{{<  slides/admonition type="Example" title="Algebraic" >}}
+{{<  admonition type="Example" title="Algebraic" >}}
 
 {{< slides/row  style="align-items:baseline;">}}
 {{< slides/col  >}}
@@ -669,7 +669,7 @@ A tangle build from $\vee$ and $+$ on some rational tangles.
 $$\LP\color{var(--r-Purple)}\LB3\ 2\ 3\RB+\LB3\ 2\ 3\RB\color{var(--r-Foreground)}\RP\vee\LP\color{var(--r-Purple)}\LB3\ 2\ 3\RB+\LB3\ 2\ 3\RB\color{var(--r-Foreground)}\RP$$
 {{< /slides/col >}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 

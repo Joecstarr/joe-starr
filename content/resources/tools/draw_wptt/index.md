@@ -15,32 +15,31 @@ share: false
 Below is a tool designed to draw the tangle represented by a weighted planar
 tangle tree {{< cite "bonahonNewGeometricSplittings2016" >}}.
 
-{{< alert icon="circle-info" cardColor="#f1fa8c" iconColor="#282a36" textColor="#282a36" >}}
+{{< admonition icon="circle-info" >}}
 The rendered image is an `svg`, a vector format. This means it can be scaled
 infinitely. If you need to view it at a larger scale or would like to
 postprocess the image, you can download it and use a tool such as Inkscape to
 edit it.
-{{< /alert >}}
+{{< /admonition >}}
 <br/>
 <br/>
-{{< alert icon="bomb" cardColor="#ff5555" iconColor="#282a36" textColor="#282a36" >}}
+{{< admonition icon="bomb" type="exercise" title="Alert" >}}
 I have done very little testing with this tool. I'm reasonably
 confident that valid input generates valid output. I have no idea what happens
 when invalid input is fed to the tool. If you find a bug, please report it.
+<br/>
+{{% btn_report %}}
 
-<button onclick="window.location.href='https://github.com/Joecstarr/joe-starr/issues/new/choose';" class="!rounded-md px-4 py-2 !no-underline border-2 border-solid">
-Report an Issue!
-</button>
-
-{{< /alert >}}
+{{< /admonition >}}
 
 
 
 ## Instructions
 
-{{< alert icon="circle-info" cardColor="#f1fa8c" iconColor="#282a36" textColor="#282a36" >}}
+{{< admonition icon="circle-info" >}}
 I've given a good number of dials here to mess with. I've set some defaults that
-seem to work well. {{< /alert >}}
+seem to work well.
+{{< /admonition >}}
 
 1. In the "Tangle" field, input a linearized weighted planar tangle tree
    (information found in my thesis link to come).

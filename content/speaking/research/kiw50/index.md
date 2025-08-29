@@ -328,7 +328,7 @@ $\frac{1}{2}$
 
 All possible tangles made from $+$ and $\vee$ on basic tangles
 
-{{<  slides/admonition type="Example" title="Algebraic" >}}
+{{<  admonition type="Example" title="Algebraic" >}}
 
 {{< slides/row  style="align-items:baseline;">}}
 {{< slides/col  >}}
@@ -347,7 +347,7 @@ A tangle build from $\vee$ and $+$ on some rational tangles.
 $$\LP\color{var(--r-Purple)}\LB3\ 2\ 3\RB+\LB3\ 2\ 3\RB\color{var(--r-Foreground)}\RP\vee\LP\color{var(--r-Purple)}\LB3\ 2\ 3\RB+\LB3\ 2\ 3\RB\color{var(--r-Foreground)}\RP$$
 {{< /slides/col >}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -475,18 +475,18 @@ $\ $
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The count of rings attached to a vertex is the *Ring Number* of the vertex.
 Ring numbers are noted as an augmentation of the vertex.
 
-{{<  /slides/admonition >}}
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  /admonition >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 A vertex with ring number $\geq 1$ or valence $\geq 3$ is called an
 *Essential Vertex*.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
@@ -514,12 +514,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The subtrees remaining after excising all essential vertices and their bonds (half edges)
 are called the *Sticks* of a tree.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
@@ -553,14 +553,14 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 {{% /slides/citations %}}
 
 ---
-{{<  slides/admonition type="Theorem" title="Theorem (Bonahon and Siebenmann)" markdownify="true" >}}
+{{<  admonition type="Theorem" title="Theorem (Bonahon and Siebenmann)" markdownify="true" >}}
 Consider two $\pm$ canonical abbreviated arborescent tangle trees $\Gamma$ and $\Gamma^\prime$. Plumbing according to $\Gamma$ and $\Gamma^\prime$ gives isomorphic arborescent tangles if and only if $\Gamma$ and $\Gamma^\prime$ can be deduced from each other by a sequence of moves in the calculus of arborescent tangle trees (__happy to talk about the calculus another time__).
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
-{{<  slides/admonition type="" title="Note" markdownify="true" >}}
+{{<  admonition type="" title="Note" markdownify="true" >}}
 Note
 $\pm$ abbreviated canonical tangle trees do not describe minimal diagrams.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations  %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -569,11 +569,11 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 ---
 
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 We call the crossing number of a the tangle diagram described by a $\pm$ abbreviated canonical tangle tree the
 *canonical arborescent crossing number (CACN)* which is given by:
 $$\text{CACN}=4\cdot\\#(\text{rings in the tree})+\sum |\text{weights}|$$
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 
@@ -731,7 +731,7 @@ Nakano, S. (2002). Efficient generation of plane trees. In Information Processin
 3. Hang the ornaments on the trees
 
 ---
-{{<  slides/admonition type="Example" title="Example: Building the tangles with canonical arborescent crossing number (CACN) 4" >}}
+{{<  admonition type="Example" title="Example: Building the tangles with canonical arborescent crossing number (CACN) 4" >}}
 
 {{< slides/row style="margin:1vh;" >}}
     {{< slides/col style="flex-grow:3;" >}}
@@ -752,7 +752,7 @@ Nakano, S. (2002). Efficient generation of plane trees. In Information Processin
         {{< /slides/center_block >}}
     {{< /slides/col>}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 

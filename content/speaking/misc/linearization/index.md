@@ -265,18 +265,18 @@ $\ $
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The count of rings attached to a vertex is the *Ring Number* of the vertex.
 Ring numbers are noted as an augmentation of the vertex.
 
-{{<  /slides/admonition >}}
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  /admonition >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 A vertex with ring number $\geq 1$ or valence $\geq 3$ is called an
 *Essential Vertex*.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
@@ -304,12 +304,12 @@ F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and t
 {{< slides/col  style="flex-grow:4;"  >}}
 {{< slides/center_block grow="1"  >}}
 
-{{<  slides/admonition type="Definition" title="Definition" markdownify="true" >}}
+{{<  admonition type="Definition" title="Definition" markdownify="true" >}}
 
 The subtrees remaining after excising all essential vertices and their bonds (half edges)
 are called the *Sticks* of a tree.
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 {{< /slides/center_block   >}}
 {{< /slides/col >}}
 {{< /slides/row >}}

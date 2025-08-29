@@ -435,7 +435,7 @@ this gives $N-1$ choices between '$+$' and space
 $$[1\square 1\square 1\square\cdots\square1]$$
 letting us generate twist vectors by simply counting from $0\to 2^{N-1}$.
 
-{{<  slides/admonition type="Example" title="Twist Vectors for $N=5$" >}}
+{{<  admonition type="Example" title="Twist Vectors for $N=5$" >}}
 
 $$\begin{array}{|l|l|l|l|}
 \hline
@@ -445,7 +445,7 @@ $$\begin{array}{|l|l|l|l|}
 [2\ 3]\ &\ [4\ 1]\ &\ [1\ 4]\ &\ [5]\\\hline
 \end{array}$$
 
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -453,7 +453,7 @@ $$\begin{array}{|l|l|l|l|}
 
 We can write a *canonical twist vector* by taking the odd length vectors (appending $0$ where needed).
 
-{{<  slides/admonition type="Example" title="Canonical Twist Vectors for $N=5$" >}}
+{{<  admonition type="Example" title="Canonical Twist Vectors for $N=5$" >}}
 
 $$\begin{array}{|l|l|l|l|}
 \hline
@@ -463,7 +463,7 @@ $$\begin{array}{|l|l|l|l|}
 [2\ 3\ 0]\ &\ [4\ 1\ 0]\ &\ [1\ 4\ 0]\ &\ [5]\\\hline
 \end{array}$$
 
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -478,7 +478,7 @@ $$\begin{array}{|l|l|l|l|}
 The rational number for a twist vector is computed by taking the twist vector as a finite continued fraction that is:
 $$\LB a\ b\ c\RB=c+\frac{1}{b+\frac{1}{a}}$$
 
-{{<  slides/admonition type="Example" title="Twist Vector to rational number" >}}
+{{<  admonition type="Example" title="Twist Vector to rational number" >}}
 
 {{< slides/row style="justify-content:flex-left;align-content:flex-start;width:70%;margin-top:1rem;" >}}
 {{< slides/col >}}
@@ -493,7 +493,7 @@ $$\ =\LB 3\ 2\ 2\RB=2+\frac{1}{2+\frac{1}{3}}=\frac{17}{7}$$
 
 
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 Louis H. Kauffman and Sofia Lambropoulou. Classifying and applying rational knots and rational tangles. In DeTurck, editor, Contemporary Mathematics, volume 304, pages 223-259, 2001
@@ -537,10 +537,10 @@ Louis H. Kauffman and Sofia Lambropoulou. Classifying and applying rational knot
 
 ## Existence of canonical diagrams for Montesinos tangles
 
-{{<  slides/admonition type="Note" title="Theorem (Bonahon and Siebenmann)" >}}
+{{<  admonition type="Note" title="Theorem (Bonahon and Siebenmann)" >}}
 Every non-rational Montesinos tangle $T$ admits a canonical diagram satisfying the following construction:
 $$T \cong L_1+\cdots+L_m+\frac{k}{1}$$ where each $L_i \cong \frac{p_i}{q_i}$ is a rational subtangle in canonical form with fraction satisfying $0<\frac{p_i}{q_i}<1$, and $\frac{k}{1}$ is a horizontal integer subtangle.
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 F. Bonahon and L. Siebenmann, New geometric splittings of classical knots, and the classification and symmetries of arborescent knots, [http://www-bcf.usc.edu/~fbonahon/Research/Publications.html](http://www-bcf.usc.edu/~fbonahon/Research/Publications.html)
@@ -609,7 +609,7 @@ $$=[3\  2\ 0] + [3\  2\  0]$$
 
 The Montesinos tangles of crossing number $N$ have a slightly simpler generation strategy compared to rational tangles. We again generate twist vectors but require that each entry $e$ of the twist vector  satisfies $2\leq e < N.$ We call these restricted set of twist vectors *stencils*.
 
-{{<  slides/admonition type="Example" title="Stencils for $N=5$" >}}
+{{<  admonition type="Example" title="Stencils for $N=5$" >}}
 $$\begin{array}{|l|l|l|l|}
 \hline
 [1\ 1\ 1\ 1\ 1]\ &\ [2\ 1\ 1\ 1]\ &\ [1\ 2\ 1\ 1]\ &\ [1\ 1\ 2\ 1]\\\hline
@@ -617,7 +617,7 @@ $$\begin{array}{|l|l|l|l|}
 [2\ 2\ 1]\ &\ [2\ 1\ 2]\ &\ [1\ 2\ 2]\ &\ [3\ 2]\\\hline
 [2\ 3]\ &\ [4\ 1]\ &\ [1\ 4]\ &\ [5]\\\hline
 \end{array}$$
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -625,7 +625,7 @@ $$\begin{array}{|l|l|l|l|}
 
 Now for each entry $e_i$ of the stencil, we generate a list of rational tangles of crossing number equal to $e_i$, with the restriction $0<\frac{p_i}{q_i}<1$. We then take all combinations of elements of these lists.
 
-{{<  slides/admonition type="Example" title="Montesinos tangles for $N=5$" >}}
+{{<  admonition type="Example" title="Montesinos tangles for $N=5$" >}}
 {{< slides/row  style="margin:2rem;font-size:1.5rem">}}
 {{< slides/col  style="flex-grow:1;" >}}
 \begin{array}{|l|}
@@ -649,7 +649,7 @@ $\quad$
 \end{array}
 {{< /slides/col   >}}
 {{< /slides/row   >}}
-{{< /slides/admonition >}}
+{{< /admonition >}}
 
 ---
 
@@ -731,7 +731,7 @@ We just need to take our lists of Montesinos and rational tangles and glue them 
 
 All possible tangles made from $+$ and $\vee$
 
-{{<  slides/admonition type="Example" title="Algebraic" >}}
+{{<  admonition type="Example" title="Algebraic" >}}
 
 {{< slides/row  >}}
 {{< slides/col  >}}
@@ -746,7 +746,7 @@ A vertical sum of two Montesinos tangles.
 {{< slides/centersvg src="/presentations/lightning/annotated/Alg.svg"  >}}
 {{< /slides/col >}}
 {{< /slides/row >}}
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 ---
 # Generation
@@ -935,7 +935,7 @@ stateDiagram-v2
 The rational number for a twist vector is computed by taking the twist vector as a finite continued fraction that is:
 $$\LB a\ b\ c\RB=c+\frac{1}{b+\frac{1}{a}}$$
 
-{{<  slides/admonition type="Example" title="Twist Vector to rational number" >}}
+{{<  admonition type="Example" title="Twist Vector to rational number" >}}
 
 {{< slides/row style="justify-content:flex-left;align-content:flex-start;width:70%;margin-top:1rem;" >}}
 {{< slides/col >}}
@@ -950,7 +950,7 @@ $$\ =\LB 3\ 2\ 2\RB=2+\frac{1}{2+\frac{1}{3}}=\frac{17}{7}$$
 
 
 
-{{<  /slides/admonition >}}
+{{<  /admonition >}}
 
 {{% slides/citations %}}
 Louis H. Kauffman and Sofia Lambropoulou. Classifying and applying rational knots and rational tangles. In DeTurck, editor, Contemporary Mathematics, volume 304, pages 223-259, 2001
@@ -1017,7 +1017,7 @@ To play with twist vectors and continued fractions visit
 
 If we take the rational number $\frac{p}{q}$ associated with the rational tangle we get the following correspondence for parity
 
-{{<  slides/admonition type="Note" title="Parity Table" >}}
+{{<  admonition type="Note" title="Parity Table" >}}
 
 $$\begin{array}{|c|c|c|}
 \hline
@@ -1028,14 +1028,14 @@ p\ \%\ 2 &q\ \%\ 2&\text{Parity}\\ \hline
 1 &1& 1\\ \hline
 \end{array}$$
 
-{{<  /slides/admonition  >}}
+{{<  /admonition  >}}
 
 ---
 
 
 
 {{< slides/hide_qr  >}}
-{{<  slides/admonition type="Example" title="" >}}
+{{<  admonition type="Example" title="" >}}
 
 
 {{< slides/row style="justify-content:flex-left;align-content:flex-start;width:90%;margin-left:2rem;margin-top:2rem;" >}}
@@ -1068,7 +1068,7 @@ $$\ =[3\ 2\ 1]=1+\frac{1}{2+\frac{1}{3}}=\frac{10}{7}\to\text{ Parity: 0 }$$
 
 
 
-{{<  /slides/admonition  >}}
+{{<  /admonition  >}}
 
 
 
@@ -1095,7 +1095,7 @@ $\ $
 {{< slides/hide_qr  >}}
 ## Closure Equivalence and pivoting to knots
 
-{{<  slides/admonition type="Note" title="Theorem (Schubert)" >}}
+{{<  admonition type="Note" title="Theorem (Schubert)" >}}
 
  Suppose that rational tangles with fractions $\frac{p}{q}$ and $\frac{p^{\prime}}{q^{\prime}}$ are given ( $p$ and $q$ are relatively prime and $0$<$p$. Similarly for $p^{\prime}$ and $q^{\prime}$.) If $K\left(\frac{p}{q}\right)$ and $K\left(\frac{p^{\prime}}{q^{\prime}}\right)$ denote the corresponding rational knots obtained by taking numerator closures of these tangles, then $K\left(\frac{p}{q}\right)$ and $K\left(\frac{p^{\prime}}{q^{\prime}}\right)$ are topologically equivalent if and only if
 <br/>
@@ -1103,7 +1103,7 @@ $\ $
 <br/>
 (2) either $q \equiv q^{\prime}(\bmod p)$ or $q q^{\prime} \equiv 1(\bmod p)$.
 
-{{<  /slides/admonition  >}}
+{{<  /admonition  >}}
 
 {{% slides/citations  %}}
 Schubert, Horst. "Knoten mit zwei Brücken.." Mathematische Zeitschrift 65 (1956): 133-170. [http://eudml.org/doc/169591](http://eudml.org/doc/169591).

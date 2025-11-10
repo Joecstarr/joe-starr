@@ -9,9 +9,13 @@
     <meta name="date" content="2025-02-11">
     <title>{{ .Title }} | {{ site.Title }}</title>
 
+    {{ partial "extend-head.html" . }}
+    {{ $qrjs := resources.Get "js/qrcode.min.js" }}
+    <script src="{{ $qrjs.RelPermalink }}"></script>
+
     <style type="text/css">
         :root {
-            --r-Background: {{ .Page.Params.betterposter.colors.Background | default "#282a36" }};
+            --r-Background: {{ .Page.Params.betterposter.colors.background | default "#282a36" }};
             --r-Selection: {{ .Page.Params.betterposter.colors.Selection | default "#44475a" }};
             --r-Foreground: {{ .Page.Params.betterposter.colors.Foreground | default "#f8f8f2" }};
             --r-Highlight: {{ .Page.Params.betterposter.colors.Highlight | default "#6272a4" }};
@@ -289,10 +293,6 @@
         }
 
     </style>
-
-    {{ partial "extend-head.html" . }}
-    {{ $qrjs := resources.Get "js/qrcode.min.js" }}
-    <script src="{{ $qrjs.RelPermalink }}"></script>
 </head>
 
 <body cz-shortcut-listen="true">

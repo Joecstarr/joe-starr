@@ -9,6 +9,65 @@
     <meta name="date" content="2025-02-11">
     <title>27th SIGMAA on RUME Conference | Joe Starr</title>
 
+    <link rel="stylesheet" href="/css/admonitions.css" />
+
+<script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+    if (typeof MathJax === 'undefined') {
+        MathJax = {
+            loader: {
+                load: ['[img]/img.min.js', '[tex]/color', '[tex]/amscd'],
+                paths: { img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3' }
+            },
+            tex: {
+                inlineMath: [["$", "$"], ["\\(", "\\)"]],
+                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+                processEscapes: true,
+                processEnvironments: true,
+                extensions: ["autoload-all.js", "AMSmath.js", "AMSsymbols.js", "AMScd.js"],
+                packages: { '[+]': ['img', 'color', 'amscd'] }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+        MathJax.startup = {
+            ready() {
+                MathJax.startup.defaultReady();
+                MathJax.startup.promise.then(() => {
+                    console.log("Start startup promise");
+
+                    document.querySelectorAll("mjx-container").forEach(function (x) {
+                        x.parentElement.classList += ' has-jax '
+                    })
+
+                    document.querySelectorAll("mjx-container img").forEach((element) => {
+                        var src = element.getAttribute("src");
+                        if (src.endsWith('.svg') == true) {
+                            fetch(src)
+                            .then(res => res.text())
+                            .then(res => {
+                                const holder = document.createElement('div')
+                                holder.style.width = "1em";
+                                holder.style.height = "1em";
+                                holder.innerHTML = res
+                                element.replaceWith(holder)
+                            })
+                        }
+                    });
+
+                    console.log("End startup promise");
+                });
+            }
+        };
+    }
+
+</script>
+
+    
+    <script src="/js/qrcode.min.js"></script>
+
     <style type="text/css">
         :root {
             --r-Background: #ffffff;
@@ -293,65 +352,6 @@
         }
 
     </style>
-
-    <link rel="stylesheet" href="/css/admonitions.css" />
-
-<script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-    if (typeof MathJax === 'undefined') {
-        MathJax = {
-            loader: {
-                load: ['[img]/img.min.js', '[tex]/color', '[tex]/amscd'],
-                paths: { img: 'https://cdn.jsdelivr.net/npm/mathjax-img@3' }
-            },
-            tex: {
-                inlineMath: [["$", "$"], ["\\(", "\\)"]],
-                displayMath: [["$$", "$$"], ["\\[", "\\]"]],
-                processEscapes: true,
-                processEnvironments: true,
-                extensions: ["autoload-all.js", "AMSmath.js", "AMSsymbols.js", "AMScd.js"],
-                packages: { '[+]': ['img', 'color', 'amscd'] }
-            },
-            options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-            }
-        };
-        MathJax.startup = {
-            ready() {
-                MathJax.startup.defaultReady();
-                MathJax.startup.promise.then(() => {
-                    console.log("Start startup promise");
-
-                    document.querySelectorAll("mjx-container").forEach(function (x) {
-                        x.parentElement.classList += ' has-jax '
-                    })
-
-                    document.querySelectorAll("mjx-container img").forEach((element) => {
-                        var src = element.getAttribute("src");
-                        if (src.endsWith('.svg') == true) {
-                            fetch(src)
-                            .then(res => res.text())
-                            .then(res => {
-                                const holder = document.createElement('div')
-                                holder.style.width = "1em";
-                                holder.style.height = "1em";
-                                holder.innerHTML = res
-                                element.replaceWith(holder)
-                            })
-                        }
-                    });
-
-                    console.log("End startup promise");
-                });
-            }
-        };
-    }
-
-</script>
-
-    
-    <script src="/js/qrcode.min.js"></script>
 </head>
 
 <body cz-shortcut-listen="true">

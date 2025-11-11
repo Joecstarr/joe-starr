@@ -137,7 +137,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "394"
+    "wordCount": "393"
   }]
   </script>
 
@@ -13818,7 +13818,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-16T00:00:00&#43;00:00">16 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>394 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2025-08-16T00:00:00&#43;00:00">16 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>393 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -13886,18 +13886,14 @@ tangle tree [<a class="hugo-simplecite-cite-hyperlink" href="#bibreference-1" ti
     </div>
     <div class="content ">
         
-        
-The rendered image is an `svg`, a vector format. This means it can be scaled
-infinitely. If you need to view it at a larger scale or would like to
-postprocess the image, you can download it and use a tool such as Inkscape to
-edit it.
-
+         The rendered image is an `svg`, a vector
+format. This means it can be scaled infinitely. If you need to view it at a
+larger scale or would like to postprocess the image, you can download it and use
+a tool such as Inkscape to edit it. 
         
     </div>
 </div>
-
-<br/>
-<br/>
+ <br/> <br/>
 
 
 <div class="admonition exercise" style="  ">
@@ -13908,12 +13904,10 @@ edit it.
     </div>
     <div class="content ">
         
-        
-I have done very little testing with this tool. I'm reasonably
-confident that valid input generates valid output. I have no idea what happens
-when invalid input is fed to the tool. If you find a bug, please report it.
-<br/>
-
+         I have done very
+little testing with this tool. I'm reasonably confident that valid input
+generates valid output. I have no idea what happens when invalid input is fed to
+the tool. If you find a bug, please report it. <br/> 
 
 
 <button onclick="window.location.href='https://github.com/Joecstarr/joe-starr/issues/new/choose';" class="!rounded-md px-4 py-2 !no-underline" style="background-color:#ff5555;color:#282a36;">
@@ -13949,10 +13943,8 @@ Report an Issue!
     </div>
     <div class="content ">
         
-        
-I've given a good number of dials here to mess with. I've set some defaults that
-seem to work well.
-
+         I've given a good number of dials here to
+mess with. I've set some defaults that seem to work well. 
         
     </div>
 </div>
@@ -13968,9 +13960,9 @@ For print you almost certainly want <code>#000000</code>.</li>
 tangle. When an overstrand is drawn, a $2\times$-sized copy is placed
 underneath it. This gives the appearance of the understrand being broken.
 For print you almost certainly want <code>#ffffff</code>.</li>
-<li>In the &ldquo;Eccentricity&rdquo; field, select a number from 0 to 100. This will tell
-the tool how far away from a path vertex to place control points. Play
-around until you find a setting you like.</li>
+<li>In the &ldquo;Eccentricity&rdquo; field, select a number from 0 to 100. This will
+tell the tool how far away from a path vertex to place control points.
+Play around until you find settings you like.</li>
 <li>In the &ldquo;String Size&rdquo; field, select a positive integer. This will be, in
 pixels, how large to make the strands of the tangle. A crossing will
 always have a height and width of $\text{&ldquo;String Size&rdquo;}\cdot 11$.</li>
@@ -13985,7 +13977,6 @@ something you like.</li>
 </ol>
 <hr>
 <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
-<script src="/tools/draw_wptt/draw_wptt.js" type="text/javascript"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css" />
 <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
 <style>
@@ -14063,7 +14054,8 @@ something you like.</li>
 </section>
 
 
-<script type="text/javascript">
+<script type="module">
+    import Drawing from "/tools/draw_wptt/draw_wptt.mjs"
     document.querySelector('.convert').addEventListener('click', () => {
         var svg = document.getElementById('svg-container');
         var fcolor = document.getElementById('fcolordata').value;

@@ -1,127 +1,8 @@
-const Order = {
-    FORWARD: 0,
-    BACKWARD: 1
-};
-
-const Label = {
-    I_ROTATION: 0,
-    X_ROTATION: 1,
-    Y_ROTATION: 2,
-    Z_ROTATION: 3,
-};
-
-class Band {
-    constructor() {
-        this.children = [];
-        this.weights = [];
-        this.direction = Order.FORWARD;
-        this.__i = 0
-    }
-    __read_rat = (input) => {
-        var stick = new Band();
-        var ints = [];
-        while (input[this.__i] != "]") {
-            if (input[this.__i] == " ") {
-                this.__i++;
-            } else {
-                ints.push(this.__read_int(input));
-            }
-        }
-        ints.reverse();
-        if (ints.length == 1) {
-            stick.weights[0] = (ints[0])
-        } else {
-            var prev = stick;
-            stick.weights.push(0)
-            stick.weights.push(ints[0])
-            for (let i = 1; i < ints.length - 1; i++) {
-                var child = new Band();
-                child.weights.push(0);
-                if (i % 2 == 1) {
-                    child.weights.push(-1 * ints[i]);
-                } else {
-                    child.weights.push(ints[i]);
-                }
-                prev.children.push(child);
-                prev = child;
-            };
-            if (1 < ints.length) {
-                var child = new Band();
-                if (ints.length % 2 == 0) {
-                    child.weights.push(-1 * ints[ints.length - 1]);
-                } else {
-                    child.weights.push(ints[ints.length - 1]);
-                }
-                prev.children.push(child);
-                prev = child;
-            }
-        }
-
-        return stick;
-    };
-    __read_int = (input) => {
-        var end = this.__i;
-        while ((input[end] >= '0' && input[end] <= '9') || (input[end] == "-")) {
-            end++;
-        }
-        var retval = parseInt(input.substring(this.__i, end));
-        this.__i = end;
-        return retval;
-    };
-    read = (input, i) => {
-        this.__i = i;
-        while ((input[this.__i] != ")") && (this.__i < input.length)) {
-            if ((input[this.__i] >= '0' && input[this.__i] <= '9') || (input[this.__i] == "-")) {
-                var w = this.__read_int(input);
-                this.weights.push(w);
-            };
-            if (input[this.__i] == "(") {
-                var band = new Band();
-                this.weights.push(0);
-                this.__i++;
-                this.__i = band.read(input, this.__i);
-                this.children.push(band)
-            }
-            if (input[this.__i] == "[") {
-                this.__i++;
-                this.weights.push(0);
-                var stick = this.__read_rat(input);
-                this.__i++;
-                this.children.push(stick)
-            }
-        }
-        return this.__i;
-    };
-}
+import notewptt from "./note_wptt_wasm.js";
 
 
-class WPTT {
-    constructor() {
-        this.root = new Band();
-        this.label = Label.I_ROTATION;
-    }
-    read = (input) => {
-        if (input[0] == "i") {
-            this.label = Label.I_ROTATION;
-        } else if (input[0] == "x") {
-            this.label = Label.X_ROTATION;
+var notewasm = await notewptt(); 
 
-        } else if (input[0] == "y") {
-            this.label = Label.Y_ROTATION;
-
-        } else if (input[0] == "z") {
-
-            this.label = Label.Z_ROTATION;
-        }
-        this.root = new Band();
-        if (input[1] == "(") {
-            this.root.read(input, 2);
-        } else {
-            this.root.read(input, 1);
-            this.root = this.root.children[0];
-        }
-    };
-}
 
 
 
@@ -271,25 +152,25 @@ class BandDraw {
     };
     draw = () => {
         var group = this.__group.group().addClass("level_group");
-        for (let i = 0; i < this.__band.children.length; i++) {
+        for (let i = 0; i < this.__band.children.size(); i++) {
             var band = undefined;
-            if (this.__band.weights[i] != 0) {
-                band = new Integral(this.__band.weights[i], this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
+            if (this.__band.weights.get(i) != 0) {
+                band = new Integral(this.__band.weights.get(i), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
-            if (this.__band.children[i] != undefined) {
-                this.__proc_child(this.__band.children[i], group);
+            if (this.__band.children.get(i) != undefined) {
+                this.__proc_child(this.__band.children.get(i), group);
             }
 
         }
-        if (0 < this.__band.children.length) {
-            if (this.__band.weights[this.__band.children.length] != 0) {
-                band = new Integral(this.__band.weights[this.__band.children.length], this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
+        if (0 < this.__band.children.size()) {
+            if (this.__band.weights.get(this.__band.children.size()) != 0) {
+                band = new Integral(this.__band.weights.get(this.__band.children.size()), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
         } else {
-            if (this.__band.weights[0] != 0) {
-                band = new Integral(this.__band.weights[0], this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
+            if (this.__band.weights.get(0) != 0) {
+                band = new Integral(this.__band.weights.get(0), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
         }
@@ -344,35 +225,41 @@ class Drawing {
         this.__wptt = wptt;
     }
     draw = () => {
-        var wptt = new WPTT();
-        wptt.read(this.__wptt);
-        console.log(wptt);
+        var wptt = new notewasm.WPTT(this.__wptt);
 
-        var group = this.__drawing.group().addClass("outer_group");
+        try {
+            var group = this.__drawing.group().addClass("outer_group");
 
-        var group_in = (new BandDraw(wptt.root, this.eccentricity, this.crossing_color, this.stroke_width, this.__gap, group)).draw();
+            var group_in = (new BandDraw(wptt.root, this.eccentricity, this.crossing_color, this.stroke_width, this.__gap, group)).draw();
 
-        if (wptt.label == Label.X_ROTATION) {
-            group_in.flip('x', { x: group.bbox().width / 2, y: group.bbox().height / 2 });
+            if (wptt.label == notewasm.V4Label.V4_LABEL_X) {
+                group_in.flip('x', { x: group.bbox().width / 2, y: group.bbox().height / 2 });
+            }
+            else if (wptt.label == notewasm.V4Label.V4_LABEL_Y) {
+                group_in.flip('y', { x: group.bbox().width / 2, y: group.bbox().height / 2 });
+            }
+            else if (wptt.label == notewasm.V4Label.V4_LABEL_Z) {
+                group_in.rotate(90);
+            }
+
+            group.attr("fill", "none");
+            group.attr("stroke-width", this.stroke_width);
+            group.attr("stroke", this.string_color);
+            this.__drawing.viewbox({
+                x: group.bbox().x,
+                y: group.bbox().y,
+                width: group.bbox().width,
+                height: group.bbox().height,
+            });
         }
-        else if (wptt.label == Label.Y_ROTATION) {
-            group_in.flip('y', { x: group.bbox().width / 2, y: group.bbox().height / 2 });
+        finally
+        {
+            wptt.delete();
         }
-        else if (wptt.label == Label.Z_ROTATION) {
-            group_in.rotate(90);
-        }
-
-        group.attr("fill", "none");
-        group.attr("stroke-width", this.stroke_width);
-        group.attr("stroke", this.string_color);
-        this.__drawing.viewbox({
-            x: group.bbox().x,
-            y: group.bbox().y,
-            width: group.bbox().width,
-            height: group.bbox().height,
-        });
     };
 
 
 
 }
+
+export default Drawing;

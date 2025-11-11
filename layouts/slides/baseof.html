@@ -2,6 +2,8 @@
 <html lang="{{ site.LanguageCode | default "en-us" }}">
 <head>
 
+  {{ partial "extend-head.html" . }}
+  
   {{/* Asset versions */}}
   {{ $cdn_url_reveal := "https://cdn.jsdelivr.net/npm/reveal.js@4.3.1" }}
   {{ $mermaid_version := "10.4.0" }}
@@ -41,7 +43,6 @@
     {{ $style := slice $css_custom | resources.Concat "css/reveal_custom.css" | resources.Minify }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ end }}
-  {{ partial "extend-head.html" . }}
 
   <script>
     var reveal_init_callbacks = []

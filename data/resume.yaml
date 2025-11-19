@@ -34,9 +34,9 @@ sections:
                 * Conducted original research.
                 * Developed original and modified existing courses for use in an
                   undergraduate research training program.
-                * Led undergraduate students as instructor of record.
+                * Led undergraduates as instructor of record.
                 * Led undergraduate and graduate students as discussion leader.
-                * Tutor undergraduate and graduate students in math tutorial lab.
+                * Tutored undergraduate and graduate students in the math tutorial lab.
           - name: Software Engineer
             subheader: "[Western Diversified Plastics](https://westerndp.com/)"
             dates: "Dec 2020 - Aug 2021"
@@ -77,32 +77,32 @@ sections:
                 * Design and implementation of continuous integration (CI) process and system.
 
                 ##### Flash Bootloader Integration
-                * Integration and testing of Off The Shelf software solutions with a focus on *Flash Bootloader* integrations.
+                * Integration and testing of off-the-shelf software solutions with a focus on *Flash Bootloader* integrations.
                 * Worked with new technologies such as Ethernet, CAN-FD, and Security.
                 * Support customers in use of the *Flash Bootloader* product.
-# ##############################################################################
-# ##############################################################################
-# ##############################################################################
+    # ##############################################################################
+    # ##############################################################################
+    # ##############################################################################
     - title: Education
       icon: fa-solid fa-school
       subsections:
           - name: Doctor of Philosophy in Mathematics
             subheader: University of Iowa
-            dates: Fall 2021 - Summer 2025 (Defended 8/18/25)
+            dates: Fall 2021 - Fall 2025 (Defended 8/18/25)
             summary: |-
-               In my thesis titled __The Tanglenomicon: Tabulation of Arborescent
-               Tangles__, I enumerated a class of knot-theoretic objects called
-               arborescent tangles. I identified a unique (up to isotopy)
-               representative for each arborescent tangle, the Right Leaning
-               Identity Tangle Tree (RLITT). I then created and proved correct
-               the abstract algorithms needed for enumeration of RLITT.
-               Furthermore, I designed a process architecture that connects
-               mathematical research with software design, including formal
-               design and validation activities. Within that process I developed
-               a modular software architecture in C for general computational
-               knot theoretic use cases. Using this architecture, I implemented
-               my theoretical algorithms and tabulated arborescent tangles up to
-               18 crossings.
+                In my thesis titled __The Tanglenomicon: Tabulation of Arborescent
+                Tangles__, I enumerated a class of knot-theoretic objects called
+                arborescent tangles. I identified a unique (up to isotopy)
+                representative for each arborescent tangle, the Right Leaning
+                Identity Tangle Tree (RLITT). I then created and proved correct
+                the abstract algorithms needed for enumeration of RLITT.
+                Furthermore, I designed a process architecture that connects
+                mathematical research with software design, including formal
+                design and validation activities. Within that process I developed
+                a modular software architecture in C for general computational
+                knot theoretic use cases. Using this architecture, I implemented
+                my theoretical algorithms and tabulated arborescent tangles up to
+                18 crossings.
           - name: Master of Science in Mathematics
             subheader: University of Iowa
             dates: Fall 2021 - Spring 2023
@@ -156,8 +156,8 @@ bullets:
             level: 2
           - name: Vector vVIRTUALtarget
             level: 2
-# ##############################################################################
-# ##############################################################################
+    # ##############################################################################
+    # ##############################################################################
     - title: Technologies and Standards
       icon: fa-solid fa-pen-ruler
       bullets:

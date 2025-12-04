@@ -137,7 +137,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "393"
+    "wordCount": "425"
   }]
   </script>
 
@@ -13818,7 +13818,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-16T00:00:00&#43;00:00">16 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>393 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2025-08-16T00:00:00&#43;00:00">16 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>425 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -13985,7 +13985,7 @@ something you like.</li>
         margin-bottom: 30px;
     }
 
-    .convert,
+    .convert,.convert_all,
     .download {
         width: 100%;
     }
@@ -14021,7 +14021,7 @@ something you like.</li>
                 Eccentricity:
             </p>
             <div class=" ">
-                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="eccentricitydata" min="1" value="40">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="eccentricitydata" min="1" value="30">
             </div>
         </div>
         <div class="m-8 grow">
@@ -14035,27 +14035,119 @@ something you like.</li>
             <p>
                 Gap Size:</p>
             <div class=" ">
-                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="gapdata" min="1" value="10">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="gapdata" min="1" value="20">
+            </div>
+        </div>
+        <div class="m-8 grow">
+            <p>
+                SVG size (in px):
+            </p>
+            <div class=" ">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="svgsize" min="1" value="500">
+            </div>
+        </div>
+        <div class="m-8 grow">
+            <p>
+                Columns:
+            </p>
+            <div class=" ">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="columns" min="1" value="4">
             </div>
         </div>
 </section>
 <br/>
-<br/>
 <section class="">
     <button
     class="m-8 !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 convert">Draw</button>
-    <br/>
-    <br/>
-    <div id="svg-container" class="m-8"></div>
+</section>
+<h2>Bulk print tangles up to TCN 10:</h2>
+<h5>($-1$ is the $\infty$ tangle and bounds are inclusive)</h5>
+<section class="flex flex-wrap m-8">
+        <div class="m-8 grow">
+            <p>
+            From:
+            </p>
+            <div class=" ">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="from" min="-1" max="10" value="-1">
+            </div>
+        </div>
+        <div class="m-8 grow">
+            <p>
+                Up to:
+            </p>
+            <div class=" ">
+                <input class="bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral"  type="number" id="upto" min="-1" max="10" value="5">
+            </div>
+        </div>
+</section>
+<br/>
+<section class="">
+    <button
+    class="m-8 !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 convert_all">Bulk draw tangles (this could take a while)</button>
     <br/>
     <br/>
     <button
     class="m-8 !rounded-md bg-primary-600 px-4 py-2 !text-neutral !no-underline hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700 download">Download</button>
+    <br/>
+    <br/>
+    <div id="svg-div">
+    <svg id="svg-container" class="m-8"></svg>
+    </div>
 </section>
 
 
 <script type="module">
+    let uuidv4 = ()=> {
+            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
+                (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+            );
+        }
+    let notes = null;
     import Drawing from "/tools/draw_wptt/draw_wptt.mjs"
+    let bulk_draw= ()=>
+    {
+            var svgcont = document.getElementById('svg-container');
+            svgcont.innerHTML = "";
+            var fcolor = document.getElementById('fcolordata').value;
+            var bcolor = document.getElementById('bcolordata').value;
+            var eccentricity = document.getElementById('eccentricitydata').value / 100;
+            var scale = document.getElementById('scaledata').value;
+            var size = document.getElementById('svgsize').value;
+            var gap = document.getElementById('gapdata').value;
+            var columns = document.getElementById('columns').value;
+            var from = document.getElementById('from').value;
+            var upto = document.getElementById('upto').value;
+            var row = 0 
+            var col = 0
+            for(var i=from;i<=upto;i++)
+            { 
+                notes[i.toString()].forEach(note => {
+                        var nid = uuidv4();
+                        var drawing = new Drawing(note, svgcont, fcolor, bcolor, eccentricity, scale, gap,size*1.2*col,size*1.2*row,size)
+                        col++;
+                        if(col > (columns-1))
+                        {
+                        col = 0;
+                        row++
+                        }
+                        drawing.draw()
+                    });
+            }
+            svgcont.setAttribute("width",size*1.2*columns+1)
+            svgcont.setAttribute("height",size*1.2*row)
+    }
+    document.querySelector('.convert_all').addEventListener('click', () => {
+        if(notes === null){
+            fetch('/up_to_10.json')
+            .then(response => response.json())
+            .then(data => {
+                notes = data; 
+                bulk_draw();
+            });
+        }else{
+            bulk_draw();
+        }
+    });
     document.querySelector('.convert').addEventListener('click', () => {
         var svg = document.getElementById('svg-container');
         var fcolor = document.getElementById('fcolordata').value;
@@ -14064,18 +14156,16 @@ something you like.</li>
         var scale = document.getElementById('scaledata').value;
         var gap = document.getElementById('gapdata').value;
         var note = document.getElementById('notation').value;
+        var size = document.getElementById('svgsize').value;
         svg.innerHTML = "";
-        var drawing = new Drawing(note, '#svg-container', fcolor, bcolor, eccentricity, scale, gap)
+        var drawing = new Drawing(note, '#svg-container', fcolor, bcolor, eccentricity, scale, gap,0,0,size)
         drawing.draw()
+        svg.setAttribute("width",size)
+        svg.setAttribute("height",size)
     });
-
-    document.querySelector('.download').addEventListener('click', () => {
-        function uuidv4() {
-            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, c =>
-                (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-            );
-        }
-        const svg = document.querySelector('#svg-container').innerHTML;
+let counter = 0;
+document.querySelector('.download').addEventListener('click', () => {
+        const svg = document.querySelector('#svg-div').innerHTML;
         const blob = new Blob([svg.toString()]);
         const element = document.createElement("a");
         element.download = uuidv4() + ".svg";

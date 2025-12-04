@@ -78,7 +78,7 @@ class Integral {
 }
 
 class BandDraw {
-    constructor(band, eccentricity, crossing_color, stroke_width, gap, group) {
+    constructor(band, eccentricity, crossing_color, stroke_width, gap, group,show_zero=false) {
         this.eccentricity = eccentricity;
         this.crossing_color = crossing_color;
         this.stroke_width = stroke_width
@@ -88,6 +88,7 @@ class BandDraw {
         this.__band = band;
         this.__xoffset = 0;
         this.__wc = [];
+        this.__show_zero = show_zero;
     }
 
     __world_coor_bottom_right = (outerGroup, innerGroup) => {
@@ -109,52 +110,46 @@ class BandDraw {
     };
 
     __connect_vh = (group, x1g1, y1g1, x2g1, y2g1, x1g2, y1g2, x2g2, y2g2,) => {
-        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 - this.eccentricity * this.__gap) + "," + y1g1 + " " + x2g1 + "," + (y2g1 - this.eccentricity * this.__gap) + " " + x2g1 + "," + y2g1;
-        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 - this.eccentricity * this.__gap) + "," + y1g2 + " " + x2g2 + "," + (y2g2 + this.eccentricity * this.__gap) + " " + x2g2 + "," + y2g2;
-        group.path(top);
-        group.path(bottom);
-    };
-    __connect_hv = (group, x1g1, y1g1, x2g1, y2g1, x1g2, y1g2, x2g2, y2g2,) => {
-        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 + this.eccentricity * this.__gap) + "," + y1g1 + " " + x2g1 + "," + (y2g1 + this.eccentricity * this.__gap) + " " + x2g1 + "," + y2g1;
-        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 + this.eccentricity * this.__gap) + "," + y1g2 + " " + x2g2 + "," + (y2g2 - this.eccentricity * this.__gap) + " " + x2g2 + "," + y2g2;
+        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 - this.eccentricity * this.__gap) + "," +  y1g1 + " " + x2g1+ "," +  (y2g1 - this.eccentricity * this.__gap)+ " " + x2g1 + "," + y2g1;
+        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 - this.eccentricity * this.__gap) + "," + y1g2 + " " + x2g2+ "," + (y2g2 + this.eccentricity * this.__gap)+ " " + x2g2 + "," + y2g2;
         group.path(top);
         group.path(bottom);
     };
 
     __connect_cl = (group, x1g1, y1g1, x2g1, y2g1, x1g2, y1g2, x2g2, y2g2,) => {
-        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 - this.eccentricity * this.__gap) + "," + y1g1 + " " + (x2g1 + this.eccentricity * this.__gap) + "," + y2g1 + " " + x2g1 + "," + y2g1;
-        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 - this.eccentricity * this.__gap) + "," + y1g2 + " " + (x2g2 + this.eccentricity * this.__gap) + "," + y2g2 + " " + x2g2 + "," + y2g2;
+        var top    = "M " + x1g1 + "," + y1g1 + " C " + x1g1  + "," + (y1g1 + this.eccentricity * this.__gap)+ " " + (x2g1 + this.eccentricity * this.__gap)+ "," + (y2g1+ this.eccentricity * this.__gap) + " " + x2g1 + "," + (y2g1+ this.eccentricity * this.__gap);
+        var bottom = "M " + x1g2 + "," + y1g2 + " C " + x1g2  + "," + (y1g2 - this.eccentricity * this.__gap)+ " " + (x2g2 + this.eccentricity * this.__gap)+ "," + (y2g2- this.eccentricity * this.__gap) + " " + x2g2 + "," + (y2g2- this.eccentricity * this.__gap);
         group.path(top);
         group.path(bottom);
     };
     __connect_cr = (group, x1g1, y1g1, x2g1, y2g1, x1g2, y1g2, x2g2, y2g2,) => {
-        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 + this.eccentricity * this.__gap) + "," + y1g1 + " " + (x2g1 - this.eccentricity * this.__gap) + "," + y2g1 + " " + x2g1 + "," + y2g1;
-        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 + this.eccentricity * this.__gap) + "," + y1g2 + " " + (x2g2 - this.eccentricity * this.__gap) + "," + y2g2 + " " + x2g2 + "," + y2g2;
+        var top = "M " + x1g1 + "," + y1g1 + " C " + (x1g1 + this.eccentricity * this.__gap) + "," + y1g1 + " " + (x2g1 - this.eccentricity * this.__gap)+ "," + (y2g1 - this.eccentricity * this.__gap) + " " + x2g1 + "," + (y2g1- this.eccentricity * this.__gap);
+        var bottom = "M " + x1g2 + "," + y1g2 + " C " + (x1g2 + this.eccentricity * this.__gap) + "," + y1g2 + " " + (x2g2 - this.eccentricity * this.__gap)+ "," + (y2g2 + this.eccentricity * this.__gap) + " " + x2g2 + "," + (y2g2+ this.eccentricity * this.__gap);
         group.path(top);
         group.path(bottom);
     };
     __proc_integral = (band) => {
-        this.__wc.push(band);
         band.transform({
             translateX: this.__xoffset,
         })
-        this.__xoffset += band.bbox().width + this.__gap;
+        this.__xoffset += band.bbox().width + this.__gap*2;
+        this.__wc.push(band);
     };
     __proc_child = (child, group) => {
         var group_i = group.group().addClass("child_group");
-        var band = new BandDraw(child, this.eccentricity, this.crossing_color, this.stroke_width, this.__gapmult, group_i).draw();
-        this.__wc.push(group_i);
+        var band = new BandDraw(child, this.eccentricity, this.crossing_color, this.stroke_width, this.__gapmult, group_i,this.__show_zero).draw();
         band.transform({
             translateX: this.__xoffset + (band.bbox().height / 2) - (band.bbox().width / 2) + this.__gap,
             rotate: 90
         })
         this.__xoffset += band.bbox().height + this.__gap * 2;
+        this.__wc.push(group_i);
     };
     draw = () => {
         var group = this.__group.group().addClass("level_group");
         for (let i = 0; i < this.__band.children.size(); i++) {
             var band = undefined;
-            if (this.__band.weights.get(i) != 0) {
+            if ((this.__show_zero==true)||(this.__band.weights.get(i) != 0)) {
                 band = new Integral(this.__band.weights.get(i), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
@@ -164,12 +159,12 @@ class BandDraw {
 
         }
         if (0 < this.__band.children.size()) {
-            if (this.__band.weights.get(this.__band.children.size()) != 0) {
+            if ((this.__show_zero==true)||(this.__band.weights.get(this.__band.children.size()) != 0)) {
                 band = new Integral(this.__band.weights.get(this.__band.children.size()), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
         } else {
-            if (this.__band.weights.get(0) != 0) {
+            if ((this.__show_zero==true)||(this.__band.weights.get(0) != 0)) {
                 band = new Integral(this.__band.weights.get(0), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
@@ -187,25 +182,27 @@ class BandDraw {
             );
         }
         if (1 < this.__wc.length) {
-            var worldbr_i = this.__world_coor_bottom_right(group, this.__wc[0]);
-            var worldtl_i = this.__world_coor_top_left(group, this.__wc[0]);
-            var worldbr_im1 = [group.bbox().x - this.__gap, group.bbox().y2];
-            var worldtl_im1 = [group.bbox().x - this.__gap, group.bbox().y];
+            var left_child_br = this.__world_coor_bottom_right(group, this.__wc[0]);
+            var left_child_tl = this.__world_coor_top_left(group, this.__wc[0]);
+            var right_child_br = this.__world_coor_bottom_right(group, this.__wc[this.__wc.length - 1]);
+            var right_child_tl = this.__world_coor_top_left(group, this.__wc[this.__wc.length - 1]);
+            
+            var worldbr = [group.bbox().x2 + this.__gap, group.bbox().y2];
+            var worldtl = [group.bbox().x - this.__gap, group.bbox().y];
+
             this.__connect_cl(group,
-                worldtl_i[0], worldbr_i[1],
-                worldtl_im1[0], worldbr_im1[1],
-                worldtl_i[0], worldtl_i[1],
-                worldtl_im1[0], worldtl_im1[1],
+                left_child_tl[0], left_child_br[1],
+                worldtl[0], worldbr[1],
+                left_child_tl[0], left_child_tl[1],
+                worldtl[0], worldtl[1],
             );
-            var worldbr_i = this.__world_coor_bottom_right(group, this.__wc[this.__wc.length - 1]);
-            var worldtl_i = this.__world_coor_top_left(group, this.__wc[this.__wc.length - 1]);
-            var worldbr_im1 = [group.bbox().x2 + this.__gap, group.bbox().y2];
-            var worldtl_im1 = [group.bbox().x2 + this.__gap, group.bbox().y];
+
             this.__connect_cr(group,
-                worldbr_i[0], worldtl_i[1],
-                worldtl_im1[0], worldtl_im1[1],
-                worldbr_i[0], worldbr_i[1],
-                worldtl_im1[0], worldbr_im1[1],
+                right_child_br[0], right_child_tl[1],
+                worldbr[0], worldtl[1],
+                right_child_br[0], right_child_br[1],
+                worldbr[0], worldbr[1],
+
             );
         }
         return group
@@ -214,7 +211,7 @@ class BandDraw {
 };
 
 class Drawing {
-    constructor(wptt, imgSelector, string_color, crossing_color, eccentricity, scale, gap) {
+    constructor(wptt, imgSelector, string_color, crossing_color, eccentricity, scale, gap,x=0,y=0,size=250) {
         SVG().clear(imgSelector);
         this.eccentricity = eccentricity * scale;
         this.crossing_color = crossing_color;
@@ -223,14 +220,21 @@ class Drawing {
         this.__drawing = SVG().addTo(imgSelector);
         this.__gap = gap;
         this.__wptt = wptt;
+        this.__x = x;
+        this.__y = y;
+        this.__size = size;
     }
     draw = () => {
         var wptt = new notewasm.WPTT(this.__wptt);
-
+        var show_zero = false;
+        if((this.__wptt === "i[0]")||(this.__wptt==="i[0 0]"))
+        {
+            show_zero =true;
+        }
         try {
             var group = this.__drawing.group().addClass("outer_group");
 
-            var group_in = (new BandDraw(wptt.root, this.eccentricity, this.crossing_color, this.stroke_width, this.__gap, group)).draw();
+            var group_in = (new BandDraw(wptt.root, this.eccentricity, this.crossing_color, this.stroke_width, this.__gap, group,show_zero)).draw();
 
             if (wptt.label == notewasm.V4Label.V4_LABEL_X) {
                 group_in.flip('x', { x: group.bbox().width / 2, y: group.bbox().height / 2 });
@@ -251,6 +255,8 @@ class Drawing {
                 width: group.bbox().width,
                 height: group.bbox().height,
             });
+            this.__drawing.attr({x:this.__x,y:this.__y})
+            this.__drawing.size(this.__size,this.__size)
         }
         finally
         {

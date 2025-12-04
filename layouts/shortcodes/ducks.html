@@ -8,7 +8,9 @@
 
 <h1 style="margin:auto;text-align:center;padding-top:10vh;">Ducks on the pond!</h1>
 <div id="duck_pond"class="grid grid-cols-2 md:grid-cols-3 gap-4"></div>
-<div id="duck_pound" style="visibility: hidden;">
+</div>
+<script>
+    var pics = [
     {{ $filepath := "/static/ducks" }}
     {{ $files    := readDir $filepath }}
     {{ $ext := default "-" (.Get "type" )}}
@@ -17,23 +19,21 @@
     {{ range readDir $filepath }}
     {{ $imgURL := print "./static/ducks/" .Name }}
     {{- if hasSuffix .Name ".jpg" -}}
-    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    {{print "/ducks/" .Name}},
     {{- end -}}
     {{- if hasSuffix .Name ".jpeg" -}}
-    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    {{print "/ducks/" .Name}} ,
     {{- end -}}
     {{- if hasSuffix .Name ".JPEG" -}}
-    <img src="data:image/jpg;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    {{print "/ducks/" .Name}} ,
     {{- end -}}
     {{- if hasSuffix .Name ".png" -}}
-    <img src="data:image/png;base64,{{ readFile $imgURL | base64Encode }}" class="shuffleMe h-auto max-w-full rounded-lg" />
+    {{print "/ducks/" .Name}} ,
     {{- end -}}
     {{ end }}
 
-    {{end}}
-</div>
-<!-- start randomimage -->
-<script>
+    {{end}}]
+
     function shuffleArray(array) {
         const copiedArray = [...array];
         for (let i = copiedArray.length - 1; i > 0; i--) {
@@ -59,18 +59,21 @@
     }
 
     const today = new Date().toISOString().slice(0, 10);;
-    const store = document.getElementById("duck_pound");
-    const elementsArray = Array.prototype.slice.call(store.getElementsByClassName('shuffleMe'));
     var id_container = document.getElementById("duck_count");
-    id_container.innerHTML = elementsArray.length;
+    id_container.innerHTML = pics.length;
 
     sha256(today).then(function (result) {
-        const duck = document.getElementById('duck_of_the_day')
-        var container = document.getElementById("duck_pound");
+        const duck_of_the_day = document.getElementById('duck_of_the_day')
         var pond_container = document.getElementById("duck_pond");
-        var element = elementsArray[result % elementsArray.length];
-        shuffleArray(elementsArray).forEach(function (element) {
-            pond_container.appendChild(element);
+        
+        var dotd = document.createElement("img");
+        dotd.src = pics[result % pics.length];
+        duck_of_the_day.appendChild(dotd);
+
+        shuffleArray(pics).forEach(function (element) {
+            var duck = document.createElement("img");
+            duck.src = element;
+            pond_container.appendChild(duck);
         })
         duck.appendChild(element)
     })

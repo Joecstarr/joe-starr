@@ -78,7 +78,7 @@ class Integral {
 }
 
 class BandDraw {
-    constructor(band, eccentricity, crossing_color, stroke_width, gap, group,show_zero=false) {
+    constructor(band, eccentricity, crossing_color, stroke_width, gap, group,show_zero=false,depth=0) {
         this.eccentricity = eccentricity;
         this.crossing_color = crossing_color;
         this.stroke_width = stroke_width
@@ -89,6 +89,7 @@ class BandDraw {
         this.__xoffset = 0;
         this.__wc = [];
         this.__show_zero = show_zero;
+        this.__depth = depth
     }
 
     __world_coor_bottom_right = (outerGroup, innerGroup) => {
@@ -135,13 +136,15 @@ class BandDraw {
         this.__xoffset += band.bbox().width + this.__gap*2;
         this.__wc.push(band);
     };
-    __proc_child = (child, group) => {
+    __proc_child = (child, group,depth) => {
         var group_i = group.group().addClass("child_group");
-        var band = new BandDraw(child, this.eccentricity, this.crossing_color, this.stroke_width, this.__gapmult, group_i,this.__show_zero).draw();
+        var band = new BandDraw(child, this.eccentricity, this.crossing_color, this.stroke_width, this.__gapmult, group_i,this.__show_zero,this.__depth+1).draw();
+        console.log("depth: "+this.__depth)
         band.transform({
-            translateX: this.__xoffset + (band.bbox().height / 2) - (band.bbox().width / 2) + this.__gap,
-            rotate: 90
-        })
+                translateX: this.__xoffset + (band.bbox().height / 2) - (band.bbox().width / 2) + this.__gap,
+                rotate: (Math.pow(-1,(this.__depth % 2)))*90
+            })
+        console.log((Math.pow(-1,(this.__depth % 2)))*90)
         this.__xoffset += band.bbox().height + this.__gap * 2;
         this.__wc.push(group_i);
     };
@@ -151,6 +154,7 @@ class BandDraw {
             var band = undefined;
             if ((this.__show_zero==true)||(this.__band.weights.get(i) != 0)) {
                 band = new Integral(this.__band.weights.get(i), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
+                console.log("the "+this.__band.weights.get(i)+ "weight")
                 this.__proc_integral(band);
             }
             if (this.__band.children.get(i) != undefined) {
@@ -160,11 +164,14 @@ class BandDraw {
         }
         if (0 < this.__band.children.size()) {
             if ((this.__show_zero==true)||(this.__band.weights.get(this.__band.children.size()) != 0)) {
+                console.log("Right most weight: "+this.__band.weights.get(this.__band.children.size()))
                 band = new Integral(this.__band.weights.get(this.__band.children.size()), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }
-        } else {
+        } 
+        else {
             if ((this.__show_zero==true)||(this.__band.weights.get(0) != 0)) {
+                console.log("leaf weight: "+this.__band.weights.get(0))
                 band = new Integral(this.__band.weights.get(0), this.eccentricity, this.crossing_color, this.stroke_width, group).draw();
                 this.__proc_integral(band);
             }

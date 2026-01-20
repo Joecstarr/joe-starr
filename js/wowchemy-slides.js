@@ -1,6 +1,6 @@
 (() => {
   // ns-hugo-params:<stdin>
-  var slides = { diagram: true, diagram_options: { theme: "dark" }, highlight_style: "dracula", reveal_options: { center: true, theme: "none", transition: "none" } };
+  var slides = { diagram: true, diagram_options: { theme: "dark", themevariables: { fontsize: 17 } }, highlight_style: "dracula", reveal_options: { backgroundtransition: "none", center: true, hash: true, progress: true, "self-contained": true, theme: "none", transition: "none" } };
 
   // <stdin>
   var enabledPlugins = [RevealMarkdown, RevealSearch, RevealNotes, RevealZoom];

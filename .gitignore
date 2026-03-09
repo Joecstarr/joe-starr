@@ -37,8 +37,8 @@ coverage/
 
 # direnv
 .direnv
+.envrc
 
 # Astro build output
 /.astro/
 tsconfig.tsbuildinfo
-

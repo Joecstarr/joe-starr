@@ -1,0 +1,939 @@
+{
+    "root": "345388",
+    "tree": {
+        "345388": {
+            "name": "Joseph Starr",
+            "year": 2025,
+            "school": "The University of Iowa",
+            "parents": ["73429"]
+        },
+        "73429": {
+            "name": "Isabel K. Darcy",
+            "year": 1997,
+            "school": "Florida State University",
+            "parents": ["10311"]
+        },
+        "10311": {
+            "name": "De Witt Lee Sumners",
+            "year": 1967,
+            "school": "University of Cambridge",
+            "parents": ["24423"]
+        },
+        "24423": {
+            "name": "John F. P. Hudson",
+            "year": 1963,
+            "school": "University of Cambridge",
+            "parents": ["24417"]
+        },
+        "24417": {
+            "name": "E. Christopher (Eric) Zeeman",
+            "year": 1955,
+            "school": "University of Cambridge",
+            "parents": ["1406"]
+        },
+        "1406": {
+            "name": "Shaun Wylie",
+            "year": 1937,
+            "school": "Princeton University",
+            "parents": ["7461"]
+        },
+        "7461": {
+            "name": "Solomon Lefschetz",
+            "year": 1911,
+            "school": "Clark University",
+            "parents": ["7451"]
+        },
+        "7451": {
+            "name": "William Edward Story",
+            "year": 1875,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["32858", "18589"]
+        },
+        "32858": {
+            "name": "Carl Gottfried Neumann",
+            "year": 1856,
+            "school": "Universit\u00e4t K\u00f6nigsberg",
+            "parents": ["57706", "46967"]
+        },
+        "18589": {
+            "name": "Wilhelm Scheibner",
+            "year": 1848,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["15635"]
+        },
+        "57706": {
+            "name": "Friedrich Julius Richelot",
+            "year": 1831,
+            "school": "Universit\u00e4t K\u00f6nigsberg",
+            "parents": ["15635"]
+        },
+        "46967": {
+            "name": "Otto Hesse",
+            "year": 1840,
+            "school": "Universit\u00e4t K\u00f6nigsberg",
+            "parents": ["15635"]
+        },
+        "15635": {
+            "name": "Carl Gustav Jacob Jacobi",
+            "year": 1825,
+            "school": "Humboldt-Universit\u00e4t zu Berlin",
+            "parents": ["41423"]
+        },
+        "41423": {
+            "name": "Enno Heeren Dirksen",
+            "year": 1820,
+            "school": "Georg-August-Universit\u00e4t G\u00f6ttingen",
+            "parents": ["57659", "57667"]
+        },
+        "57659": {
+            "name": "Johann Tobias Mayer",
+            "year": 1773,
+            "school": "Georg-August-Universit\u00e4t G\u00f6ttingen",
+            "parents": ["66476", "65161"]
+        },
+        "57667": {
+            "name": "Bernhard Friedrich Thibaut",
+            "year": 1796,
+            "school": "Georg-August-Universit\u00e4t G\u00f6ttingen",
+            "parents": ["66476", "65161"]
+        },
+        "66476": {
+            "name": "Abraham Gotthelf K\u00e4stner",
+            "year": 1739,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["57670"]
+        },
+        "65161": {
+            "name": "Georg Christoph Lichtenberg",
+            "year": 1765,
+            "school": "Georg-August-Universit\u00e4t G\u00f6ttingen",
+            "parents": ["66476"]
+        },
+        "57670": {
+            "name": "Christian August Hausen",
+            "year": 1713,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["72669", "128986"]
+        },
+        "72669": {
+            "name": "Johann Christoph Wichmannshausen",
+            "year": 1685,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["21235"]
+        },
+        "128986": {
+            "name": "Johann Andreas Planer",
+            "year": 1686,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["128046", "128938"]
+        },
+        "21235": {
+            "name": "Otto Mencke",
+            "year": 1665,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["137705"]
+        },
+        "128046": {
+            "name": "Johann Pasch",
+            "year": 1683,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127962"]
+        },
+        "128938": {
+            "name": "Rudolf Jakob Camerarius",
+            "year": 1684,
+            "school": ", 1686 Eberhard-Karls-Universit\u00e4t T\u00fcbingen",
+            "parents": ["123974", "76481"]
+        },
+        "137705": {
+            "name": "Jakob Thomasius",
+            "year": 1643,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["143630"]
+        },
+        "127962": {
+            "name": "Michael d. J. Walther",
+            "year": 1656,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127956", "230796", "127801"]
+        },
+        "123974": {
+            "name": "Georg Balthasar Metzger",
+            "year": 1646,
+            "school": "Friedrich-Schiller-Universit\u00e4t Jena",
+            "parents": ["182088", "182089"]
+        },
+        "76481": {
+            "name": "Elias Rudolph Camerarius, Sr.",
+            "year": 1663,
+            "school": "Eberhard-Karls-Universit\u00e4t T\u00fcbingen",
+            "parents": ["123974"]
+        },
+        "143630": {
+            "name": "Friedrich Leibniz",
+            "year": 1622,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": []
+        },
+        "127956": {
+            "name": "Johann Andreas Quenstedt",
+            "year": 1643,
+            "school": "Universit\u00e4t Helmstedt",
+            "parents": ["128097", "127724"]
+        },
+        "230796": {
+            "name": "Constantin Ziegra",
+            "year": 1640,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": []
+        },
+        "127801": {
+            "name": "Aegidius Strauch",
+            "year": 1633,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127734"]
+        },
+        "182088": {
+            "name": "Johann Jakob von Brunn",
+            "year": 1615,
+            "school": "Universit\u00e4t Basel",
+            "parents": ["125048"]
+        },
+        "182089": {
+            "name": "Gottfried M\u00f6bius",
+            "year": 1640,
+            "school": "Friedrich-Schiller-Universit\u00e4t Jena",
+            "parents": ["125154"]
+        },
+        "128097": {
+            "name": "Georg Calixt",
+            "year": 1607,
+            "school": "Universit\u00e4t Helmstedt",
+            "parents": ["128104", "128105"]
+        },
+        "127724": {
+            "name": "Christoph Nottnagel",
+            "year": 1630,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127606"]
+        },
+        "127734": {
+            "name": "Nicolaus Zapf",
+            "year": 1622,
+            "school": "Friedrich-Schiller-Universit\u00e4t Jena",
+            "parents": ["189659", "127424", "127848"]
+        },
+        "125048": {
+            "name": "Johannes Nicolaus Stupanus",
+            "year": 1569,
+            "school": "Universit\u00e4t Basel",
+            "parents": ["125148"]
+        },
+        "125154": {
+            "name": "Werner Rolfinck",
+            "year": 1618,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["125006", "126111"]
+        },
+        "128104": {
+            "name": "Johannes Caselius",
+            "year": 1560,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126956"]
+        },
+        "128105": {
+            "name": "Cornelius Martini",
+            "year": 1591,
+            "school": "Universit\u00e4t Helmstedt",
+            "parents": ["128122", "200006"]
+        },
+        "127606": {
+            "name": "Ambrosius Rhodius",
+            "year": 1599,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["221101", "127459", "127461", "127098", "125379"]
+        },
+        "189659": { "name": "Abraham Heinecke", "parents": [] },
+        "127424": {
+            "name": "Erasmus Schmidt",
+            "year": 1592,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127898", "127942"]
+        },
+        "127848": {
+            "name": "Jacobus  Martini",
+            "year": 1596,
+            "school": "Universit\u00e4t Helmstedt",
+            "parents": ["128105"]
+        },
+        "125148": {
+            "name": "Theodor Zwinger",
+            "year": 1553,
+            "school": "Coll\u00e8ge de France",
+            "parents": ["152906", "152905", "125047"]
+        },
+        "125006": {
+            "name": "Adriaan van den Spieghel",
+            "year": 1603,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["125109"]
+        },
+        "126111": {
+            "name": "Daniel Sennert",
+            "year": 1594,
+            "school": ", 1599 Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127848", "127278"]
+        },
+        "126956": {
+            "name": "Philipp Melanchthon",
+            "year": 1511,
+            "school": "Ruprecht-Karls-Universit\u00e4t Heidelberg",
+            "parents": ["125760", "127107"]
+        },
+        "128122": {
+            "name": "Duncan Liddel",
+            "year": 1582,
+            "school": "Europa-Universit\u00e4t Viadrina Frankfurt an der Oder",
+            "parents": ["128305", "128348"]
+        },
+        "200006": {
+            "name": "Albert Clampius",
+            "school": "Ruprecht-Karls-Universit\u00e4t Heidelberg",
+            "parents": ["224249"]
+        },
+        "221101": {
+            "name": "Anton Euonymus",
+            "year": 1583,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["221100"]
+        },
+        "127459": {
+            "name": "Melchior J\u00f6stel",
+            "year": 1583,
+            "school": ", 1600 Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127061", "127275"]
+        },
+        "127461": {
+            "name": "Ernestus Hettenbach",
+            "year": 1576,
+            "school": ", 1591 Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127275", "127252"]
+        },
+        "127098": {
+            "name": "Johannes Kepler",
+            "year": 1591,
+            "school": "Evangelischen Stift T\u00fcbingen",
+            "parents": ["127049", "125379"]
+        },
+        "125379": {
+            "name": "Tycho (Tyge Ottesen) Brahe",
+            "year": 1562,
+            "school": ", 1565 K\u00f8benhavns Universitet",
+            "parents": ["127092", "126875"]
+        },
+        "127898": {
+            "name": "Sethus Calvisius",
+            "year": 1582,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["127864", "127790"]
+        },
+        "127942": { "name": "Petrus  Otto", "parents": [] },
+        "152906": {
+            "name": "Bassiano Landi",
+            "year": 1542,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["152904", "152905"]
+        },
+        "152905": {
+            "name": "Vittore Trincavelli",
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["152903"]
+        },
+        "125047": {
+            "name": "Petrus (Pierre de La Ram\u00e9e) Ramus",
+            "year": 1536,
+            "school": "Coll\u00e8ge de Navarre",
+            "parents": ["125665", "131546"]
+        },
+        "125109": {
+            "name": "Hieronymus (Girolamo Fabrici d'Acquapendente) Fabricius",
+            "year": 1559,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["125142"]
+        },
+        "127278": {
+            "name": "Jan Jessenius",
+            "year": 1588,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["125109"]
+        },
+        "125760": {
+            "name": "Johann (Johannes Kapnion) Reuchlin",
+            "year": 1477,
+            "school": "Universit\u00e4t Basel",
+            "parents": ["131444", "125755"]
+        },
+        "127107": {
+            "name": "Johannes St\u00f6ffler",
+            "year": 1476,
+            "school": "Universit\u00e4t Ingolstadt",
+            "parents": []
+        },
+        "128305": {
+            "name": "John Craig",
+            "year": 1580,
+            "school": "Universit\u00e4t Basel",
+            "parents": ["125148"]
+        },
+        "128348": {
+            "name": "Paul Wittich",
+            "year": 1566,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["127092"]
+        },
+        "224249": {
+            "name": "Reinhard Bachoff von Echt",
+            "year": 1598,
+            "school": "Ruprecht-Karls-Universit\u00e4t Heidelberg",
+            "parents": []
+        },
+        "221100": { "name": "Leonhard Etzler", "parents": [] },
+        "127061": {
+            "name": "Valentin (Valentinus Otho) Otto",
+            "year": 1570,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126827"]
+        },
+        "127275": {
+            "name": "Andreas Schato",
+            "year": 1562,
+            "school": ", 1578 Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126957", "127252"]
+        },
+        "127252": {
+            "name": "Salomon Alberti",
+            "year": 1564,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["125109", "126875"]
+        },
+        "127049": {
+            "name": "Michael Maestlin",
+            "year": 1571,
+            "school": ", 1576 Evangelischen Stift T\u00fcbingen",
+            "parents": ["127020", "127039"]
+        },
+        "127092": {
+            "name": "Valentin Thau",
+            "year": 1555,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["127011"]
+        },
+        "126875": {
+            "name": "Caspar Peucer",
+            "year": 1545,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126736", "126827"]
+        },
+        "127864": {
+            "name": "Nikolaus Selnecker",
+            "year": 1570,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": []
+        },
+        "127790": {
+            "name": "Moritz Valentin Steinmetz",
+            "year": 1550,
+            "school": ", 1567 Universit\u00e4t Leipzig",
+            "parents": ["126827", "184935"]
+        },
+        "152904": {
+            "name": "Giovanni Battista della Monte",
+            "school": "Universit\u00e0 degli Studi di Ferrara",
+            "parents": ["152901", "152903", "127166"]
+        },
+        "152903": {
+            "name": "Pietro Pomponazzi",
+            "year": 1487,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["152902", "136726"]
+        },
+        "125665": {
+            "name": "Johannes (Johann Sturm) Sturmius",
+            "year": 1527,
+            "school": "Universit\u00e9 Catholique de Louvain",
+            "parents": ["125658", "119159"]
+        },
+        "131546": {
+            "name": "Jacques Toussain",
+            "year": 1521,
+            "school": "Universit\u00e9 de Paris",
+            "parents": ["131517"]
+        },
+        "125142": {
+            "name": "Gabriele Falloppio",
+            "year": 1547,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["127245", "125303"]
+        },
+        "131444": {
+            "name": "Johannes Argyropoulos",
+            "year": 1444,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["131561"]
+        },
+        "125755": { "name": "Jacob ben Jehiel Loans", "parents": [] },
+        "126827": {
+            "name": "Georg Joachim von Leuchen Rheticus",
+            "year": 1535,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126730", "126177"]
+        },
+        "126957": {
+            "name": "Sebastian (Theodoricus) Dietrich",
+            "year": 1544,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126736", "126827"]
+        },
+        "127020": {
+            "name": "Samuel Heyland",
+            "year": 1554,
+            "school": "Coll\u00e8ge Saint-Guillaume \u00e0 Strasbourg",
+            "parents": ["125665"]
+        },
+        "127039": {
+            "name": "Philipp Apian",
+            "year": 1549,
+            "school": ", 1551 Universit\u00e9 Paris IV-Sorbonne",
+            "parents": ["125665", "127110"]
+        },
+        "127011": {
+            "name": "Johannes Hommel",
+            "year": 1543,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126736", "126956"]
+        },
+        "126736": {
+            "name": "Erasmus Reinhold",
+            "year": 1535,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126667"]
+        },
+        "184935": { "name": "Johann Hoffmann", "parents": [] },
+        "152901": {
+            "name": "Marco Musuro",
+            "year": 1486,
+            "school": "Universit\u00e0 degli Studi di Firenze",
+            "parents": ["131541"]
+        },
+        "127166": {
+            "name": "Niccol\u00f2 Leoniceno",
+            "year": 1446,
+            "school": "Scuola Pubblica di Vicenza",
+            "parents": ["149192", "127144", "136726"]
+        },
+        "152902": {
+            "name": "Nicoletto Vernia",
+            "year": 1458,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["148882", "232228"]
+        },
+        "136726": {
+            "name": "Pietro Roccabonella",
+            "year": 1459,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["148882", "164338"]
+        },
+        "125658": {
+            "name": "Nicolas (Nicolaes Cleynaerts) Cl\u00e9nard",
+            "year": 1515,
+            "school": ", 1521 Universit\u00e9 Catholique de Louvain",
+            "parents": ["125681", "125682"]
+        },
+        "119159": {
+            "name": "Johannes Winter von Andernach",
+            "year": 1527,
+            "school": "Universit\u00e9 Catholique de Louvain",
+            "parents": ["126571", "125422"]
+        },
+        "131517": {
+            "name": "Guillaume Bud\u00e9",
+            "year": 1486,
+            "school": ", 1491 Universit\u00e9 d'Orl\u00e9ans",
+            "parents": ["131443", "131541"]
+        },
+        "127245": {
+            "name": "Antonio Musa Brasavola",
+            "year": 1520,
+            "school": "Universit\u00e0 degli Studi di Ferrara",
+            "parents": ["127166"]
+        },
+        "125303": {
+            "name": "Matteo Realdo (Renaldus Columbus) Colombo",
+            "year": 1544,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["119178"]
+        },
+        "131561": {
+            "name": "Basilios Bessarion",
+            "year": 1436,
+            "school": "Mystras",
+            "parents": ["131575"]
+        },
+        "126730": {
+            "name": "Johannes Volmar",
+            "year": 1515,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126724"]
+        },
+        "126177": {
+            "name": "Nicolaus (Miko\u0142aj Kopernik) Copernicus",
+            "year": 1499,
+            "school": "Universit\u00e0 di Bologna",
+            "parents": ["126113", "126112"]
+        },
+        "127110": {
+            "name": "Michael Beuther",
+            "year": 1542,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": ["126956", "126736"]
+        },
+        "126667": {
+            "name": "Jakob Milich",
+            "year": 1520,
+            "school": "Albert-Ludwigs-Universit\u00e4t Freiburg im Breisgau",
+            "parents": ["125938", "126659"]
+        },
+        "131541": {
+            "name": "Janus Lascaris",
+            "year": 1472,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["131561", "131576"]
+        },
+        "149192": {
+            "name": "Ognibene (Omnibonus Leonicenus) Bonisoli da Lonigo",
+            "year": 1433,
+            "school": "Universit\u00e0 di Mantova",
+            "parents": ["134873"]
+        },
+        "127144": { "name": "Pelope", "parents": [] },
+        "148882": {
+            "name": "Gaetano da Thiene",
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["232227"]
+        },
+        "232228": { "name": "Paolo da Pergola", "parents": ["232227"] },
+        "164338": {
+            "name": "Sigismondo Polcastro",
+            "year": 1412,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": []
+        },
+        "125681": {
+            "name": "Jacobus (Jacques Masson) Latomus",
+            "year": 1502,
+            "school": "Coll\u00e8ge de Montaigu",
+            "parents": ["125888"]
+        },
+        "125682": {
+            "name": "Jan (Johannes Campensis) van Campen",
+            "school": "Universit\u00e4t Ingolstadt",
+            "parents": ["125794", "125760"]
+        },
+        "126571": {
+            "name": "Rutger Rescius",
+            "year": 1513,
+            "school": "Universit\u00e9 de Paris",
+            "parents": ["127181"]
+        },
+        "125422": {
+            "name": "Jacobus (Jacques Dubois) Sylvius",
+            "year": 1529,
+            "school": "Universit\u00e9 de Paris",
+            "parents": ["128921", "128987"]
+        },
+        "131443": { "name": "Georgius Hermonymus", "parents": [] },
+        "119178": {
+            "name": "Andreas (Andries van Wesel) Vesalius",
+            "year": 1537,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["119159", "119097", "152904"]
+        },
+        "131575": {
+            "name": "Georgios Plethon Gemistos",
+            "year": 1380,
+            "school": ", 1393",
+            "parents": ["134780", "134781"]
+        },
+        "126724": {
+            "name": "Bonifazius Erasmi",
+            "year": 1509,
+            "school": "Martin-Luther-Universit\u00e4t Halle-Wittenberg",
+            "parents": []
+        },
+        "126113": {
+            "name": "Leonhard (Leonard Vitreatoris z Dobczyc) von Dobsch\u00fctz",
+            "year": 1489,
+            "school": "Uniwersytet Jagiello\u0144ski",
+            "parents": []
+        },
+        "126112": {
+            "name": "Domenico Maria Novara da Ferrara",
+            "year": 1483,
+            "school": "Universit\u00e0 degli Studi di Firenze",
+            "parents": ["126109", "126888"]
+        },
+        "125938": {
+            "name": "Desiderius Erasmus",
+            "year": 1497,
+            "school": "/1506  Coll\u00e8ge de Montaigu",
+            "parents": ["125888", "125898"]
+        },
+        "126659": {
+            "name": "Ulrich Zasius",
+            "year": 1501,
+            "school": "Albert-Ludwigs-Universit\u00e4t Freiburg im Breisgau",
+            "parents": []
+        },
+        "131576": {
+            "name": "Demetrios Chalcocondyles",
+            "year": 1452,
+            "school": "Mystras",
+            "parents": ["131584"]
+        },
+        "134873": {
+            "name": "Vittorino da Feltre",
+            "year": 1416,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": ["298290", "298304", "134931"]
+        },
+        "232227": {
+            "name": "Paolo (Nicoletti) da Venezia",
+            "year": 1405,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": []
+        },
+        "125888": {
+            "name": "Jan Standonck",
+            "year": 1474,
+            "school": "Coll\u00e8ge Sainte-Barbe",
+            "parents": []
+        },
+        "125794": { "name": "Matthaeus Adrianus", "parents": [] },
+        "127181": {
+            "name": "Girolamo (Hieronymus Aleander) Aleandro",
+            "year": 1499,
+            "school": ", 1508 Universit\u00e0 degli Studi di Padova",
+            "parents": ["131446", "131447"]
+        },
+        "128921": {
+            "name": "Jean Tagault",
+            "year": 1524,
+            "school": "Sorbonne Universit\u00e9",
+            "parents": []
+        },
+        "128987": {
+            "name": "Fran\u00e7ois Dubois",
+            "year": 1516,
+            "school": "Universit\u00e9 de Paris",
+            "parents": []
+        },
+        "119097": {
+            "name": "Gemma (Jemme Reinerszoon) Frisius",
+            "year": 1529,
+            "school": ", 1536 Universit\u00e9 Catholique de Louvain",
+            "parents": ["125892"]
+        },
+        "134780": { "name": "Demetrios Kydones", "parents": ["146365"] },
+        "134781": { "name": "Elissaeus Judaeus", "parents": [] },
+        "126109": {
+            "name": "Johannes M\u00fcller Regiomontanus",
+            "year": 1457,
+            "school": "Universit\u00e4t Leipzig",
+            "parents": ["126087", "131561"]
+        },
+        "126888": { "name": "Luca Pacioli", "parents": [] },
+        "125898": {
+            "name": "Alexander Hegius",
+            "year": 1463,
+            "school": "Universit\u00e4t Rostock",
+            "parents": ["128012", "140181"]
+        },
+        "131584": {
+            "name": "Theodoros Gazes",
+            "year": 1433,
+            "school": "Universit\u00e0 di Mantova",
+            "parents": ["134873"]
+        },
+        "298290": {
+            "name": "Gasparino da Barzizza",
+            "year": 1413,
+            "school": "Universit\u00e0 degli Studi di Padova",
+            "parents": []
+        },
+        "298304": {
+            "name": "Giovanni Conversini",
+            "year": 1363,
+            "school": "Universit\u00e0 di Bologna",
+            "parents": []
+        },
+        "134931": {
+            "name": "Guarino da Verona",
+            "year": 1408,
+            "school": "Imperial University of Constantinople",
+            "parents": ["135185", "298304"]
+        },
+        "131446": { "name": "Moses Perez", "parents": [] },
+        "131447": {
+            "name": "Scipione Fortiguerra",
+            "year": 1493,
+            "school": "Universit\u00e0 degli Studi di Firenze",
+            "parents": ["131535"]
+        },
+        "125892": {
+            "name": "Petrus (Pieter de Corte) Curtius",
+            "year": 1513,
+            "school": ", 1530 Universit\u00e9 Catholique de Louvain",
+            "parents": ["125894"]
+        },
+        "146365": { "name": "Nilos Kabasilas", "year": 1363, "school": "", "parents": ["176844"] },
+        "126087": {
+            "name": "Georg von Peuerbach",
+            "year": 1440,
+            "school": "Universit\u00e4t Wien",
+            "parents": ["126887"]
+        },
+        "128012": {
+            "name": "Rudolf Agricola",
+            "year": 1478,
+            "school": "Universit\u00e0 degli Studi di Ferrara",
+            "parents": ["131584"]
+        },
+        "140181": { "name": "Thomas von Kempen \u00e0 Kempis", "parents": ["179836", "179837"] },
+        "135185": { "name": "Manuel Chrysoloras", "parents": ["134780"] },
+        "131535": {
+            "name": "Angelo Poliziano",
+            "year": 1477,
+            "school": "Universit\u00e0 degli Studi di Firenze",
+            "parents": ["131539", "131540"]
+        },
+        "125894": {
+            "name": "Maarten (Martinus Dorpius) van Dorp",
+            "year": 1504,
+            "school": ", 1515 Universit\u00e9 Catholique de Louvain",
+            "parents": ["125897"]
+        },
+        "176844": {
+            "name": "Gregory Palamas",
+            "year": 1316,
+            "school": "Imperial University of Constantinople",
+            "parents": ["184631"]
+        },
+        "126887": {
+            "name": "Johannes  von Gmunden",
+            "year": 1406,
+            "school": "Universit\u00e4t Wien",
+            "parents": ["127264"]
+        },
+        "179836": {
+            "name": "Geert (Gerardus Magnus) Groote",
+            "year": 1358,
+            "school": "Universit\u00e9 de Paris",
+            "parents": []
+        },
+        "179837": {
+            "name": "Florens (Florentius Radwyn) Radewyns",
+            "year": 1378,
+            "school": "Charles University",
+            "parents": []
+        },
+        "131539": {
+            "name": "Marsilio Ficino",
+            "year": 1462,
+            "school": "Universit\u00e0 degli Studi di Firenze",
+            "parents": ["131444"]
+        },
+        "131540": { "name": "Cristoforo Landino", "parents": ["298288"] },
+        "125897": {
+            "name": "Leo Outers",
+            "year": 1485,
+            "school": "Universit\u00e9 Catholique de Louvain",
+            "parents": []
+        },
+        "184631": {
+            "name": "Theodore Metochites",
+            "year": 1315,
+            "school": "Imperial University of Constantinople",
+            "parents": ["184632"]
+        },
+        "127264": {
+            "name": "Heinrich  von Langenstein",
+            "year": 1363,
+            "school": "Universit\u00e9 de Paris",
+            "parents": ["199357"]
+        },
+        "298288": { "name": "George of Trebizond", "parents": ["134873"] },
+        "184632": {
+            "name": "Manuel Bryennios",
+            "year": 1300,
+            "school": "Imperial University of Constantinople",
+            "parents": ["201288"]
+        },
+        "199357": {
+            "name": "Nicole Oresme",
+            "year": 1356,
+            "school": "Universit\u00e9 de Paris",
+            "parents": []
+        },
+        "201288": {
+            "name": "Gregory Chioniadis",
+            "year": 1296,
+            "school": "Ilkhans Court at Tabriz",
+            "parents": ["204293"]
+        },
+        "204293": {
+            "name": "Shams al\u2010D\u012bn al\u2010Bukh\u0101r\u012b",
+            "school": "Maragheh Observatory",
+            "parents": ["217509"]
+        },
+        "217509": {
+            "name": "Nasir al-D\u012bn al-\u1e6c\u016bs\u012b",
+            "parents": ["223724", "287480"]
+        },
+        "223724": {
+            "name": "Kam\u0101l al-D\u012bn Ibn Y\u016bnus",
+            "parents": ["230926", "287466"]
+        },
+        "287480": {
+            "name": "Ath\u012br al-D\u012bn al-Mufa\u1e0d\u1e0dal al-Abhar\u012b",
+            "year": 1264,
+            "school": "",
+            "parents": ["223724", "287479"]
+        },
+        "230926": { "name": "Sharaf al-D\u012bn al-\u1e6c\u016bs\u012b", "parents": [] },
+        "287466": {
+            "name": "Saraf al-D\u012bn Muhammad al-Mas\u02bf\u016bd\u012b al-Marwaz\u012b",
+            "parents": ["295739"]
+        },
+        "287479": {
+            "name": "Qutb al-D\u012bn Ibr\u0101h\u012bm al-M\u012b\u1e63r\u012b",
+            "year": 1222,
+            "school": "",
+            "parents": ["287478"]
+        },
+        "295739": {
+            "name": "Ghiy\u0101th al-D\u012bn Ab\u016b al-Fat\u1e25 \u02bfUmar ibn Ibr\u0101h\u012bm al-Khayy\u0101m al-N\u012bs\u0101b\u016br\u012b",
+            "year": 1068,
+            "school": "",
+            "parents": ["287468"]
+        },
+        "287478": { "name": "Fakhr al-D\u012bn Muhammad al-R\u0113z\u012b", "parents": ["287466"] },
+        "287468": { "name": "Bahmany\u0101r ibn al-Marzub\u0101n", "parents": ["298616"] },
+        "298616": {
+            "name": "Abu \u02bfAli al-Husayn (Avicenna) ibn Sina",
+            "parents": ["316872", "310782", "316873"]
+        },
+        "316872": { "name": "Abu Abdallah Al-Husayn ibn Ibrahim al-Natili", "parents": [] },
+        "310782": { "name": "Abu Sahl 'Isa ibn Yahya al-Masihi", "parents": [] },
+        "316873": { "name": "Abu Mansur al-Hasan ibn Nuh al-Qumri", "parents": [] }
+    }
+}

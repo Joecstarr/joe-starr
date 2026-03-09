@@ -1,0 +1,272 @@
+---
+
+---
+
+<script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+<style>
+    .generator {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .controls {
+        display: block;
+    }
+
+    th,
+    td {
+        border: 1px solid #6272a4;
+        border-collapse: collapse;
+    }
+
+    table-container table {
+        margin: 20px auto;
+        padding: 0;
+        background-color: #44475a;
+        border-radius: 5px;
+    }
+
+    table-container td {
+        padding: 15px;
+        text-align: center;
+        color: #ffb86c;
+        font-family: monospace;
+    }
+    .example {
+        flex-shrink: 0;
+        margin-bottom: 30px;
+    }
+
+    .clr-field {
+        display: inline-block;
+        position: relative;
+        color: transparent;
+    }
+    .field {
+        display: inline-block;
+        position: relative;
+    }
+
+    .full .clr-field button {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    .clr-field input {
+        margin: 0;
+        direction: ltr;
+    }
+    .field input {
+        margin: 0;
+        direction: ltr;
+    }
+
+    input {
+        width: 150px;
+        height: 32px;
+        padding: 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        box-sizing: border-box;
+        background: #44475a !important;
+    }
+
+    .button,
+    .convert,
+    .download {
+        margin-top: 15px;
+        padding: 9px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #bd93f9;
+        color: #44475a;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        outline: none;
+        transition: transform 0.1s cubic-bezier(0.77, 0.2, 0.05, 1);
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    .convert,
+    .download {
+        width: 100%;
+    }
+
+    .table-placeholder {
+        max-width: 500px;
+        width: 100%;
+        margin: 20px auto;
+
+        &.hidden {
+            display: none;
+        }
+
+        &__row {
+            width: 100%;
+            display: flex;
+        }
+    }
+
+    &__item {
+        max-width: 150px;
+        width: 100%;
+        height: 36px;
+        margin: 2px;
+        background: #44475a;
+        border-radius: 5px;
+    }
+
+    table-container c {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 30vw;
+        max-height: 30vh;
+    }
+
+    #svg-container svg {
+        width: 100% !important;
+        height: auto !important;
+    }
+</style>
+
+<div id="table-container">
+    <section class="controls">
+        <div>
+            <label>
+                Size :
+                <input id="tblsize" class="size" type="number" min="3" value="3" />
+            </label>
+            <button id="createtbl" class="button">Create table</button>
+        </div>
+    </section>
+    <div class="flex flex-wrap">
+        <div class="example shrink grow">
+            <p>Foreground color:</p>
+            <div class="clr-field" style="color: MediumSlateBlue; " data-darkreader-inline-color="">
+                <button type="button" aria-labelledby="clr-open-label"></button><input
+                    type="text"
+                    value="MediumSlateBlue"
+                    id="fcolordata"
+                    data-coloris=""
+                />
+            </div>
+        </div>
+        <div class="example shrink grow">
+            <p>Background color:</p>
+            <div class="clr-field" style="color: #ffffff; " data-darkreader-inline-color="">
+                <button type="button" aria-labelledby="clr-open-label"></button><input
+                    type="text"
+                    id="bcolordata"
+                    value="#ffffff"
+                    data-coloris=""
+                />
+            </div>
+        </div>
+        <div class="example shrink grow">
+            <p>Eccentricity :</p>
+            <div class="field">
+                <input class="size" type="number" id="eccentricitydata" min="1" value="40" />
+            </div>
+        </div>
+        <div class="example shrink grow">
+            <p>Scale :</p>
+            <div class="field">
+                <input class="size" type="number" id="scaledata" min="1" value="10" />
+            </div>
+        </div>
+    </div>
+
+    <table class="table" border="0" cellpadding="" cellspacing="" contenteditable="true"></table>
+</div>
+
+<button class="convert">Convert table</button>
+<div id="svg-container"></div>
+<button class="download">Download</button>
+
+<script type="text/javascript">
+    class Table {
+        constructor(tableSelector, sizeSelector) {
+            this.sizeSelector = sizeSelector;
+            this.tableObj = document.querySelector(tableSelector);
+        }
+
+        generate = () => {
+            let tableHTML = "";
+            const sizeNumber = parseInt(document.querySelector(this.sizeSelector).value);
+
+            for (let i = 1; i <= sizeNumber; i++) {
+                let tr = "<tr>";
+                let td = "";
+
+                for (let j = 1; j <= sizeNumber; j++) {
+                    td = `<td>&ensp;</td>`;
+
+                    tr += td;
+                }
+
+                tr += "</tr>";
+                tableHTML += tr;
+            }
+
+            this.tableObj.innerHTML = tableHTML;
+        };
+    }
+
+    const table = new Table(".table", "#tblsize");
+
+    document.getElementById("createtbl").addEventListener("click", () => {
+        table.generate();
+    });
+</script>
+
+<script type="module">
+    import Drawer from "/grid2fp.mjs";
+
+    document.querySelector(".convert").addEventListener("click", () => {
+        const svg = document.getElementById("svg-container");
+        const fcolor = document.getElementById("fcolordata").value;
+        const bcolor = document.getElementById("bcolordata").value;
+        const eccentricity = document.getElementById("eccentricitydata").value / 100;
+        const scale = document.getElementById("scaledata").value / 100;
+        svg.innerHTML = "";
+        const drawer = new Drawer(
+            "#svg-container",
+            ".table tr",
+            fcolor,
+            bcolor,
+            eccentricity,
+            scale,
+        );
+        drawer.generate();
+    });
+
+    document.querySelector(".download").addEventListener("click", () => {
+        function uuidv4() {
+            return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+                (c ^ (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))).toString(16),
+            );
+        }
+        const svg = document.querySelector("#svg-container").innerHTML;
+        const blob = new Blob([svg.toString()]);
+        const element = document.createElement("a");
+        element.download = uuidv4() + ".svg";
+        element.href = window.URL.createObjectURL(blob);
+        element.click();
+        element.remove();
+    });
+</script>

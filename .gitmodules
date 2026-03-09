@@ -1,0 +1,3 @@
+[submodule "src/content/albums/ducks"]
+	path = src/content/albums/ducks
+	url = https://github.com/Joecstarr/ducks.git

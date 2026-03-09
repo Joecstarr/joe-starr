@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+interface Props {
+    album: CollectionEntry<"album">[];
+}
+
+export async function getStaticPaths() {
+    const albums = await getCollection("albums");
+
+    const paths = Object.values(albums).map((album) => {
+        return {
+            params: {
+                id: album.id,
+            },
+            props: {
+                album,
+            },
+        };
+    });
+
+    return paths;
+}
+
+const { album } = Astro.props;
+
+async function sha256(message) {
+    // encode as UTF-8
+    const msgBuffer = new TextEncoder().encode(message);
+
+    // hash the message
+    const hashBuffer = await crypto.subtle.digest("SHA-256", msgBuffer);
+
+    // convert ArrayBuffer to Array
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+
+    // convert bytes to hex string
+    const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+    return Math.trunc(parseInt(hashHex, 16));
+}
+
+async function getAlbumImage(albumId: string) {
+    // 1. List all album files from collections path
+    let images = import.meta.glob<{ default: ImageMetadata }>(
+        "/src/content/albums/**/*.{jpeg,jpg,JPEG}",
+    );
+
+    // 2. Filter images by albumId
+    images = Object.fromEntries(Object.entries(images).filter(([key]) => key.includes(albumId)));
+
+    // 3. Images are promises, so we need to resolve the glob promises
+    const resolvedImages = await Promise.all(
+        Object.values(images).map((image) => image().then((mod) => mod.default)),
+    );
+
+    // 4. Shuffle images in random order
+    const today = new Date().toISOString().slice(0, 10);
+    const todayidx = await sha256(today);
+
+    return resolvedImages[Math.trunc(todayidx % resolvedImages.length)];
+}
+
+const image = await getAlbumImage(album);
+---
+
+<Image
+    src={image}
+    alt=""
+    quality="mid"
+    class="rounded-sm mb-4 border border-transparent hover:border-gray-300 transition-all duration-300 ease-in-out hover:shadow-lg"
+    loading="lazy"
+/>

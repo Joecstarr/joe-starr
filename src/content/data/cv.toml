@@ -1,0 +1,299 @@
+[color]
+textColor = "#000000"
+printTextColor = "#000000"
+secondaryTextColor = "#000000"
+contrastTextColor = "#ffffff"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#8811ee1a"
+primaryColor = "#8811ee"
+secondaryColor = "#006bac"
+
+[header]
+name = "Joseph Starr"
+title = "Mathematician and Software Engineer"
+
+[[header.contact]]
+address = "mailto:joe@joe-starr.com"
+text = "joe@joe-starr.com"
+icon = "fa-solid fa-envelope"
+
+[[header.contact]]
+address = "https://joe-starr.com/"
+text = "joe-starr.com"
+icon = "fa-solid fa-ethernet"
+
+[[header.contact]]
+address = "https://github.com/Joecstarr/"
+text = "Joecstarr"
+icon = "fa-brands fa-github"
+
+[[header.contact]]
+address = "https://www.linkedin.com/in/joseph-c-starr/"
+text = "joseph-c-starr"
+icon = "fa-brands fa-linkedin"
+
+[[sections]]
+title = "Education"
+icon = "fa-solid fa-school"
+
+[[sections.subsections]]
+name = "Doctor of Philosophy in Mathematics (Defended 8/18/25)"
+summary = "Advisor: Isabel Darcy\n\nDissertation: \"The Tanglenomicon: Tabulation of Arborescent Tangles\""
+subheader = "University of Iowa"
+dates = "Fall 2021 - Fall 2025"
+
+[[sections.subsections]]
+name = "Master of Science in Mathematics"
+subheader = "University of Iowa"
+dates = "Fall 2021 - Spring 2023"
+
+[[sections.subsections]]
+name = "Bachelor of Science in Computer Science"
+subheader = "University of Michigan - Dearborn"
+dates = "Fall 2013 - Fall 2016"
+
+[[sections.subsections]]
+name = "Bachelor of Science in CIS Mathematics (Applied Mathematics)"
+subheader = "University of Michigan - Dearborn"
+dates = "Fall 2013 - Fall 2016"
+
+[[sections]]
+title = "Awards"
+icon = "fa-solid fa-medal"
+
+[[sections.subsections]]
+name = "[Outstanding Teaching Assistant Award](https://cot.org.uiowa.edu/teaching-awards/outstanding-teaching-assistant-awards)"
+summary = "The Outstanding Teaching Assistant Award recognizes teaching\nassistants who have demonstrated outstanding abilities at the\nUniversity of Iowa."
+dates = "Spring 2025"
+
+[[sections.subsections]]
+name = "RTG: Geometry and Topology at Iowa Graduate Fellowship"
+summary = "Funded by [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+dates = "Spring 2023, Summer 2023,<br/>Summer 2024"
+
+[[sections]]
+title = "Experience"
+icon = "fa-solid fa-briefcase"
+
+[[sections.subsections]]
+name = "Iowa Sciences Academy Graduate Assistant"
+subheader = "[University of Iowa - Iowa Sciences Academy](https://isa.uiowa.edu)"
+dates = "Fall 2024, Spring 2025"
+
+[[sections.subsections]]
+name = "Graduate Fellow"
+subheader = "[University of Iowa](https://uiowa.edu)"
+dates = "Spring 2023, Summer 2023,<br/>Summer 2024"
+summary = "Funded by NSF RTG grant [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+
+[[sections.subsections]]
+name = "Mathematics Teaching Assistant"
+subheader = "[University of Iowa](https://uiowa.edu)"
+dates = "Fall 2021, Spring 2022,<br/>Fall 2022, Fall 2023,<br/>Spring 2024"
+
+[[sections.subsections]]
+name = "Software Engineer"
+subheader = "[Western Diversified Plastics](https://westerndp.com/)"
+dates = "December 2020 - August 2021"
+summary = "Process tooling and AUTOSAR development"
+
+[[sections.subsections]]
+name = "Project Engineer"
+subheader = "[Vector North America](https://Vector.com)"
+dates = "January 2017 - December 2020"
+summary = "##### Software Architect\n* Responsible for the complete architectural design and direction of a customer project.\n* Analysis of customer requirements and negotiation of acceptance for those requirements.\n* Planning of team development activities.\n\n##### Flash Bootloader Integration\n* Integration and testing of Off The Shelf software solutions with a focus on *Flash Bootloader* integrations.\n* Worked with new technologies such as Ethernet, CAN-FD, and Security.\n* Support customers in use of the *Flash Bootloader* product."
+
+[[sections.subsections]]
+name = "Engineering CoOp"
+subheader = "[ZF](https://zf.com)"
+dates = "May 2016 - August 2016"
+summary = "Bootloader integrations for advanced vehicle stability control (braking) systems."
+
+[[sections]]
+title = "Teaching"
+icon = "fa-solid fa-pencil"
+
+[[sections.subsections]]
+name = "ISA:4041"
+subheader = "Primary Instructor"
+summary = "Structure for development, planning, and implementation of a\nculminating project for the Iowa Sciences Academy; students\ndedicate three to five hours per week to the project and are\nencouraged to connect their projects to community issues or\nproblem; integration of external learning experiences and\nactivities including interviews, scientific observations, or\ninternships.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173792&id=1034182)"
+dates = "Spring 2025"
+
+[[sections.subsections]]
+name = "ISA:1040"
+subheader = "Primary Instructor"
+summary = "Professional and career development; tours of scientific\nresearch facilities and laboratories on campus; network with\nprofessors and graduate students; explore different types of\nresearch environments on campus; learn how to identify and\ncontact potential research mentors.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173793&id=1032561)"
+dates = "Spring 2025"
+
+[[sections.subsections]]
+name = "ISA:4040"
+subheader = "Primary Instructor"
+summary = "Scientific teaching principles (e.g., backwards design, active\nlearning, formative assessment); students develop a teaching\nunit based on some aspect of their research and teach it to the\nclass in preparation for future interviews where the ability to\nexplain the background and significance for their research is a\nhighly valued skill. Requirements: minimum of 60 s.h. earned,\njunior or senior standing, and undergraduate research experience.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173795&id=1037535)"
+dates = "Fall 2024"
+
+[[sections.subsections]]
+name = "MATH:5760"
+subheader = "Graduate Assistant"
+summary = "Topics in mathematical biology; canonical mathematical modeling\nand analysis of problems in the biological sciences\n(data analysis and introduction to machine learning).\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=5760&showResults=1)"
+dates = "Spring 2024"
+
+[[sections.subsections]]
+name = "MATH:1005"
+subheader = "Primary Instructor"
+summary = "Algebraic techniques, equations and inequalities,\nfunctions and graphs, exponential and logarithmic functions,\nsystems of equations and inequalities.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1005&showResults=1)"
+dates = "Fall 2022, Fall 2023"
+
+[[sections.subsections]]
+name = "MATH:1350"
+subheader = "Discussion Section Leader"
+summary = "Algebraic techniques and modeling; quantitative methods for treating\nproblems that arise in management and economic sciences; topics include algebra\ntechniques, functions and functional models, exponential and logarithmic functions\nand models, and a thorough introduction to differential calculus; examples\nand applications from management, economic sciences, and related areas; for\nstudents planning to major in business.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1350&showResults=1)"
+dates = "Fall 2021, Spring 2022,<br/>Spring 2024"
+
+[[sections]]
+title = "Invited Research Talks"
+icon = "fa-solid fa-microphone"
+break = true
+
+[[sections.subsections]]
+dates = "January 2025"
+name = "Joint Math Meetings: AMS Special Session on Results on Curves and Surfaces Inspired by Experiments"
+summary = "[JMM AMS Special Session on Results on Curves and Surfaces Inspired by Experiments Program](https://meetings.ams.org/math/jmm2025/meetingapp.cgi/Paper/40424)"
+
+[[sections.subsections]]
+dates = "December 2024"
+name = "Knots in Washington 50"
+summary = "[Knots in Washington 50 program](https://bpb-us-e1.wpmucdn.com/blogs.gwu.edu/dist/d/4238/files/2024/12/Knots-in-Washington-50-8.pdf)"
+
+[[sections.subsections]]
+dates = "January 2023"
+name = "GEOTOP-A International Conference"
+summary = "[https://seminargeotop-a.com/merida24/scientific-programme#talk_19](https://seminargeotop-a.com/merida24/scientific-programme#talk_19)"
+
+[[sections.subsections]]
+dates = "November 2023"
+name = "University of Michigan - Dearborn Colloquia"
+summary = "[Dearborn Colloquia: The Tanglenomicon: Tabulation of two string tangles](https://www.dropbox.com/scl/fi/mxetfathb0gby0nfp7t9k/2023-11-15_Colloquium_Starr.pdf?rlkey=cl07qn56q0saos0hzauxo6758&e=1&dl=0)"
+
+[[sections.subsections]]
+dates = "May 2023"
+name = "Tangled in Knot Theory"
+summary = "[Lightning talk](https://icerm.brown.edu/program/topical_workshop/tw-23-tkt#schedule-item-5222)"
+
+[[sections]]
+title = "Invited General Audience Talks"
+icon = "fa-solid fa-microphone"
+
+[[sections.subsections]]
+dates = "February 2024"
+name = "Truman State University"
+summary = "[Constructing the Jones polynomial to save the world](https://joe-starr.com/speaking/general_audience/zombie_jones/)"
+
+[[sections.subsections]]
+dates = "November 2023"
+name = "Grinnell College"
+summary = "[Constructing the Jones polynomial to save the world](https://joe-starr.com/speaking/general_audience/zombie_jones/)"
+
+[[sections]]
+title = "Posters"
+icon = "fa-solid fa-users"
+
+[[sections.subsections]]
+dates = "February 2025"
+name = "[2025 Research in Undergraduate Mathematics Education Conference](https://sites.google.com/view/rume2025/)"
+summary = "Submitted poster on \"How One GTA Restructured a Course on Teaching Undergraduate Research\""
+
+[[sections.subsections]]
+dates = "November 2023"
+name = "[9th Mexican Workshop on Applied Geometry and Topology](https://9mwgeometrytopology.eventos.cimat.mx/home_9atd)"
+summary = "[https://joe-starr.com/speaking/posters/9mwagt/](https://joe-starr.com/speaking/posters/9mwagt/)"
+
+[[sections]]
+title = "Conference Attendance"
+icon = "fa-solid fa-users"
+
+[[sections.subsections]]
+dates = "February 2025"
+name = "[2025 Research in Undergraduate Mathematics Education Conference](https://sites.google.com/view/rume2025/)"
+summary = "Funded by NSF RTG grant [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+
+[[sections.subsections]]
+dates = "January 2025"
+name = "[Joint Math Meetings](https://jointmathematicsmeetings.org/jmm)"
+summary = "Funded by AMS Travel Grant"
+
+[[sections.subsections]]
+dates = "December 2024"
+name = "[Knots in Washington 50](https://blogs.gwu.edu/ccas-knotsinwashington/kiw-50/)"
+summary = "Funded by NSF Knots in Washington Grant and NSF RTG grant [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+
+[[sections.subsections]]
+dates = "November 2024"
+name = "[CIMAT-Mérida Applied Topology School (Remote)](https://applied-topology-school.eventos.cimat.mx)"
+
+[[sections.subsections]]
+dates = "August 2024"
+name = "[2024 MAA Mathfest](https://maa.org/event/mathfest/)"
+summary = "Funded by NSF RTG grant [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+
+[[sections.subsections]]
+dates = "February 2024"
+summary = "Funded by The University of Iowa Department of Mathematics"
+name = "[2024 Research in Undergraduate Mathematics Education Conference](https://www.unomaha.edu/college-of-arts-and-sciences/mathematics/conferences/sigmaa-on-rume.php)"
+
+[[sections.subsections]]
+dates = "January 2024"
+name = "[GEOTOP-A International Conference](https://seminargeotop-a.com/merida24)"
+
+[[sections.subsections]]
+dates = "November 2023"
+name = "[9th Mexican Workshop on Applied Geometry and Topology (Remote)](https://9mwgeometrytopology.eventos.cimat.mx/home_9atd)"
+
+[[sections.subsections]]
+dates = "October 2023"
+name = "[AMS Central Section Meeting: Special Session on Applied Knot Theory](https://www.ams.org/meetings/sectional/2307_special.html)"
+summary = "Funded by AMS Travel Grant"
+
+[[sections.subsections]]
+name = "[Tangled in Knot Theory](https://icerm.brown.edu/topical_workshops/tw-23-tkt/) "
+summary = "Funded by ICERM and NSF RTG grant [DMS-2038103](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2038103)"
+dates = "May 2023"
+
+[[sections.subsections]]
+dates = "February 2023"
+name = "[2023 Research in Undergraduate Mathematics Education Conference (Remote)](https://www.unomaha.edu/college-of-arts-and-sciences/mathematics/conferences/sigmaa-on-rume.php)"
+summary = "Funded by The University of Iowa Department of Mathematics"
+
+[[sections.subsections]]
+dates = "November 2022"
+name = "[8th Mexican Workshop on Applied Geometry and Topology (Remote)](https://8mwgeometrytopology.eventos.cimat.mx/home_8mwtopology)"
+
+[[sections]]
+title = "Service"
+icon = "fa-solid fa-handshake"
+
+[[sections.subsections]]
+name = "[Editor Synthesis A Journal Of Student Science Communication](https://pubs.lib.uiowa.edu/synthesis/editorialteam/)"
+dates = "Fall 2024, Spring 2025"
+
+[[sections.subsections]]
+name = "[Webmaster University of Iowa Math Graduate Board](https://mathgradboard.com/)"
+dates = "Spring 2023 to Fall 2024"
+
+[[sections.subsections]]
+name = "Heartland Partnership Talk Organization"
+summary = "Speaking series as outreach to midwest colleges."
+dates = "Fall 2024"
+
+[[sections.subsections]]
+name = "Panel Participant STEM Career Panel"
+dates = "February 2023"
+summary = "[Explore Career Paths in Mathematics and Statistics: Alumni\nPanel\nDiscussion](https://umdearborn.edu/events/explore-career-paths-mathematics-and-statistics)"
+
+[[sections.subsections]]
+name = "University of Iowa Exploring Majors Fair Department Representative"
+dates = "Fall 2022, Spring 2023, <br/>Fall 2023"
+summary = "The Exploring Majors Fair on each Hawkeye Visit Day connects prospective\nundergraduate students with departments of their interest."
+
+[[sections.subsections]]
+name = "Seminars Organized"
+summary = "#### Knots, Tangles, and Computers\n##### Primary Organizer:\n* Fall 2024: On Arborescent Tangles\n* Spring 2024: On Software Engineering\n* Fall 2023: On Tangle Tabulation\n#### Topological Data Visualization\n##### Assisted in Organizing:\n* Spring 2024\n* Fall 2023\n#### Undergraduate Topology Seminar\n##### Assisted in Organizing:\n* Fall 2024 On 3D printing for visualization (technical support)"

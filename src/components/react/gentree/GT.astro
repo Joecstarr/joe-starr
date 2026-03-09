@@ -1,0 +1,9 @@
+---
+import DisplayGraph from "~/components/react/gentree/gentree";
+
+import { getCollection } from "astro:content";
+const genTreeData = await getCollection("gentree");
+---
+
+<!-- I have no idea why I need this wrapper   -->
+<DisplayGraph client:only="react" graphData={genTreeData} />

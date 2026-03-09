@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+
+/** 
+	Uses https://www.astroicon.dev/getting-started/
+	Find icons via guide: https://www.astroicon.dev/guides/customization/#open-source-icon-sets
+	Only installed pack is: @iconify-json/mdi
+*/
+const socialLinks = await getCollection("socials");
+const socials = socialLinks[0].data;
+---
+
+<div class="flex flex-wrap items-end gap-x-2">
+    <ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
+        {
+            socials.map((item) => (
+                <li class="flex">
+                    <a class="hover:text-link inline-block" href={item.link} target="_blank">
+                        <Icon class="h-8 w-8" focusable="false" name={item.name} />
+                        <span class="sr-only">{item.friendlyName}</span>
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>

@@ -1,0 +1,7 @@
+[global]
+disable = ["MD041", "MD033"]
+
+[MD013]
+line-length = 100
+reflow = true
+reflow-mode = "semantic-line-breaks"

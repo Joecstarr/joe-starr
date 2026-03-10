@@ -1,0 +1,29 @@
+---
+interface Props {
+    section: Object;
+}
+const { section } = Astro.props;
+import { marked } from "marked";
+marked.Renderer.prototype.paragraph = function (text) {
+    return text + "\n";
+};
+marked.use({
+    breaks: true,
+});
+
+const name = marked.parse(section.name);
+const subheader = section.subheader ? marked.parse(section.subheader) : undefined;
+const summary = section.summary ? marked.parse(section.summary) : undefined;
+const dates = section.dates ? marked.parse(section.dates) : undefined;
+---
+
+<div class="hrlite"></div>
+<div class="flex">
+    <div class="left">
+        <div class="left_heading">
+            <h4 set:html={name} />
+            {subheader && <h4 set:html={subheader} />}
+        </div>{summary && <div class="summary" set:html={summary} />}
+    </div>
+    {dates && <div class="right" set:html={dates} />}
+</div>

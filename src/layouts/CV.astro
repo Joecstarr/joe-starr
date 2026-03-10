@@ -1,0 +1,229 @@
+---
+import { type CollectionEntry } from "astro:content";
+import CVSection from "~/components/cv/Section.astro";
+import CVContact from "~/components/cv/Contact.astro";
+import { Icon } from "astro-icon/components";
+interface Props {
+    post: CollectionEntry<"cv">;
+    theme: Object;
+    data: Object;
+}
+const { post, theme, data } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{data.header.name} - CV</title>
+        <!-- fontawesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        />
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+        ></script>
+
+        <style
+            define:vars={{
+                textColor: theme.textColor,
+                printTextColor: theme.printTextColor,
+                secondaryTextColor: theme.secondaryTextColor,
+                backgroundColor: theme.backgroundColor,
+                secondaryBackgroundColor: theme.secondaryBackgroundColor,
+                primaryColor: theme.primaryColor,
+                secondaryColor: theme.secondaryColor,
+                contrastTextColor: theme.contrastTextColor,
+            }}
+            is:global
+        >
+            @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+            :root {
+                --text-color: var(--textColor);
+                --print-text-color: var(--printTextColor);
+                --text-secondary-color: var(--secondaryTextColor);
+                --background-color: var(--backgroundColor);
+                --secondary-background-color: var(--secondaryBackgroundColor);
+                --primary-color: var(--primaryColor);
+                --secondary-color: var(--secondaryColor);
+                --contrast-text-color: var(--contrastTextColor);
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            #header,
+            #footer,
+            #nav {
+                display: none !important;
+            }
+
+            @media print {
+                @page {
+                    size: letter;
+                }
+
+                .social {
+                    color: var(--print-text-color) !important;
+                    text-decoration: none;
+                }
+                a {
+                    color: var(--secondary-color) !important;
+                    text-decoration: none;
+                }
+
+                html {
+                    font-size: 11pt;
+                    color: var(--print-text-color) !important;
+                    background-color: var(--background-color) !important;
+                }
+            }
+
+            @media screen {
+                html {
+                    color: var(--text-color) !important;
+                    background-color: var(--background-color) !important;
+                }
+                .social {
+                    color: var(--print-text-color) !important;
+                    text-decoration: none;
+                }
+                a {
+                    color: var(--secondary-color) !important;
+                    text-decoration: none;
+                }
+                .skill_title {
+                    color: var(--primary-color) !important;
+                }
+            }
+            .section_title {
+                background-color: var(--primary-color);
+                color: var(--background-color);
+            }
+            .head .icon {
+                color: var(--text-color);
+                background-color: var(--background-color);
+                margin-left: 0.4rem;
+                margin-right: 0rem;
+            }
+
+            .skill > svg {
+                color: var(--primary-color);
+                background-color: var(--background-color);
+            }
+
+            .icon {
+                vertical-align: middle;
+                margin-left: 0.4rem;
+                margin-right: 0.4rem;
+            }
+            .icon_skill {
+                vertical-align: middle;
+                margin-right: 0.4rem;
+            }
+
+            .head {
+                text-align: center;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "roboto", sans-serif;
+                padding: 0;
+                margin: 0;
+            }
+            h1 {
+                color: var(--primary-color);
+            }
+            p {
+                display: block;
+                margin-block-start: 0.1rem;
+                margin-block-end: 0.1rem;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                unicode-bidi: isolate;
+            }
+            ul {
+                margin: 0;
+            }
+            .hr {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                height: 0.1vh;
+                padding: 0;
+                margin-top: 0;
+            }
+            .hrlite {
+                background-color: var(--secondary-color);
+                border-color: var(--secondary-color);
+                opacity: 0.2;
+                height: 0.1vh;
+                padding: 0;
+                margin-top: 0;
+            }
+            .section_title {
+                display: inline-block;
+                padding: 0.5vw;
+                margin: 0.125vh;
+                margin-left: 0;
+                margin-bottom: 0;
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+
+            body {
+                font-family: "roboto", sans-serif;
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: stretch;
+                margin: 0;
+            }
+            .summary {
+                margin-top: 0.5vh;
+                margin-bottom: 0.5vh;
+                width: 100%;
+            }
+
+            .left_heading {
+                width: 100%;
+            }
+
+            .left {
+                max-width: 70vw;
+            }
+            .right {
+                min-width: 30vw;
+                float: right;
+                text-align: right;
+            }
+
+            .left p:first-of-type,
+            .left h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .left p:first-of-type {
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="head">
+            <h1>{data.header.name}</h1>
+            <h2>{data.header.title}</h2>
+            {data.header.contact.map((item) => <CVContact contact={item} />)}
+            <p>
+                {data.header.summary}
+            </p>
+        </div>
+    </body>
+    {data.sections.map((item) => <CVSection section={item} />)}
+</html>

@@ -1,0 +1,26 @@
+---
+import CVSubsction from "~/components/cv/Subsection.astro";
+import { Icon } from "astro-icon/components";
+interface Props {
+    section: Object;
+}
+marked.use({
+    breaks: true,
+});
+marked.Renderer.prototype.paragraph = function (text) {
+    return text + "\n";
+};
+const { section } = Astro.props;
+import { marked } from "marked";
+const title = marked.parse(section.title);
+---
+
+<div style="page-break-inside:avoid;">
+    <h4 class="section_title" style="page-break-after: avoid !important;" set:html={title}>
+        <Icon class="icon" focusable="false" name={section.icon} />
+    </h4>
+    <div class="hr"></div>
+    <div style="page-break-inside:avoid;">
+        {section.subsections.map((item) => <CVSubsction section={item} />)}
+    </div>
+</div>

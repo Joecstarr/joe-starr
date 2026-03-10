@@ -1,0 +1,11 @@
+---
+import { Icon } from "astro-icon/components";
+interface Props {
+    contact: Object;
+}
+const { contact } = Astro.props;
+---
+
+<a href={contact.address} set:html={contact.text}>
+    <Icon class="icon" focusable="false" name={contact.icon} />
+</a>

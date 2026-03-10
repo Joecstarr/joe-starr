@@ -2,7 +2,8 @@
 title: Materials for a Course on Basic Project Management
 published: 2025-02-10
 description: "The contents of this repository describe the outline for a course on basic project management. There are three document sets each described in the README."
-tags: ["Resources", "Instruction"]
+tags: ["Instruction","Instructional Design"]
+series: "Course Designs"
 draft: false
 toc: true
 ---

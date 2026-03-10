@@ -1,13 +1,13 @@
 ---
 title: Analysis Prepsheet
-published: 2020-01-07
-tags: ["Resources"]
-description: ""
+published: 2022-05-07
+tags: ["Resources", "Grad School", ]
+description: "A prepsheet/card deck for preparing for my analysis qualifying exam."
 draft: false
 toc: true
 ---
 
-A prepsheet/card deck for preparing for my analysis qual
+A prepsheet/card deck for preparing for my analysis qualifying exam.
 
 ::github{repo="Joecstarr/Analysis_prepsheet"}
 

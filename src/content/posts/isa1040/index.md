@@ -3,7 +3,7 @@ title: "ISA:1040 Entering Research"
 published: 2025-01-07
 tags: ["Instruction"]
 description: ""
-series: "Classes I Have Taught"
+series: "Courses I've Taught"
 draft: false
 toc: true
 ---

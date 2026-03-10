@@ -2,7 +2,7 @@
 title: "MATH:1005 College Algebra"
 published: 2023-01-07
 tags: ["Instruction"]
-series: "Classes I Have Taught"
+series: "Courses I've Taught"
 description: ""
 draft: false
 toc: true

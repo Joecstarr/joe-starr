@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from "astro:content";
+import ResumeLayout from "~/layouts/Resume.astro";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import fs from "fs";
+import toml from "toml";
+
+export const getStaticPaths = (async () => {
+    const resumesEntries = await getCollection("resume", ({ data }) => {
+        return import.meta.env.PROD ? !data.draft : true;
+    });
+
+    return resumesEntries.map((resume) => ({
+        params: { slug: resume.id },
+        props: { resume },
+    }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { resume } = Astro.props;
+const color = resume.data.theme;
+const configPath = resume.data.re_data; // Assumes site.toml is in the project root
+const display_skills = resume.data.skills == true ? resume.data.skills : false; // Assumes site.toml is in the project root
+const rawConfig = fs.readFileSync(configPath, "utf-8");
+const resumeData = toml.parse(rawConfig);
+---
+
+<ResumeLayout post={resume} theme={color} data={resumeData} display_skills={display_skills} />

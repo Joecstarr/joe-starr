@@ -16,6 +16,8 @@ repos:
                     - "**/*.jsx"
                     - "**/*.tsx"
                     - "**/*.css"
+                    - "**/*.json"
+                    - "**/*.yaml"
           - id: toml
             name: toml
             language: system
@@ -37,4 +39,3 @@ repos:
                 glob:
                     - "**/*.md"
                     - "**/*.mdx"
-

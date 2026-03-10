@@ -1,9 +1,19 @@
 [[social]]
 friendlyName = "Github"
 link = "https://github.com/joecstarr"
-name = "mdi:github"
+icon = "mdi:github"
 
 [[social]]
 friendlyName = "Linkedin"
 link = "https://github.com/joecstarr"
-name = "mdi:linkedin"
+icon = "mdi:linkedin"
+
+[[social]]
+friendlyName = "CV"
+link = "/cv/starr"
+icon = "academicons:cv"
+
+[[social]]
+friendlyName = "Resume"
+link = "/resume/starr_skills"
+icon = "mdi:resume"

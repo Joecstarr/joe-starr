@@ -3,7 +3,8 @@ title: Materials for a Course on Teaching Undergraduate Research
 published: 2025-02-10
 featured: false
 description: "The contents of this repository describe the outline for a course on teaching undergraduate research."
-tags: ["Resources", "Instruction"]
+tags: ["Instruction","Instructional Design"]
+series: "Course Designs"
 draft: false
 toc: true
 ---

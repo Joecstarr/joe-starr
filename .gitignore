@@ -42,3 +42,4 @@ coverage/
 # Astro build output
 /.astro/
 tsconfig.tsbuildinfo
+mprocs.log

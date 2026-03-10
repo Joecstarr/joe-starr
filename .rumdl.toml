@@ -1,5 +1,6 @@
 [global]
 disable = ["MD041", "MD033"]
+flavor = "mdx"
 
 [MD013]
 line-length = 100

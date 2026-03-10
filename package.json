@@ -23,6 +23,10 @@
         "@fontsource-variable/jetbrains-mono": "^5.2.6",
         "@fortawesome/free-solid-svg-icons": "^7.2.0",
         "@fortawesome/react-fontawesome": "^3.2.0",
+        "@iconify-json/academicons": "^1.2.4",
+        "@iconify-json/fa7-brands": "^1.2.2",
+        "@iconify-json/fa7-regular": "^1.2.3",
+        "@iconify-json/fa7-solid": "^1.2.4",
         "@pagefind/default-ui": "^1.4.0",
         "@react-pdf/renderer": "^4.3.2",
         "@react-sigma/core": "^5.0.6",
@@ -68,6 +72,7 @@
         "satori-html": "^0.3.2",
         "sigma": "^3.0.2",
         "tailwindcss": "^4.1.13",
+        "toml": "^3.0.0",
         "typescript": "^5.9.2",
         "unified": "^11.0.5"
     },

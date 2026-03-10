@@ -1,13 +1,3 @@
-[color]
-textColor = "#000000"
-printTextColor = "#000000"
-secondaryTextColor = "#000000"
-contrastTextColor = "#ffffff"
-backgroundColor = "#ffffff"
-secondaryBackgroundColor = "#8811ee1a"
-primaryColor = "#8811ee"
-secondaryColor = "#006bac"
-
 [header]
 name = "Joseph Starr"
 title = "Mathematician and Software Engineer"
@@ -15,30 +5,32 @@ title = "Mathematician and Software Engineer"
 [[header.contact]]
 address = "mailto:joe@joe-starr.com"
 text = "joe@joe-starr.com"
-icon = "fa-solid fa-envelope"
+icon = "fa7-solid:envelope"
 
 [[header.contact]]
 address = "https://joe-starr.com/"
 text = "joe-starr.com"
-icon = "fa-solid fa-ethernet"
+icon = "fa7-solid:ethernet"
 
 [[header.contact]]
 address = "https://github.com/Joecstarr/"
 text = "Joecstarr"
-icon = "fa-brands fa-github"
+icon = "fa7-brands:github"
 
 [[header.contact]]
 address = "https://www.linkedin.com/in/joseph-c-starr/"
 text = "joseph-c-starr"
-icon = "fa-brands fa-linkedin"
+icon = "fa7-brands:linkedin"
 
 [[sections]]
 title = "Education"
-icon = "fa-solid fa-school"
+icon = "fa7-solid:school"
 
 [[sections.subsections]]
-name = "Doctor of Philosophy in Mathematics (Defended 8/18/25)"
-summary = "Advisor: Isabel Darcy\n\nDissertation: \"The Tanglenomicon: Tabulation of Arborescent Tangles\""
+name = "Doctor of Philosophy in Mathematics"
+summary = """Advisor: Isabel Darcy
+Dissertation: \"The Tanglenomicon: Tabulation of Arborescent Tangles\"
+"""
 subheader = "University of Iowa"
 dates = "Fall 2021 - Fall 2025"
 
@@ -59,11 +51,13 @@ dates = "Fall 2013 - Fall 2016"
 
 [[sections]]
 title = "Awards"
-icon = "fa-solid fa-medal"
+icon = "fa7-solid:medal"
 
 [[sections.subsections]]
 name = "[Outstanding Teaching Assistant Award](https://cot.org.uiowa.edu/teaching-awards/outstanding-teaching-assistant-awards)"
-summary = "The Outstanding Teaching Assistant Award recognizes teaching\nassistants who have demonstrated outstanding abilities at the\nUniversity of Iowa."
+summary = """The Outstanding Teaching Assistant Award recognizes teaching
+assistants who have demonstrated outstanding abilities at the
+University of Iowa."""
 dates = "Spring 2025"
 
 [[sections.subsections]]
@@ -73,7 +67,7 @@ dates = "Spring 2023, Summer 2023,<br/>Summer 2024"
 
 [[sections]]
 title = "Experience"
-icon = "fa-solid fa-briefcase"
+icon = "fa7-solid:briefcase"
 
 [[sections.subsections]]
 name = "Iowa Sciences Academy Graduate Assistant"
@@ -95,13 +89,45 @@ dates = "Fall 2021, Spring 2022,<br/>Fall 2022, Fall 2023,<br/>Spring 2024"
 name = "Software Engineer"
 subheader = "[Western Diversified Plastics](https://westerndp.com/)"
 dates = "December 2020 - August 2021"
-summary = "Process tooling and AUTOSAR development"
+summary = """* Design and implementation of ASPICE process tooling for:
+    - Parsing of customer requirements    
+    - Tracing of customer requirements.
+    - Internal requirements modeling process design.
+    - Generation of project health metrics and their analysis.
+    - Reporting project health to project management tooling.
+* MICROSAR sourcing (technical contact)
+    - MICROSAR
+    - Flash Bootloader
+    - vVIRTUALtarget
+    - vTESTstudio
+* Standing up product prototype (basic IO for hardware verification).
+* General development of AUTOSAR application components.
+* Design and implementation of continuous integration (CI) process and system."""
 
 [[sections.subsections]]
 name = "Project Engineer"
 subheader = "[Vector North America](https://Vector.com)"
 dates = "January 2017 - December 2020"
-summary = "##### Software Architect\n* Responsible for the complete architectural design and direction of a customer project.\n* Analysis of customer requirements and negotiation of acceptance for those requirements.\n* Planning of team development activities.\n\n##### Flash Bootloader Integration\n* Integration and testing of Off The Shelf software solutions with a focus on *Flash Bootloader* integrations.\n* Worked with new technologies such as Ethernet, CAN-FD, and Security.\n* Support customers in use of the *Flash Bootloader* product."
+summary = """##### Project Architect
+* Responsible for the complete architectural design and direction of a customer project.
+* Analysis of customer requirements and negotiation of acceptance for those requirements.
+* Planning of team development activities.
+* Design and implementation of safety use case (ASIL A)
+
+##### AUTOSAR Projects
+* Design and implementation of AUTOSAR application components
+* Design and implementation of AUTOSAR MCAL components
+    - GPT
+    - SPI
+    - FLS (partial)
+    - ADC (partial)
+* Flash Bootloader design and implementation.
+* Design and implementation of continuous integration (CI) process and system.
+
+##### Flash Bootloader Integration
+* Integration and testing of off-the-shelf software solutions with a focus on *Flash Bootloader* integrations.
+* Worked with new technologies such as Ethernet, CAN-FD, and Security.
+* Support customers in use of the *Flash Bootloader* product."""
 
 [[sections.subsections]]
 name = "Engineering CoOp"
@@ -111,47 +137,68 @@ summary = "Bootloader integrations for advanced vehicle stability control (braki
 
 [[sections]]
 title = "Teaching"
-icon = "fa-solid fa-pencil"
+icon = "fa7-solid:pencil"
 
 [[sections.subsections]]
 name = "ISA:4041"
 subheader = "Primary Instructor"
-summary = "Structure for development, planning, and implementation of a\nculminating project for the Iowa Sciences Academy; students\ndedicate three to five hours per week to the project and are\nencouraged to connect their projects to community issues or\nproblem; integration of external learning experiences and\nactivities including interviews, scientific observations, or\ninternships.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173792&id=1034182)"
+summary = """Structure for development, planning, and implementation of a culminating project for 
+the Iowa Sciences Academy; students dedicate three to five hours per week to the project and are
+encouraged to connect their projects to community issues or problem; integration of external 
+learning experiences and activities including interviews, scientific observations, or internships.
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173792&id=1034182)"""
 dates = "Spring 2025"
 
 [[sections.subsections]]
 name = "ISA:1040"
 subheader = "Primary Instructor"
-summary = "Professional and career development; tours of scientific\nresearch facilities and laboratories on campus; network with\nprofessors and graduate students; explore different types of\nresearch environments on campus; learn how to identify and\ncontact potential research mentors.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173793&id=1032561)"
+summary = """Professional and career development; tours of scientific research facilities and 
+laboratories on campus; network with professors and graduate students; explore different types of
+research environments on campus; learn how to identify and contact potential research mentors.
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173793&id=1032561)"""
 dates = "Spring 2025"
 
 [[sections.subsections]]
 name = "ISA:4040"
 subheader = "Primary Instructor"
-summary = "Scientific teaching principles (e.g., backwards design, active\nlearning, formative assessment); students develop a teaching\nunit based on some aspect of their research and teach it to the\nclass in preparation for future interviews where the ability to\nexplain the background and significance for their research is a\nhighly valued skill. Requirements: minimum of 60 s.h. earned,\njunior or senior standing, and undergraduate research experience.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173795&id=1037535)"
+summary = """Scientific teaching principles (e.g., backwards design, active learning, formative 
+assessment); students develop a teaching unit based on some aspect of their research and teach it 
+to the class in preparation for future interviews where the ability to explain the background and 
+significance for their research is a highly valued skill. Requirements: minimum of 60 s.h. 
+earned, junior or senior standing, and undergraduate research experience.
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/details.page?ci=173795&id=1037535)"""
 dates = "Fall 2024"
 
 [[sections.subsections]]
 name = "MATH:5760"
 subheader = "Graduate Assistant"
-summary = "Topics in mathematical biology; canonical mathematical modeling\nand analysis of problems in the biological sciences\n(data analysis and introduction to machine learning).\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=5760&showResults=1)"
+summary = """Topics in mathematical biology; canonical mathematical modeling and analysis of 
+problems in the biological sciences (data analysis and introduction to machine learning). 
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=5760&showResults=1)"""
 dates = "Spring 2024"
 
 [[sections.subsections]]
 name = "MATH:1005"
 subheader = "Primary Instructor"
-summary = "Algebraic techniques, equations and inequalities,\nfunctions and graphs, exponential and logarithmic functions,\nsystems of equations and inequalities.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1005&showResults=1)"
+summary = """Algebraic techniques, equations and inequalities, functions and graphs, exponential 
+and logarithmic functions, systems of equations and inequalities. 
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1005&showResults=1)"""
 dates = "Fall 2022, Fall 2023"
 
 [[sections.subsections]]
 name = "MATH:1350"
 subheader = "Discussion Section Leader"
-summary = "Algebraic techniques and modeling; quantitative methods for treating\nproblems that arise in management and economic sciences; topics include algebra\ntechniques, functions and functional models, exponential and logarithmic functions\nand models, and a thorough introduction to differential calculus; examples\nand applications from management, economic sciences, and related areas; for\nstudents planning to major in business.\n[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1350&showResults=1)"
+summary = """Algebraic techniques and modeling; quantitative methods for treating problems that 
+arise in management and economic sciences; topics include algebra techniques, functions and 
+functional models, exponential and logarithmic functions and models, and a thorough introduction 
+to differential calculus; examples and applications from management, economic sciences, and 
+related areas; for students planning to major in business.
+[Course Listing](https://myui.uiowa.edu/my-ui/courses/dashboard.page?q.courseSubject=MATH&q.courseNumber=1350&showResults=1)"""
 dates = "Fall 2021, Spring 2022,<br/>Spring 2024"
 
 [[sections]]
 title = "Invited Research Talks"
-icon = "fa-solid fa-microphone"
+icon = "fa7-solid:microphone"
 break = true
 
 [[sections.subsections]]
@@ -181,7 +228,7 @@ summary = "[Lightning talk](https://icerm.brown.edu/program/topical_workshop/tw-
 
 [[sections]]
 title = "Invited General Audience Talks"
-icon = "fa-solid fa-microphone"
+icon = "fa7-solid:microphone"
 
 [[sections.subsections]]
 dates = "February 2024"
@@ -195,7 +242,7 @@ summary = "[Constructing the Jones polynomial to save the world](https://joe-sta
 
 [[sections]]
 title = "Posters"
-icon = "fa-solid fa-users"
+icon = "fa7-solid:users"
 
 [[sections.subsections]]
 dates = "February 2025"
@@ -209,7 +256,7 @@ summary = "[https://joe-starr.com/speaking/posters/9mwagt/](https://joe-starr.co
 
 [[sections]]
 title = "Conference Attendance"
-icon = "fa-solid fa-users"
+icon = "fa7-solid:users"
 
 [[sections.subsections]]
 dates = "February 2025"
@@ -269,7 +316,7 @@ name = "[8th Mexican Workshop on Applied Geometry and Topology (Remote)](https:/
 
 [[sections]]
 title = "Service"
-icon = "fa-solid fa-handshake"
+icon = "fa7-solid:handshake"
 
 [[sections.subsections]]
 name = "[Editor Synthesis A Journal Of Student Science Communication](https://pubs.lib.uiowa.edu/synthesis/editorialteam/)"
@@ -287,13 +334,25 @@ dates = "Fall 2024"
 [[sections.subsections]]
 name = "Panel Participant STEM Career Panel"
 dates = "February 2023"
-summary = "[Explore Career Paths in Mathematics and Statistics: Alumni\nPanel\nDiscussion](https://umdearborn.edu/events/explore-career-paths-mathematics-and-statistics)"
+summary = """[Explore Career Paths in Mathematics and Statistics: Alumni Panel Discussion](https://umdearborn.edu/events/explore-career-paths-mathematics-and-statistics)"""
 
 [[sections.subsections]]
 name = "University of Iowa Exploring Majors Fair Department Representative"
 dates = "Fall 2022, Spring 2023, <br/>Fall 2023"
-summary = "The Exploring Majors Fair on each Hawkeye Visit Day connects prospective\nundergraduate students with departments of their interest."
+summary = """The Exploring Majors Fair on each Hawkeye Visit Day connects prospective
+undergraduate students with departments of their interest."""
 
 [[sections.subsections]]
 name = "Seminars Organized"
-summary = "#### Knots, Tangles, and Computers\n##### Primary Organizer:\n* Fall 2024: On Arborescent Tangles\n* Spring 2024: On Software Engineering\n* Fall 2023: On Tangle Tabulation\n#### Topological Data Visualization\n##### Assisted in Organizing:\n* Spring 2024\n* Fall 2023\n#### Undergraduate Topology Seminar\n##### Assisted in Organizing:\n* Fall 2024 On 3D printing for visualization (technical support)"
+summary = """#### Knots, Tangles, and Computers
+##### Primary Organizer:
+* Fall 2024: On Arborescent Tangles
+* Spring 2024: On Software Engineering
+* Fall 2023: On Tangle Tabulation
+#### Topological Data Visualization
+##### Assisted in Organizing:
+* Spring 2024
+* Fall 2023
+#### Undergraduate Topology Seminar
+##### Assisted in Organizing:
+* Fall 2024 On 3D printing for visualization (technical support)"""

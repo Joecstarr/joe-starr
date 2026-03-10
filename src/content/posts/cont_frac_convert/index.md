@@ -1,8 +1,8 @@
 ---
 title: Continued Fraction and Twist Vector Converter
 published: 2023-07-15
-tags: ["Resources"]
-description: ""
+tags: ["Knot Tool", "Tool"]
+description: "Converts between continued fractions and twist vectors."
 draft: false
 toc: true
 bibliography: ./bib.json

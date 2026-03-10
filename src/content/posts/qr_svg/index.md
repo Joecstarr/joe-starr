@@ -1,7 +1,7 @@
 ---
 title: QR code svg generator
 published: 2025-04-15
-tags: ["Resources", "Visualizer", "Tool"]
+tags: ["Visualizer","Tool"]
 draft: true
 toc: true
 ---

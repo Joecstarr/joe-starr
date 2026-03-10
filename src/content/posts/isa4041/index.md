@@ -2,7 +2,7 @@
 title: "ISA:4041 Senior Capstone Project"
 published: 2025-01-07
 tags: ["Instruction"]
-series: "Classes I Have Taught"
+series: "Courses I've Taught"
 description: ""
 draft: false
 toc: true

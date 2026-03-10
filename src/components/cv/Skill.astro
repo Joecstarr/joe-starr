@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+    skill: Object;
+}
+const { skill } = Astro.props;
+---
+
+<div>
+    <div class="skills">
+        {
+            skill.bullets.map((item) => (
+                <div>
+                    <h5 class=""> ‣ {item.name}</h5>
+                    <div class="skill">
+                        {item.level &&
+                            Array(item.level)
+                                .fill(1)
+                                .map((x) => (
+                                    <Icon class="skill" focusable="false" name="fa7-solid:star" />
+                                ))}
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>

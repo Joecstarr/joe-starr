@@ -53,7 +53,7 @@ const socialsCollection = defineCollection({
         z.object({
             friendlyName: z.string(),
             link: z.string(),
-            name: z.string(),
+            icon: z.string(),
         }),
     ),
 });
@@ -115,6 +115,41 @@ const albumsCollection = defineCollection({
         }),
 });
 
+const cvCollection = defineCollection({
+    loader: glob({ base: "./src/content/cv", pattern: "**/*.{md,mdx}" }),
+    schema: z.object({
+        title: titleSchema,
+        cv_data: z.string(),
+        theme: z.object({
+            textColor: z.string(),
+            printTextColor: z.string(),
+            secondaryTextColor: z.string(),
+            backgroundColor: z.string(),
+            secondaryBackgroundColor: z.string(),
+            primaryColor: z.string(),
+            secondaryColor: z.string(),
+        }),
+    }),
+});
+
+const resumeCollection = defineCollection({
+    loader: glob({ base: "./src/content/resume", pattern: "**/*.{md,mdx}" }),
+    schema: z.object({
+        title: titleSchema,
+        re_data: z.string(),
+        skills: z.boolean().optional(),
+        theme: z.object({
+            textColor: z.string(),
+            printTextColor: z.string(),
+            secondaryTextColor: z.string(),
+            backgroundColor: z.string(),
+            secondaryBackgroundColor: z.string(),
+            primaryColor: z.string(),
+            secondaryColor: z.string(),
+        }),
+    }),
+});
+
 export const collections = {
     posts: postsCollection,
     home: homeCollection,
@@ -122,4 +157,6 @@ export const collections = {
     slides: slidesCollection,
     albums: albumsCollection,
     gentree: gentreeCollection,
+    cv: cvCollection,
+    resume: resumeCollection,
 };

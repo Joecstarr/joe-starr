@@ -1,11 +1,10 @@
 ---
 import { type CollectionEntry } from "astro:content";
 import RevealSlides from "~/components/slides/RevealSlides.astro";
-import { siteConfig } from "~/site.config";
 
 interface Props {
     post: CollectionEntry<"slides">;
-    theme?:
+    color:
         | "black"
         | "white"
         | "league"

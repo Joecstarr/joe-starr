@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from "astro:content";
+import CVLayout from "~/layouts/CV.astro";
+import type { GetStaticPaths, InferGetStaticPropsType } from "astro";
+import fs from "fs";
+import toml from "toml";
+
+export const getStaticPaths = (async () => {
+    const cvsEntries = await getCollection("cv", ({ data }) => {
+        return import.meta.env.PROD ? !data.draft : true;
+    });
+
+    return cvsEntries.map((cv) => ({
+        params: { slug: cv.id },
+        props: { cv },
+    }));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+const { cv } = Astro.props;
+const { Content } = await render(cv);
+const color = cv.data.theme;
+const configPath = cv.data.cv_data; // Assumes site.toml is in the project root
+const rawConfig = fs.readFileSync(configPath, "utf-8");
+const cvData = toml.parse(rawConfig);
+---
+
+<CVLayout post={cv} theme={color} data={cvData} />

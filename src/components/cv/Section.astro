@@ -15,12 +15,12 @@ import { marked } from "marked";
 const title = marked.parse(section.title);
 ---
 
-<div style="page-break-inside:avoid;">
-    <h4 class="section_title" style="page-break-after: avoid !important;" set:html={title}>
+<div>
+    <h4 class="section_title" set:html={title}>
         <Icon class="icon" focusable="false" name={section.icon} />
     </h4>
     <div class="hr"></div>
-    <div style="page-break-inside:avoid;">
+    <div>
         {section.subsections.map((item) => <CVSubsction section={item} />)}
     </div>
 </div>

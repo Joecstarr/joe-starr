@@ -594,3 +594,14 @@ article img {
 .react-sigma-control > * {
     background-color: var(--color-background) !important;
 }
+.ant-input textarea,
+.ant-input pre {
+    word-break: break-all !important;
+}
+.shield > img {
+    border: none !important;
+    border-radius: 0;
+    vertical-align: left !important;
+    margin-inline: 0px !important;
+    margin: 0.5rem;
+}

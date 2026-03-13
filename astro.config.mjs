@@ -12,6 +12,7 @@ import remarkDescription from "./src/plugins/remark-description"; /* Add descrip
 import remarkReadingTime from "./src/plugins/remark-reading-time"; /* Add reading time to frontmatter */
 import rehypeTitleFigure from "./src/plugins/rehype-title-figure"; /* Wraps titles in figures */
 import { remarkGithubCard } from "./src/plugins/remark-github-card";
+import { remarkGithubShield } from "./src/plugins/remark-github-shield";
 import { fromHtmlIsomorphic } from "hast-util-from-html-isomorphic";
 import rehypeExternalLinks from "rehype-external-links";
 import remarkDirective from "remark-directive"; /* Handle ::: directives as nodes */
@@ -39,6 +40,7 @@ export default defineConfig({
             remarkReadingTime,
             remarkDirective,
             remarkGithubCard,
+            remarkGithubShield,
             remarkAdmonitions,
             [remarkCharacterDialogue, { characters: siteConfig.characters }],
             remarkUnknownDirectives,

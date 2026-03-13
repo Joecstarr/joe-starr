@@ -598,3 +598,10 @@ article img {
 .ant-input pre {
     word-break: break-all !important;
 }
+.shield > img {
+    border: none !important;
+    border-radius: 0;
+    vertical-align: left !important;
+    margin-inline: 0px !important;
+    margin: 0.5rem;
+}

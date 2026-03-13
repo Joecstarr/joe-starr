@@ -1,0 +1,48 @@
+---
+title: Web PDGL
+published: 2026-03-12
+tags: ["Misc","Tool"]
+description: "A web interface for the [PDGL](https://pdgl.joe-starr.com)"
+draft: false
+toc: true
+---
+
+import PDGL from "~/components/react/pdgl/PDGL.astro";
+
+## 📃 Cite Me
+
+::ghshield{ref="<https://doi.org/10.5281/zenodo.18962752>" img="<https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18962752-2ea44f?logo=doi>" alt="10.5281/zenodo.18962752"}
+
+Full citation on [GitHub](https://github.com/Joecstarr/pdgl/blob/main/CITATION).
+
+## Information
+
+### Documentation
+
+Full documentation of the PDGL can be found online at
+[https://pdgl.joe-starr.com/](https://pdgl.joe-starr.com/).
+You may find the [User Guide](https://pdgl.joe-starr.com/manual/whatis/) useful
+for understanding the PDGL at a high level.
+
+The full codebase for the PDGL can be found on github:
+
+::github{repo="joecstarr/pdgl"}
+
+### Web Usage
+
+1. Write or paste a TOML language specification into the text area below.
+    1. Alternatively, paste a link to a TOML file into the "URL to Load" box and press load
+2. Configure the PDGL with the size of the stack to use and the number of words to derive.
+3. Press run and wait for the run to complete.
+   When the run completes the output will appear in a text box.
+4. You can copy results freely from the output text box.
+   Alternatively, you can:
+    1. Press the "Copy Text" button to copy all the text to your
+       clipboard.
+    1. Press the "Download Words" button.
+       This will download a text file containing the data in the text box.
+       The filename for the downloaded text will be a UUIDv4.  
+
+## The PDGL
+
+<PDGL />

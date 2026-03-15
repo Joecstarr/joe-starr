@@ -4,7 +4,9 @@ import { render } from "react-dom";
 import AceEditor from "react-ace";
 import React from "react";
 import { DNA } from "react-loader-spinner";
-
+import axios from "axios";
+import Ajv from "ajv";
+import { parse, stringify } from "smol-toml";
 import "ace-builds/src-noconflict/mode-toml";
 import "ace-builds/src-noconflict/theme-dracula";
 import "ace-builds/src-noconflict/ext-language_tools";
@@ -66,6 +68,17 @@ export default function ComputePDGL({ graphData }) {
     const [stackSize, setStackSize] = React.useState(10);
     const [wordCount, setWordCount] = React.useState(10);
     const [copySuccess, setCopySuccess] = useState("");
+    const [isValid, setIsValid] = useState(null);
+    const [validate, setValidate] = React.useState(() => {});
+    const [ajv, setAjv] = React.useState(
+        new Ajv({
+            loadSchema: async (uri) => {
+                console.log(uri);
+                const res = await axios.get(uri);
+                return res.data;
+            },
+        }),
+    );
     const [code, setCode] = React.useState(`[[production]]
 name = "entry"
 type = "pure"
@@ -77,6 +90,17 @@ name = "paren set"
 type = "pure"
 replacements = ["(%{paren set})", "%{paren set}%{paren set}", ""]
 terminals = [""]`);
+
+    useEffect(() => {
+        (async () => {
+            let obj = { $ref: "https://pdgl.joe-starr.com/manual/media/pdgl-schema.json" };
+            const validate = await ajv.compileAsync(obj);
+            checkTOMLSchema(code, validate);
+            setValidate((data) => validate);
+        })();
+        return () => {};
+    }, []);
+
     var onChange_stackSize = (newValue) => {
         setStackSize(newValue.target.value);
     };
@@ -86,8 +110,23 @@ terminals = [""]`);
     var onChange_url = (newValue) => {
         setUrl(newValue.target.value);
     };
+
     var onChange_output = (newValue) => {};
-    var onChange = (newValue) => {};
+
+    var checkTOMLSchema = (newValue, validator) => {
+        try {
+            const parsed = parse(newValue);
+            const valid = validator(parsed);
+            setIsValid(valid ? "satisfies the PDGL schema!" : "does not satisfy the PDGL schema!");
+        } catch (error) {
+            setIsValid("has a syntax error!");
+        }
+    };
+
+    var onChange = (newValue) => {
+        setCode(newValue);
+        checkTOMLSchema(newValue, validate);
+    };
 
     var handleClick = () => {
         var pdgl = new Pdgl_js(code, stackSize, wordCount);
@@ -149,7 +188,7 @@ terminals = [""]`);
             const textData = await response.text();
             setCode(textData);
         } catch (err) {
-            setError(err.message);
+            console.log(err.message);
         } finally {
             setIsLoading(false);
         }
@@ -158,6 +197,7 @@ terminals = [""]`);
     return (
         <div style={{ width: "100%" }}>
             <h3>Language Specification</h3>
+            <p>The TOML {isValid}</p>
             <DNA
                 visible={isLoading}
                 height="30vh"

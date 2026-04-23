@@ -8,13 +8,17 @@ marked.Renderer.prototype.paragraph = function (text) {
     return text + "\n";
 };
 marked.use({
-    breaks: true,
+    breaks: false,
 });
 
 const name = marked.parse(section.name);
 const subheader = section.subheader ? marked.parse(section.subheader) : undefined;
-const summary = section.summary ? marked.parse(section.summary) : undefined;
-const dates = section.dates ? marked.parse(section.dates) : undefined;
+const summary = section.summary
+    ? marked.parse(section.summary.replaceAll(/\n\n/g, "\n<br/>\n"))
+    : undefined;
+const dates = section.dates
+    ? marked.parse(section.dates.replaceAll(/\n\n/g, "\n<br/>\n"))
+    : undefined;
 ---
 
 <div class="hrlite"></div>

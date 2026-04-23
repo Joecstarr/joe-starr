@@ -34,6 +34,7 @@ icon = "fa7-solid:school"
 [[sections.subsections]]
 name = "Doctor of Philosophy in Mathematics"
 summary = """Advisor: Isabel Darcy
+
 Dissertation: \"The Tanglenomicon: Tabulation of Arborescent Tangles\"
 """
 subheader = "University of Iowa"
@@ -79,6 +80,7 @@ name = "[CIRTL Scholar](https://grad.uiowa.edu/cirtl-membership)"
 summary = """CIRTL Scholars add to community knowledge about teaching and learning, most often by 
 presenting or publishing their work to university, regional, national, or international 
 audiences.
+
 Taken from [CIRTL program details](https://cirtl.net/achievement-levels/)"""
 dates = "December 2025"
 
@@ -86,6 +88,7 @@ dates = "December 2025"
 name = "[CIRTL Practitioner](https://grad.uiowa.edu/cirtl-membership)"
 summary = """CIRTL Practitioners critically reflect on their knowledge and experiences of teaching 
 and learning, often by designing and/or implementing a Teaching-as-Research project.
+
 Taken from [CIRTL program details](https://cirtl.net/achievement-levels/)"""
 dates = "December 2025"
 
@@ -94,6 +97,7 @@ name = "[CIRTL Associate](https://grad.uiowa.edu/cirtl-membership)"
 summary = """CIRTL Associates have a strong foundation in evidence-based teaching and learning 
 practices, are able to describe these practices, and recognize their value for improving 
 undergraduate learning.
+
 Taken from [CIRTL program details](https://cirtl.net/achievement-levels/)"""
 dates = "December 2025"
 
@@ -166,6 +170,60 @@ name = "Engineering CoOp"
 subheader = "[ZF](https://zf.com)"
 dates = "May 2016 - August 2016"
 summary = "Bootloader integrations for advanced vehicle stability control (braking) systems."
+
+[[sections]]
+title = "Software"
+icon = "fa7-solid:code"
+
+[[sections.subsections]]
+name = "The Tanglenomicon: A Table of Two String Arborescent Tangles Up to 16 Crossings"
+dates = "[![DOI - 10.5281/zenodo.17612688](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17612688-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.17612688)"
+summary = """This repository contains a list of all arborescent tangles up to 16 crossings."""
+
+[[sections.subsections]]
+name = "Tanglenomicon Core Libraries"
+dates = "[![DOI - 10.5281/zenodo.17612692](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17612692-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.17612692)"
+summary = """The Tanglenomicon core libraries repository consists of a collection of C libraries 
+used for computation and generation of knot/tangle data. """
+
+[[sections.subsections]]
+name = "Toolchain for Computing the Pure Vignette for Right Leaning Identity Tangle Trees"
+dates = "[![DOI - 10.5281/zenodo.18134849](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18134849-2ea44f?logo=DOI)](https://doi.org/10.5281/zenodo.18134849)"
+summary = """A python and cython toolchain wrapping the Tanglenomicon Core Library code for the 
+purpose of generating a table of right leaning identity tangle tree pure vignettes. The toolchain is packaged as a
+a single command launchable docker compose file. 
+"""
+
+[[sections.subsections]]
+name = "Toolchain for Generating Right Leaning Identity Tangle Trees"
+dates = "[![DOI - 10.5281/zenodo.17612686](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.17612686-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.17612686)"
+summary = """A python and cython toolchain wrapping the Tanglenomicon Core Library code for the 
+purpose of generating a table of right leaning identity tangle trees. The toolchain is packaged as a
+a single command launchable docker compose file. 
+"""
+
+[[sections.subsections]]
+name = "Portable Generation Language Based on Probabilistic Context Free Grammars"
+dates = "[![DOI - 10.5281/zenodo.18962752](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.18962752-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.18962752)"
+summary = """The PDGL reimplements portions of the [original DGL by Maurer](https://cs.baylor.edu/~maurer/dgl.php).
+The PDGL implements a set of portable libraries used to consume a context free language definition
+and directly stochastically produce words of that language.
+The PDGL matches the features and use cases of the original DGL where possible.  
+
+The toolchain is published as binaries for Windows and Linux.
+Additionally, the PDGL can be found in web form at
+[https://joe-starr.com/posts/pdgl/](https://joe-starr.com/posts/pdgl/).
+"""
+
+[[sections.subsections]]
+name = "Materials for a Course on Basic Project Management"
+dates = "[![DOI - 10.5281/zenodo.14933990](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14933990-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.14933990)"
+summary = """Describes a course on basic project management."""
+
+[[sections.subsections]]
+name = "Materials for a Course on Teaching Undergraduate Research"
+dates = "[![DOI - 10.5281/zenodo.14933487](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.14933487-2ea44f?logo=doi)](https://doi.org/10.5281/zenodo.14933487)"
+summary = """Describes a course on instruction geared toward undergraduate researchers."""
 
 [[sections]]
 title = "Teaching"

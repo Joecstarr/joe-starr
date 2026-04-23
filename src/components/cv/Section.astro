@@ -5,7 +5,7 @@ interface Props {
     section: Object;
 }
 marked.use({
-    breaks: true,
+    breaks: false,
 });
 marked.Renderer.prototype.paragraph = function (text) {
     return text + "\n";

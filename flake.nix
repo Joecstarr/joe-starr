@@ -20,11 +20,10 @@
       {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
-            nodePackages.nodejs
-            nodePackages.npm
-            nodePackages.prettier
-            nodePackages.eslint
-            nodePackages.typescript
+            pkgs.nodejs
+            pkgs.prettier
+            pkgs.eslint
+            pkgs.typescript
 
             git
             prek

@@ -10,7 +10,8 @@ toc: true
 
 ## Summary
 
-Scientific teaching principles (e.g., backwards design, active learning, formative assessment);
+Scientific teaching principles
+(e.g., backwards design, active learning, formative assessment);
 students develop a teaching unit based on some aspect of their research
 and teach it to the class in preparation for future interviews
 where the ability to explain the background and significance

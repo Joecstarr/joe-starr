@@ -19,8 +19,8 @@ knot.
 The tooling used to generate this visualization was built as a one off for a topics course,
 as such I wouldn't call it alpha it's currently a toy proof of concept.
 That said, the tool is built to support any knot.
-Unfortunately, right now the knot needs to be defined at compile time (this can be changed in the
-future if needed/wanted).
+Unfortunately, right now the knot needs to be defined at compile time
+(this can be changed in the future if needed/wanted).
 If you would like another knot or a published (polished FOSS) version of the software let me know.
 
 ---

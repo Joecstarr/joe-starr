@@ -93,16 +93,7 @@ class Integral {
 }
 
 class BandDraw {
-    constructor(
-        band,
-        eccentricity,
-        crossing_color,
-        stroke_width,
-        gap,
-        group,
-        show_zero = false,
-        depth = 0,
-    ) {
+    constructor(band, eccentricity, crossing_color, stroke_width, gap, group, depth = 0) {
         this.eccentricity = eccentricity;
         this.crossing_color = crossing_color;
         this.stroke_width = stroke_width;
@@ -112,7 +103,6 @@ class BandDraw {
         this.__band = band;
         this.__xoffset = 0;
         this.__wc = [];
-        this.__show_zero = show_zero;
         this.__depth = depth;
     }
 
@@ -269,7 +259,6 @@ class BandDraw {
             this.stroke_width,
             this.__gapmult,
             group_i,
-            this.__show_zero,
             this.__depth + 1,
         ).draw();
         console.log("depth: " + this.__depth);
@@ -286,7 +275,7 @@ class BandDraw {
         var group = this.__group.group().addClass("level_group");
         for (let i = 0; i < this.__band.children.size(); i++) {
             var band = undefined;
-            if (this.__show_zero == true || this.__band.weights.get(i) != 0) {
+            if (this.__band.weights.get(i) != 0 || this.__band.children.size() == 0) {
                 band = new Integral(
                     this.__band.weights.get(i),
                     this.eccentricity,
@@ -303,8 +292,8 @@ class BandDraw {
         }
         if (0 < this.__band.children.size()) {
             if (
-                this.__show_zero == true ||
-                this.__band.weights.get(this.__band.children.size()) != 0
+                this.__band.weights.get(this.__band.children.size()) != 0 ||
+                0 == this.__band.children.size()
             ) {
                 console.log(
                     "Right most weight: " + this.__band.weights.get(this.__band.children.size()),
@@ -319,7 +308,7 @@ class BandDraw {
                 this.__proc_integral(band);
             }
         } else {
-            if (this.__show_zero == true || this.__band.weights.get(0) != 0) {
+            if (this.__band.weights.get(0) != 0 || 0 == this.__band.children.size()) {
                 console.log("leaf weight: " + this.__band.weights.get(0));
                 band = new Integral(
                     this.__band.weights.get(0),
@@ -415,10 +404,6 @@ class Drawing {
     }
     draw = () => {
         var wptt = new notewasm.WPTT(this.__wptt);
-        var show_zero = false;
-        if (this.__wptt === "i[0]" || this.__wptt === "i[0 0]") {
-            show_zero = true;
-        }
         try {
             var group = this.__drawing.group().addClass("outer_group");
 
@@ -429,7 +414,6 @@ class Drawing {
                 this.stroke_width,
                 this.__gap,
                 group,
-                show_zero,
             ).draw();
 
             if (wptt.label == notewasm.V4Label.V4_LABEL_X) {

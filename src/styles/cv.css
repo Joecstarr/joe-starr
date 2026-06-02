@@ -1,0 +1,235 @@
+body {
+    font-family: "roboto", sans-serif;
+}
+@media print {
+    @page {
+        size: letter;
+    }
+
+    .section_title {
+        background-color: var(--primary-color);
+        color: #ffffff;
+    }
+
+    .skill_title {
+        color: var(--primary-color);
+    }
+
+    a {
+        color: var(--secondary-color) !important;
+        text-decoration: none;
+    }
+
+    html {
+        font-size: 8.4pt;
+        color: var(--print-text-color) !important;
+        background-color: var(--background-color) !important;
+    }
+}
+
+@media screen {
+    html {
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+
+    a {
+        color: var(--secondary-color) !important;
+        text-decoration: none;
+    }
+
+    .section_title {
+        background-color: var(--primary-color);
+        color: var(--background-color);
+    }
+
+    .skill_title {
+        color: var(--primary-color);
+    }
+}
+
+.head .icon {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin-left: 0.4rem;
+    margin-right: 0rem;
+}
+
+.skills {
+    list-style: disc;
+    list-style-position: outside;
+    margin: 0;
+}
+
+.skill_li {
+    margin-right: 2em;
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.skill_icon {
+    padding: 0;
+    margin: 0;
+    height: 0.7rem;
+    width: 0.7rem;
+}
+
+.filled {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+.empty {
+    color: var(--background-color);
+    background-color: var(--background-color);
+}
+
+.icon {
+    vertical-align: middle;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+}
+
+.head {
+    text-align: center;
+}
+
+h1 {
+    font-family: "roboto", sans-serif;
+    color: var(--primary-color);
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+h3 {
+    font-family: "roboto", sans-serif;
+    padding: 0;
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h4,
+h5 {
+    font-family: "roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+h6 {
+    font-family: "roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+p {
+    display: block;
+    margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.hr {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    height: 0.1vh;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+}
+
+.hrlite {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    opacity: 0.2;
+    height: 0.01em;
+    padding: 0;
+    margin-top: 0.2em;
+    margin-bottom: 0.3em;
+}
+
+.section_title {
+    display: inline-block;
+    padding: 0.5vw;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0.5rem;
+}
+
+.skill_title {
+    display: inline-block;
+    padding: 0.5vw;
+    padding-left: 0;
+    margin-left: 0;
+    margin: 0.125vh;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 0.45em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.subsection {
+    margin-bottom: 0.2em;
+}
+
+.summary {
+    max-width: 80vw;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.summary > ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.summary_full > * > .summary {
+    max-width: 95vw !important;
+}
+
+.right {
+    float: right;
+    min-width: 17vw;
+}
+
+.left p:first-of-type,
+.left h3:first-of-type {
+    margin-top: 0;
+}
+
+.left p:first-of-type {
+    margin-bottom: 0;
+}
+
+.dot {
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    border-color: var(--foreground-color);
+    border-width: 0.01rem;
+    border-style: solid;
+    display: inline-block;
+}
+
+.dot_fill {
+    background-color: var(--primary-color);
+}

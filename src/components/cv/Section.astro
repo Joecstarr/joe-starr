@@ -16,11 +16,20 @@ const title = marked.parse(section.title);
 ---
 
 <div>
-    <h4 class="section_title" set:html={title}>
+    <h3 class="section_title" set:html={title}>
         <Icon class="icon" focusable="false" name={section.icon} />
-    </h4>
+    </h3>
     <div class="hr"></div>
-    <div>
-        {section.subsections.map((item) => <CVSubsction section={item} />)}
+    <div class={section.full == true && "summary_full"}>
+        {
+            section.subsections &&
+                section.subsections.map((item, index, array) => (
+                    <div>
+                        <CVSubsction section={item} />
+
+                        <div class={index !== array.length - 1 && "hrlite"} />
+                    </div>
+                ))
+        }
     </div>
 </div>

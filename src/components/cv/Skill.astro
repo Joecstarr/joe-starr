@@ -8,21 +8,60 @@ const { skill } = Astro.props;
 ---
 
 <div>
-    <div class="skills">
-        {
-            skill.bullets.map((item) => (
+    {
+        skill.section &&
+            skill.section.map((sec) => (
                 <div>
-                    <h5 class=""> ‣ {item.name}</h5>
-                    <div class="skill">
-                        {item.level &&
-                            Array(item.level)
-                                .fill(1)
-                                .map((x) => (
-                                    <Icon class="skill" focusable="false" name="fa7-solid:star" />
-                                ))}
-                    </div>
+                    <h6 style="padding-top:.1rem;font-weight:bold;font-size:.9em">{sec.title}</h6>
+                    <ul
+                        class="skills"
+                        style={
+                            "display:grid;  grid-template-columns: repeat(auto-fill, minmax(" +
+                            Math.max(
+                                Math.max.apply(
+                                    Math,
+                                    sec.bullets.map(function (el) {
+                                        return el.name.length;
+                                    }),
+                                ),
+                                9,
+                            ) *
+                                0.6 +
+                            "rem, 1fr)); "
+                        }
+                    >
+                        {sec &&
+                            sec.bullets.map((item) => (
+                                <li class="skill_li">
+                                    <div style="display:inline-block;">
+                                        <div style="display:flex;align-items:center;">
+                                            <div class="skill">{item.name}</div>
+                                            {item.level &&
+                                                Array(item.level)
+                                                    .fill(1)
+                                                    .map((x) => (
+                                                        <Icon
+                                                            class="skill_icon filled"
+                                                            focusable="false"
+                                                            name="fa7-solid:star"
+                                                        />
+                                                    ))}
+                                            {item.level &&
+                                                Array(5 - item.level)
+                                                    .fill(1)
+                                                    .map((x) => (
+                                                        <Icon
+                                                            class="skill_icon empty"
+                                                            focusable="false"
+                                                            name="fa7-solid:star"
+                                                        />
+                                                    ))}
+                                        </div>
+                                    </div>
+                                </li>
+                            ))}
+                    </ul>
                 </div>
             ))
-        }
-    </div>
+    }
 </div>

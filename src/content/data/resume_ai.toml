@@ -1,0 +1,275 @@
+[header]
+name = "Joseph Starr, PhD"
+title = """Transitioning from PhD research to full-time embedded roles. Looking to relocate to a
+large metropolitan area. Previous experience as an embedded Software Engineer in automotive systems: AUTOSAR, MCAL, and Bootloader. Expert in C, 
+python, and combining mathematical rigor with software development life cycles."""
+
+[[header.contact]]
+address = "mailto:joe@joe-starr.com"
+text = "joe@joe-starr.com"
+icon = "fa7-solid:envelope"
+
+[[header.contact]]
+address = "(734) 679-0623"
+text = "(734) 679-0623"
+icon = "fa7-solid:phone"
+
+[[header.contact]]
+address = "https://joe-starr.com/"
+text = "https://joe-starr.com"
+icon = "fa7-solid:ethernet"
+
+[[header.contact]]
+address = "https://github.com/Joecstarr/"
+text = "Joecstarr"
+icon = "fa7-brands:github"
+
+[[header.contact]]
+address = "https://www.linkedin.com/in/joseph-c-starr/"
+text = "linkedin/joseph-c-starr"
+icon = "fa7-brands:linkedin"
+
+[[sections]]
+title = "Relevant Professional Experience"
+icon = "fa7-solid:briefcase"
+
+# [[sections.subsections]]
+# subheader = "Research Fellow / Teaching Assistant"
+# name = "[University of Iowa](https://uiowa.edu)"
+# dates = "Aug 2021 - May 2025"
+# summary = """* Conducted original mathematics and education research.
+# * Taught undergraduate and graduate courses with original and modified course materials.
+# """
+
+[[sections.subsections]]
+subheader = "Software Engineer"
+name = "[Western Diversified Plastics](https://westerndp.com/)"
+dates = "Dec 2020 - Aug 2021"
+summary = """
+* Analysis and clarification of customer (OEM) requirements.
+* Engaged in prototyping and kickoff activities for next gen Traveo II hardware, ensuring a 
+    seamless transition between product versions.
+* Evaluated development infrastructure, including build systems and IDEs, and sourced
+    project-specific AUTOSAR and bootloader stacks (MICROSAR).
+* Developed a hardware proofing software stack to validate prototype hardware against system
+    requirements. Reducing future development load for MCAL configuration and integration.
+* Engineered ASPICE compliant tooling to automate the parsing of OEM requirements into
+    Enterprise Architect with full SWE process traceability. High accuracy automation reduced manual
+    parsing overhead to almost zero. 
+* Built a modular declarative Jenkins toolchain supporting both physical hardware and 
+    virtual ECU testing environments. Allowing quality gates to be validated on a developer's desk
+    reducing regression causing excess HIL load. 
+
+"""
+
+[[sections.subsections]]
+subheader = "Project Engineer"
+name = "[Vector North America](https://Vector.com)"
+dates = "Jan 2017 - Dec 2020"
+summary = """
+* Served as the developer and eventual technical lead for a MICROSAR-powered power
+distribution box (RL78).
+* Managed the full ASPICE V-model lifecycle, from translating OEM requirements into software 
+    architecture and design using Enterprise Architect to final implementation using C, DaVinci
+    Configurator, and DaVinci Developer.
+* Conducted code and design reviews, led sprint kickoffs and retrospectives, and oversaw all 
+    technical development efforts.
+* Defined Jenkins and CANoe CI/CD infrastructure with project and process specific quality gates to automate 
+    the qualification and creation of software releases. Reducing regression and release process 
+    load while increasing project stability and velocity. 
+"""
+
+[[sections]]
+title = "Projects"
+full = true
+icon = "fa7-solid:list-check"
+
+[[sections.subsections]]
+name = "Dissertation Research: The Tanglenomicon"
+subheader = ""
+dates = ""
+summary = """
+* Enumerated a new class of knot-theoretic objects (arborescent tangles) 
+    by identifying a unique representative and proving the correctness of abstract algorithms 
+    for their enumeration.
+* Developed a multiplatform (JavaScript (WASM), Python (Cython), and C++ wrappers) modular C 
+    library collection for generating large-scale tangle datasets. Successfully 
+    tabulating tangles up to 19 crossings (~5.2 Billion tangles).
+* Designed and implemented a formal software design process that bridges mathematical research 
+    with software development life cycles, including rigorous validation and design activities.
+* Created a generalized software design process to ensure program correctness and future 
+    extensibility for cross-discipline research use cases.
+"""
+
+[[sections]]
+title = "Education"
+icon = "fa7-solid:school"
+
+[[sections.subsections]]
+name = "University of Iowa"
+subheader = """Doctor of Philosophy (PhD) in Mathematics
+
+Master of Science in Mathematics
+"""
+dates = "Fall 2021 - Fall 2025"
+
+[[sections.subsections]]
+subheader = """Bachelor of Science in Computer Science
+
+Bachelor of Science in CIS Mathematics"""
+name = "University of Michigan - Dearborn"
+dates = "Fall 2013 - Fall 2016"
+
+[[bullets]]
+title = "Skills"
+icon = "fa7-solid:screwdriver-wrench"
+
+[[bullets.section]]
+title = "Languages"
+
+[[bullets.section.bullets]]
+name = "C"
+
+[[bullets.section.bullets]]
+name = "C++"
+
+[[bullets.section.bullets]]
+name = "C#"
+
+[[bullets.section.bullets]]
+name = "Python"
+
+[[bullets.section.bullets]]
+name = "JavaScript"
+
+[[bullets.section.bullets]]
+name = "CAPL"
+
+[[bullets.section]]
+title = "Standards"
+
+[[bullets.section.bullets]]
+name = "ISO 26262"
+
+[[bullets.section.bullets]]
+name = "AUTOSAR Classic"
+
+[[bullets.section.bullets]]
+name = "ASPICE"
+
+[[bullets.section]]
+title = "Hardware and Protocols"
+
+[[bullets.section.bullets]]
+name = "Renesas RL78"
+
+[[bullets.section.bullets]]
+name = "Infineon Traveo II"
+
+[[bullets.section.bullets]]
+name = "Infineon TriCore TC2xx/TC3xx"
+
+[[bullets.section.bullets]]
+name = "NXP TJA1145A"
+
+[[bullets.section.bullets]]
+name = "SPI"
+
+[[bullets.section.bullets]]
+name = "CAN"
+
+[[bullets.section.bullets]]
+name = "CAN FD"
+
+[[bullets.section.bullets]]
+name = "LIN"
+
+[[bullets.section.bullets]]
+name = "Ethernet"
+
+[[bullets.section.bullets]]
+name = "MQTT"
+
+[[bullets.section]]
+title = "Frameworks"
+
+[[bullets.section.bullets]]
+name = "MICROSAR Classic"
+
+[[bullets.section.bullets]]
+name = "Vector Flash Bootloader"
+
+[[bullets.section.bullets]]
+name = "FastAPI"
+
+[[bullets.section.bullets]]
+name = "Faktory"
+
+[[bullets.section.bullets]]
+name = "Cython"
+
+[[bullets.section.bullets]]
+name = "Emscripten"
+
+[[bullets.section.bullets]]
+name = "CMake"
+
+[[bullets.section.bullets]]
+name = "React"
+
+[[bullets.section]]
+title = "Tooling"
+
+[[bullets.section.bullets]]
+name = "Jenkins (CI/CD)"
+
+[[bullets.section.bullets]]
+name = "GitHub (CI/CD)"
+
+[[bullets.section.bullets]]
+name = "Git"
+
+[[bullets.section.bullets]]
+name = "SVN"
+
+[[bullets.section.bullets]]
+name = "JIRA"
+
+[[bullets.section.bullets]]
+name = "Enterprise Architect"
+
+[[bullets.section.bullets]]
+name = "CANoe"
+
+[[bullets.section.bullets]]
+name = "DaVinci Configurator"
+
+[[bullets.section.bullets]]
+name = "DaVinci Developer"
+
+[[bullets.section.bullets]]
+name = "vTESTstudio"
+
+[[bullets.section.bullets]]
+name = "VectorCAST"
+
+[[bullets.section.bullets]]
+name = "vVIRTUALtarget"
+
+[[bullets.section.bullets]]
+name = "Elektrobit Tresos Studio"
+
+[[bullets.section.bullets]]
+name = "iSYSTEM winIDEA"
+
+[[bullets.section.bullets]]
+name = "MongoDB"
+
+[[bullets.section.bullets]]
+name = "IAR Embedded Workbench"
+
+[[bullets.section.bullets]]
+name = "Neovim"
+
+[[bullets.section.bullets]]
+name = "Visual Studio"

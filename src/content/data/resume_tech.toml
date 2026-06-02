@@ -1,0 +1,287 @@
+[header]
+name = "Joseph Starr, PhD"
+title = ""
+
+[[header.contact]]
+address = "mailto:joe@joe-starr.com"
+text = "joe@joe-starr.com"
+icon = "fa7-solid:envelope"
+
+[[header.contact]]
+address = "(734) 679-0623"
+text = "(734) 679-0623"
+icon = "fa7-solid:phone"
+
+[[header.contact]]
+address = "https://joe-starr.com/"
+text = "https://joe-starr.com"
+icon = "fa7-solid:ethernet"
+
+[[header.contact]]
+address = "https://github.com/Joecstarr/"
+text = "Joecstarr"
+icon = "fa7-brands:github"
+
+[[header.contact]]
+address = "https://www.linkedin.com/in/joseph-c-starr/"
+text = "linkedin/joseph-c-starr"
+icon = "fa7-brands:linkedin"
+
+[[sections]]
+title = "Experience"
+icon = "fa7-solid:briefcase"
+
+[[sections.subsections]]
+subheader = "Research Fellow / Teaching Assistant"
+name = "[University of Iowa](https://uiowa.edu)"
+dates = "Aug 2021 - May 2025"
+summary = """* Conducted original mathematics and education research. 
+* Taught undergraduate and graduate courses with original and modified course materials.
+"""
+
+[[sections.subsections]]
+subheader = "Software Engineer"
+name = "[Western Diversified Plastics](https://westerndp.com/)"
+dates = "Dec 2020 - Aug 2021"
+summary = """* Design and implementation of ASPICE process tooling.
+* Analysis of customer requirements.
+* Design and implementation of Jenkins continuous integration (CI) process and system."""
+
+[[sections.subsections]]
+subheader = "Project Engineer"
+name = "[Vector North America](https://Vector.com)"
+dates = "Jan 2017 - Dec 2020"
+summary = """
+* Responsible for the complete architectural design, direction, and planning of a customer project.
+* Design and implementation of AUTOSAR application and MCAL components, including safety (ISO 26262
+ASIL A) use cases.
+* Design and implementation of Jenkins continuous integration (CI) process and system."""
+
+[[sections]]
+title = "Education"
+icon = "fa7-solid:school"
+
+[[sections.subsections]]
+name = "University of Iowa"
+subheader = """Doctor of Philosophy (PhD) in Mathematics
+
+Master of Science in Mathematics
+"""
+dates = "Fall 2021 - Fall 2025"
+
+[[sections.subsections]]
+subheader = """Bachelor of Science in Computer Science
+
+Bachelor of Science in CIS Mathematics"""
+name = "University of Michigan - Dearborn"
+dates = "Fall 2013 - Fall 2016"
+
+[[sections]]
+title = "Projects"
+full = true
+icon = "fa7-solid:list-check"
+
+[[sections.subsections]]
+name = "Power Distribution Box"
+subheader = ""
+dates = ""
+summary = """Served as developer then technical lead on a MICROSAR (AUTOSAR) powered power 
+distribution box (RL78). In my development role I carried out the left side of the ASPICE V SWE life 
+cycle for both the application and bootloader layers. Using Enterprise Architect I created internal 
+software requirements, both architecture and detailed software designs. Using DaVinci Configurator
+and DaVinci Developer I translated my design into a software implementation. In my technical lead 
+capacity I conducted code and design reviews for team members. I also analyzed customer (OEM) requirements 
+and was the primary contact for customer technical concerns. Finally, I organized, planned, and 
+oversaw all technical development efforts. In my oversight duties I fostered strong team bonds by 
+leading sprint kickoff and retrospective meetings."""
+
+[[sections.subsections]]
+name = "Next Generation Product Kickoff"
+subheader = ""
+dates = ""
+summary = """Conducted next generation product prototyping (Traveo II) and kickoff activities which ensured a 
+seamless transition between product versions. Investigated and tested development infrastructure 
+such as standard debugger, IDE, and build system. Analyzed customer (OEM) requirements and sourced 
+the project AUTOSAR and bootloader stacks. Developed hardware proofing software stack used to flex 
+prototype hardware to ensure correctness and compatibility with software requirements."""
+
+[[sections.subsections]]
+name = "Infrastructure Development"
+subheader = ""
+dates = ""
+summary = """Developed ASPICE compliant tooling for programmatically parsing customer (OEM) 
+requirements documents into enterprise architect, including full traceability analysis and 
+reporting of Enterprise Architect models offering the following tracing: customer requirements 
+$\leftrightarrow$ use cases $\leftrightarrow$ design $\leftrightarrow$ implementation 
+$\leftrightarrow$ validation. Created the build toolchain which allowed for easy targeting of 
+multiple environments (real hardware and virtual ECU). Created flexible and fast Jenkins 
+configuration to enable both hardware and virtual ECU (PC) testing. Additionally, defined the 
+CI/CD quality gates used to qualify software for inclusion into releases and creation of releases.  
+"""
+
+[[sections.subsections]]
+name = "The Tanglenomicon"
+subheader = ""
+dates = ""
+summary = """Produced a large dataset of objects called arborescent tangles as a portion of my PhD 
+research.  My architectural design allowed me to run my generation tooling on various platforms 
+such as PC, mobile, browser, and high  performance computing clusters. The tooling I created 
+consisted of a collection of flexible and extensibile C libraries. The libraries were then wrapped 
+with one of C++, JavaScript, or Python. The tooling was built within a generalized software development 
+process and design I created to ensure program correctness and extensibility of the libraries for 
+future researchers. This dataset is used by math, physics, and biology researchers as an input to 
+their research work."""
+
+[[bullets]]
+title = "Skills"
+icon = "fa7-solid:screwdriver-wrench"
+
+[[bullets.section]]
+title = "Languages"
+
+[[bullets.section.bullets]]
+name = "C"
+
+[[bullets.section.bullets]]
+name = "C++"
+
+[[bullets.section.bullets]]
+name = "Python"
+
+[[bullets.section.bullets]]
+name = "JavaScript"
+
+[[bullets.section]]
+title = "Standards and Products"
+
+[[bullets.section.bullets]]
+name = "ISO 26262"
+
+[[bullets.section.bullets]]
+name = "AUTOSAR Classic"
+
+[[bullets.section.bullets]]
+name = "MICROSAR Classic"
+
+[[bullets.section.bullets]]
+name = "Vector Flash Bootloader"
+
+[[bullets.section.bullets]]
+name = "ASPICE"
+
+[[bullets.section]]
+title = "Hardware"
+
+[[bullets.section.bullets]]
+name = "Renesas RL78"
+
+[[bullets.section.bullets]]
+name = "Infineon Traveo II"
+
+[[bullets.section.bullets]]
+name = "Infineon TriCore TC2xx/TC3xx"
+
+[[bullets.section.bullets]]
+name = "NXP TJA1145A"
+
+[[bullets.section]]
+title = "Communication"
+
+[[bullets.section.bullets]]
+name = "SPI"
+
+[[bullets.section.bullets]]
+name = "CAN"
+
+[[bullets.section.bullets]]
+name = "CAN FD"
+
+[[bullets.section.bullets]]
+name = "LIN"
+
+[[bullets.section.bullets]]
+name = "Ethernet"
+
+[[bullets.section.bullets]]
+name = "MQTT"
+
+[[bullets.section]]
+title = "Frameworks"
+
+[[bullets.section.bullets]]
+name = "FastAPI"
+
+[[bullets.section.bullets]]
+name = "Faktory"
+
+[[bullets.section.bullets]]
+name = "Cython"
+
+[[bullets.section.bullets]]
+name = "Emscripten"
+
+[[bullets.section.bullets]]
+name = "CMake"
+
+[[bullets.section.bullets]]
+name = "React"
+
+[[bullets.section]]
+title = "Tools"
+
+[[bullets.section.bullets]]
+name = "Jenkins (CI/CD)"
+
+[[bullets.section.bullets]]
+name = "GitHub (CI/CD)"
+
+[[bullets.section.bullets]]
+name = "GitHub (Project Management)"
+
+[[bullets.section.bullets]]
+name = "Git"
+
+[[bullets.section.bullets]]
+name = "SVN"
+
+[[bullets.section.bullets]]
+name = "JIRA"
+
+[[bullets.section.bullets]]
+name = "Enterprise Architect"
+
+[[bullets.section.bullets]]
+name = "CANoe"
+
+[[bullets.section.bullets]]
+name = "DaVinci Configurator"
+
+[[bullets.section.bullets]]
+name = "DaVinci Developer"
+
+[[bullets.section.bullets]]
+name = "vTESTstudio"
+
+[[bullets.section.bullets]]
+name = "VectorCAST"
+
+[[bullets.section.bullets]]
+name = "vVIRTUALtarget"
+
+[[bullets.section.bullets]]
+name = "Elektrobit Tresos Studio"
+
+[[bullets.section.bullets]]
+name = "iSYSTEM winIDEA"
+
+[[bullets.section.bullets]]
+name = "MongoDB"
+
+[[bullets.section.bullets]]
+name = "IAR Embedded Workbench"
+
+[[bullets.section.bullets]]
+name = "Neovim"
+
+[[bullets.section.bullets]]
+name = "Visual Studio"

@@ -1,11 +1,19 @@
 ---
 import { Icon } from "astro-icon/components";
 interface Props {
-    contact: Object;
+    contacts: Object[];
 }
-const { contact } = Astro.props;
+const { contacts } = Astro.props;
 ---
 
-<a href={contact.address} set:html={contact.text}>
-    <Icon class="icon" focusable="false" name={contact.icon} />
-</a>
+<div
+    style="display:flex; flex-flow:row wrap;  align-content:flex-start; width:100%; padding:0; margin: 0;"
+>
+    {
+        contacts.map((item) => (
+            <a style="flex-grow: 1;" href={item.address} set:html={item.text}>
+                <Icon class="icon" focusable="false" name={item.icon} />
+            </a>
+        ))
+    }
+</div>

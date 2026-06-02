@@ -47,10 +47,6 @@ summary = """* Design and implementation of ASPICE process tooling for:
     - Generation of project health metrics and their analysis.
     - Reporting project health to project management tooling.
 * MICROSAR sourcing (technical contact)
-    - MICROSAR
-    - Flash Bootloader
-    - vVIRTUALtarget
-    - vTESTstudio
 * Standing up product prototype (basic IO for hardware verification).
 * General development of AUTOSAR application components.
 * Design and implementation of continuous integration (CI) process and system."""
@@ -68,10 +64,6 @@ summary = """##### Project Architect
 ##### AUTOSAR Projects
 * Design and implementation of AUTOSAR application components
 * Design and implementation of AUTOSAR MCAL components
-    - GPT
-    - SPI
-    - FLS (partial)
-    - ADC (partial)
 * Flash Bootloader design and implementation.
 * Design and implementation of continuous integration (CI) process and system.
 
@@ -114,135 +106,133 @@ subheader = "University of Michigan - Dearborn"
 dates = "Fall 2013 - Fall 2016"
 
 [[bullets]]
-title = "Tools and Frameworks"
+title = "Skills"
 icon = "fa7-solid:screwdriver-wrench"
 
-[[bullets.bullets]]
+[[bullets.section]]
+title = "Tools and Frameworks"
+
+[[bullets.section.bullets]]
 name = "C"
 level = 5
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Python"
 level = 5
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "JavaScript"
 level = 2
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "CMake"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Jenkins (CI/CD)"
 level = 3
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "GitHub (CI/CD)"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "GitHub (Project Management)"
 level = 3
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Git"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "SVN"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "JIRA"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Enterprise Architect"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector MICROSAR Classic"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector Flash Bootloader"
 level = 5
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector CANoe"
 level = 3
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector DaVinci Configurator"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector DaVinci Developer"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector vTESTstudio"
 level = 3
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector VectorCAST"
 level = 2
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Vector vVIRTUALtarget"
 level = 2
 
-[[bullets]]
-title = "Technologies and Standards"
-icon = "fa7-solid:pen-ruler"
-
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "ASPICE"
 level = 4
 
-[[bullets.bullets]]
-name = "AUTOSAR (classic)"
-level = 4
+[[bullets.section]]
+title = "Technologies"
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "SPI"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "CAN"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "CAN FD"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Ethernet"
 level = 4
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "ISO 26262"
 level = 2
 
-[[bullets]]
-title = "Silicon Platforms and Peripherals"
-icon = "fa7-solid:microchip"
+[[bullets.section.bullets]]
+name = "AUTOSAR (classic)"
+level = 4
 
-[[bullets.bullets]]
+[[bullets.section]]
+title = "Platforms/Hardware"
+
+[[bullets.section.bullets]]
 name = "Renesas RL78"
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Infineon Traveo II"
 
-[[bullets.bullets]]
-name = "Infineon TriCore TC2xx"
+[[bullets.section.bullets]]
+name = "Infineon TriCore TC2xx/TC3xx"
 
-[[bullets.bullets]]
-name = "Infineon TriCore TC3xx"
-
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "Infineon TLE9471"
 
-[[bullets.bullets]]
+[[bullets.section.bullets]]
 name = "NXP TJA1145A"

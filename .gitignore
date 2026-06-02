@@ -43,3 +43,4 @@ coverage/
 /.astro/
 tsconfig.tsbuildinfo
 mprocs.log
+server exited unexpectedly

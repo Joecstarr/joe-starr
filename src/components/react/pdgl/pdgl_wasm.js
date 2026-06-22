@@ -1,4 +1,3 @@
-// prettier-ignore-start
 async function pdgl_wasm(moduleArg = {}) {
     var moduleRtn;
     var f = moduleArg,
@@ -3168,4 +3167,3 @@ async function pdgl_wasm(moduleArg = {}) {
     return moduleRtn;
 }
 export default pdgl_wasm;
-// prettier-ignore-end

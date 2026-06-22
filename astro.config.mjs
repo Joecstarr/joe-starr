@@ -3,7 +3,7 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
-import { rehypeHeadingIds } from "@astrojs/markdown-remark";
+import { rehypeHeadingIds, unified } from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import expressiveCode from "astro-expressive-code";
 import siteConfig from "./src/site.config";
@@ -35,35 +35,37 @@ export default defineConfig({
     trailingSlash: siteConfig.trailingSlashes ? "always" : "never",
     prefetch: true,
     markdown: {
-        remarkPlugins: [
-            [remarkDescription, { maxChars: 200 }],
-            remarkReadingTime,
-            remarkDirective,
-            remarkGithubCard,
-            remarkGithubShield,
-            remarkAdmonitions,
-            [remarkCharacterDialogue, { characters: siteConfig.characters }],
-            remarkUnknownDirectives,
-            remarkMath,
-            remarkGemoji,
-        ],
-        rehypePlugins: [
-            [rehypeHeadingIds, { headingIdCompat: true }],
-            [rehypeAutolinkHeadings, { behavior: "wrap" }],
-            rehypeTitleFigure,
-            [
-                rehypeExternalLinks,
-                {
-                    rel: ["noreferrer", "noopener"],
-                    target: "_blank",
-                },
+        processor: unified({
+            remarkPlugins: [
+                [remarkDescription, { maxChars: 200 }],
+                remarkReadingTime,
+                remarkDirective,
+                remarkGithubCard,
+                remarkGithubShield,
+                remarkAdmonitions,
+                [remarkCharacterDialogue, { characters: siteConfig.characters }],
+                remarkUnknownDirectives,
+                remarkMath,
+                remarkGemoji,
             ],
-            rehypeUnwrapImages,
-            rehypePixelated,
-            rehypeKatex,
-            rehypeSlides, // Convert H1/H2 to Reveal.js sections for slides
-            rehypeCitationRelative,
-        ],
+            rehypePlugins: [
+                [rehypeHeadingIds, { headingIdCompat: true }],
+                [rehypeAutolinkHeadings, { behavior: "wrap" }],
+                rehypeTitleFigure,
+                [
+                    rehypeExternalLinks,
+                    {
+                        rel: ["noreferrer", "noopener"],
+                        target: "_blank",
+                    },
+                ],
+                rehypeUnwrapImages,
+                rehypePixelated,
+                rehypeKatex,
+                rehypeSlides, // Convert H1/H2 to Reveal.js sections for slides
+                rehypeCitationRelative,
+            ],
+        }),
     },
     image: {
         responsiveStyles: true,

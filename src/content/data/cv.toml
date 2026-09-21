@@ -126,19 +126,12 @@ name = "Software Engineer"
 subheader = "[Western Diversified Plastics](https://westerndp.com/)"
 dates = "December 2020 - August 2021"
 summary = """
-* Served as the developer and eventual technical lead for a MICROSAR-powered power
-distribution box (RL78).
-* Managed the full ASPICE V-model lifecycle, from translating OEM requirements into software 
-    architecture and design using Enterprise Architect to final implementation using C, DaVinci
-    Configurator, and DaVinci Developer.
-* Conducted code and design reviews, led sprint kickoffs and retrospectives, and oversaw all 
-    technical development efforts.
-* Defined Jenkins and CANoe CI/CD infrastructure with project and process specific quality gates to automate 
-    the qualification and creation of software releases. Reducing regression and release process 
-    load while increasing project stability and velocity.
-<br>
-<br>
-<br>
+* Analyzed and clarified customer (OEM) requirements to align development scope with system specifications.
+* Led prototyping and kickoff activities for next-generation Traveo II hardware, ensuring a seamless transition between product versions.
+* Evaluated development infrastructure including build systems and IDEs, and sourced project-specific AUTOSAR and bootloader stacks (MICROSAR).
+* Developed a hardware proofing software stack to validate prototype hardware against system requirements, reducing future MCAL configuration and integration load.
+* Engineered ASPICE-compliant tooling to automate parsing of OEM requirements into Enterprise Architect with full SWE process traceability, reducing manual parsing overhead to near zero.
+* Built a modular declarative Jenkins toolchain supporting both physical hardware and virtual ECU testing environments, enabling quality gates to be validated locally and reducing excess HIL load.
 <br>
 <br>
 """
@@ -148,16 +141,10 @@ name = "Project Engineer"
 subheader = "[Vector North America](https://Vector.com)"
 dates = "January 2017 - December 2020"
 summary = """
-* Served as the developer and eventual technical lead for a MICROSAR-powered power
-distribution box (RL78).
-* Managed the full ASPICE V-model lifecycle, from translating OEM requirements into software 
-    architecture and design using Enterprise Architect to final implementation using C, DaVinci
-    Configurator, and DaVinci Developer.
-* Conducted code and design reviews, led sprint kickoffs and retrospectives, and oversaw all 
-    technical development efforts.
-* Defined Jenkins and CANoe CI/CD infrastructure with project and process specific quality gates to automate 
-    the qualification and creation of software releases. Reducing regression and release process 
-    load while increasing project stability and velocity. 
+* Served as developer and eventual technical lead for a MICROSAR-powered power distribution box (RL78).
+* Managed the full ASPICE V-model lifecycle, from translating OEM requirements into software architecture and design using Enterprise Architect to final implementation in C, DaVinci Configurator, and DaVinci Developer.
+* Conducted code and design reviews, led sprint kickoffs and retrospectives, and oversaw all technical development efforts.
+* Defined Jenkins and CANoe CI/CD infrastructure with project-specific quality gates to automate the qualification and creation of software releases, reducing regression and release process load while increasing project stability and velocity.
 """
 
 [[sections.subsections]]

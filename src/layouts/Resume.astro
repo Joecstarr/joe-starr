@@ -93,10 +93,10 @@ const { post, theme, data, display_skills } = Astro.props;
     <body>
         <div class="head">
             <h1>{data.header.name}</h1>
+            <CVContact contacts={data.header.contact} />
             <h6 style="text-align:left;margin-bottom:.5em;margin-left:2em;margin-right:2em;">
                 {data.header.title}
             </h6>
-            <CVContact contacts={data.header.contact} />
             <p>
                 {data.header.summary}
             </p>

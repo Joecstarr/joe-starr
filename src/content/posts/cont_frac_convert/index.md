@@ -18,7 +18,8 @@ Discussion of canonically of this construction of twist vector can be found in
 [@goldmanRationalTangles1997].
 A twist vector encodes these alternating twists as a list of integers.
 This induces a unique map from the rational tangles onto the rational numbers
-[@conwayEnumerationKnotsLinks1970 @goldmanRationalTangles1997 @kauffmanClassificationRationalKnots2002].
+[@conwayEnumerationKnotsLinks1970 @goldmanRationalTangles1997
+@kauffmanClassificationRationalKnots2002].
 We accomplish this by interpreting a twist vector as a sequence for a continued fraction as:
 
     \left[ a\ b\ c\right]=c+\frac{1}{b+\frac{1}{a}}
